@@ -743,11 +743,24 @@
 
 .workbook-content {
 	background-color: $whiteColor;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		min-width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		background: url("@img/decor/bg-slider.jpg") 0 0 / cover repeat-x;
+	}
 	// .workbook-content__container
 
 	&__container {
 		max-width: toRem(1018);
 		margin: 0 auto;
+		position: relative;
+		z-index: 2;
 	}
 
 	// .workbook-content__title
@@ -763,9 +776,15 @@
 
 	// .workbook-content__body
 
-	&__body {
+	&__content-wrapper {
+		border-radius: toRem(50);
+		text-align: center;
+		padding: toRem(83) toRem(30);
+		position: relative;
+		height: 100%;
+		z-index: 2;
+		background-color: $backgroundCards;
 	}
-
 	// .workbook-content__slider
 
 	&__slider {
@@ -777,6 +796,7 @@
 	// .workbook-content__wrapper
 
 	&__wrapper {
+		will-change: transform;
 		&:not(:last-child) {
 			margin-bottom: toRem(40);
 		}
@@ -798,15 +818,12 @@
 }
 
 .slide-workbook {
-	background-color: $backgroundCards;
-	border-radius: toRem(50);
-	padding: toRem(83) toRem(30);
-	text-align: center;
 	position: relative;
-	transform: scale(0.8);
-	// transition: transform 0.3s ease 0s;
-	// will-change: transform;
-
+	border-radius: toRem(50);
+	filter: blur(toRem(20));
+	transform: scale(0.7);
+	transition: transform 0.3s;
+	will-change: filter;
 	&::before {
 		content: "";
 		position: absolute;
@@ -816,13 +833,16 @@
 		width: percent(432, 410);
 		height: percent(451, 512);
 		background: $red;
-		z-index: -1;
-		border-radius: inherit;
+		z-index: 1;
+		border-radius: toRem(50);
 	}
+	// transition: transform 0.3s ease 0s;
+	// will-change: transform;
 
 	&.swiper-slide-active,
 	&.swiper-slide-next {
-		// transform: scale(1);
+		filter: blur(toRem(0));
+		transform: scale(1);
 	}
 
 	// .slide-workbook__chapter-title

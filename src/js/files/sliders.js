@@ -31,59 +31,25 @@ function initSliders() {
 	// Перевіряємо, чи є слайдер на сторінці
 	if (document.querySelector('.workbook-content__slider')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.workbook-content__slider', { // Вказуємо склас потрібного слайдера
+		const sl = new Swiper('.workbook-content__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			spaceBetween: 80,
-			// autoHeight: true,
+			spaceBetween: 100,
 			speed: 800,
 			grabCursor: true,
-			centeredSlides: true,
 			slidesPerView: 2,
 			loop: true,
-			// loopedSlides: 6,
-			// effect: "coverflow",
-			// coverflowEffect: {
-			// 	rotate: 0,
-			// 	stretch: 0,
-			// 	depth: 100,
-			// 	modifier: 2,
-			// 	slideShadows: true,
-			// },
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
-
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-			// Пагінація
+			loopedSlides: 3,
 			/*
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 			},
 			*/
-
 			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
 			// Кнопки "вліво/вправо"
 			navigation: {
 				prevEl: '.swiper-button_prev',
@@ -110,13 +76,20 @@ function initSliders() {
 					spaceBetween: 30,
 				},
 			},
+
+			
 			*/
+
+
 			// Події
 			on: {
 
 			}
 		});
+		sl.slideTo(2, 0, false)
 	}
+
+
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

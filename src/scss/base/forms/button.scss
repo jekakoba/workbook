@@ -2,6 +2,8 @@
 // Сніппет (HTML): btn
 
 .button {
+	position: relative;
+	overflow: hidden;
 	display: inline-flex;
 	background: $red;
 	padding: toRem(26) toRem(75);
@@ -25,6 +27,22 @@
 			transform: translateY(50%);
 		}
 	}
+	transition:
+		color 0.3s ease 0s,
+		background-color 0.3s ease 0s,
+		box-shadow 0.3s ease 0s;
+	&::before {
+		content: "";
+		position: absolute;
+		pointer-events: none;
+		display: inline-block;
+		top: -11.25rem;
+		left: 0;
+		width: 1.875rem;
+		height: 100%;
+		background-color: #fff;
+		animation: shiny-btn1 5s ease-in-out infinite;
+	}
 }
 
 .content-hero {
@@ -36,5 +54,31 @@
 			font-size: vmin(12);
 			padding: vmin(12) vmin(29);
 		}
+	}
+}
+
+@keyframes shiny-btn1 {
+	0% {
+		transform: scale(0) rotate(45deg);
+		transform: scale(0) rotate(45deg);
+		opacity: 0;
+	}
+
+	80% {
+		transform: scale(0) rotate(45deg);
+		transform: scale(0) rotate(45deg);
+		opacity: 0.5;
+	}
+
+	81% {
+		transform: scale(4) rotate(45deg);
+		transform: scale(4) rotate(45deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(50) rotate(45deg);
+		transform: scale(50) rotate(45deg);
+		opacity: 0;
 	}
 }
