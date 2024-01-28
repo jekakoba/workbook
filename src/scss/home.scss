@@ -757,10 +757,12 @@
 	// .workbook-content__container
 
 	&__container {
-		max-width: toRem(1018);
-		margin: 0 auto;
 		position: relative;
 		z-index: 2;
+		@media (min-width: em(1024)) {
+			max-width: toRem(1018);
+			margin: 0 auto;
+		}
 	}
 
 	// .workbook-content__title
@@ -771,6 +773,16 @@
 		}
 		&.title {
 			color: $mainColor;
+		}
+		@media (max-width: $tablet) {
+			&:not(:last-child) {
+				margin-bottom: toRem(44);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
 		}
 	}
 
@@ -784,10 +796,19 @@
 		height: 100%;
 		z-index: 2;
 		background-color: $backgroundCards;
+		@media (max-width: $tablet) {
+			padding: toRem(40) toRem(30);
+		}
 	}
 	// .workbook-content__slider
 
 	&__slider {
+		@media (max-width: $mobile) {
+			padding: 0 toRem(10);
+		}
+		@media (max-width: em(375.98)) {
+			padding: 0;
+		}
 		&.swiper {
 			overflow: visible;
 		}
@@ -800,6 +821,11 @@
 		&:not(:last-child) {
 			margin-bottom: toRem(40);
 		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+		}
 	}
 
 	// .workbook-content__slide
@@ -807,23 +833,91 @@
 	&__slide {
 	}
 
-	// .workbook-content__pagination
+	&__bottom {
+	}
 
-	&__pagination {
+	// .workbook-content__navigation
+
+	&__navigation {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: toRem(20);
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	&__pagination {
+		@media (min-width: $mobile) {
+			display: none;
+		}
+		@media (max-width: $mobile) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: toRem(27);
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+			.swiper-pagination-bullet {
+				flex: 0 0 toRem(15);
+				width: toRem(15);
+				height: toRem(15);
+				border-radius: 50%;
+				background-color: #d9d9d9;
+			}
+			.swiper-pagination-bullet-active {
+				background: $red;
+			}
+		}
+	}
+	&__tip {
+		display: none;
+		@media (max-width: $mobile) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		span {
+			font-size: toRem(10);
+			color: black;
+			text-transform: uppercase;
+		}
+		img {
+			width: toRem(52);
+			height: toRem(52);
+			flex: 0 0 toRem(52);
+		}
 	}
 }
 
 .slide-workbook {
 	position: relative;
 	border-radius: toRem(50);
-	filter: blur(toRem(20));
-	transform: scale(0.7);
+	box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.3);
 	transition: transform 0.3s;
 	will-change: filter;
+	@media (max-width: $mobile) {
+		&:nth-child(1) {
+			order: 5;
+		}
+		&:nth-child(2) {
+			order: 6;
+		}
+		&:nth-child(3) {
+			order: 1;
+		}
+		&:nth-child(4) {
+			order: 2;
+		}
+		&:nth-child(5) {
+			order: 3;
+		}
+		&:nth-child(6) {
+			order: 4;
+		}
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -835,14 +929,27 @@
 		background: $red;
 		z-index: 1;
 		border-radius: toRem(50);
+
+		@media (max-width: $mobile) {
+			width: 101.966887%;
+			height: 82.826087%;
+			transform: translate(-1%, -50%);
+		}
+	}
+
+	@media (min-width: $mobile) {
+		filter: blur(toRem(20));
+		transform: scale(0.7);
 	}
 	// transition: transform 0.3s ease 0s;
 	// will-change: transform;
 
 	&.swiper-slide-active,
 	&.swiper-slide-next {
-		filter: blur(toRem(0));
-		transform: scale(1);
+		@media (min-width: $mobile) {
+			filter: blur(toRem(0));
+			transform: scale(1);
+		}
 	}
 
 	// .slide-workbook__chapter-title
@@ -852,6 +959,9 @@
 		font-size: toRem(60);
 		color: $whiteColor;
 		transform: translateY(20%);
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(43);
+		}
 	}
 
 	// .slide-workbook__chapter-name
@@ -863,6 +973,12 @@
 		&:not(:last-child) {
 			margin-bottom: toRem(26);
 		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(19);
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+		}
 	}
 
 	// .slide-workbook__description
@@ -871,6 +987,12 @@
 		p {
 			&:not(:last-child) {
 				margin-bottom: toRem(15);
+			}
+			@media (max-width: $mobileSmall) {
+				font-size: toRem(14);
+				&:not(:last-child) {
+					margin-bottom: toRem(7);
+				}
 			}
 		}
 	}
@@ -1282,16 +1404,16 @@
 				margin-bottom: toRem(35);
 			}
 		}
-		&.title {
-			span {
-				@media (max-width: $mobileSmall) {
-					font-size: toRem(43);
-				}
-			}
-			@media (max-width: $mobileSmall) {
-				font-size: toRem(24);
-			}
-		}
+		// &.title {
+		// 	span {
+		// 		@media (max-width: $mobileSmall) {
+		// 			font-size: toRem(43);
+		// 		}
+		// 	}
+		// 	@media (max-width: $mobileSmall) {
+		// 		font-size: toRem(24);
+		// 	}
+		// }
 	}
 
 	// .faq__spollers

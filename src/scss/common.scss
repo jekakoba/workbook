@@ -18,6 +18,9 @@
 
 	&__content-workbook {
 		padding-bottom: toRem(38);
+		@media (max-width: $mobileSmall) {
+			padding-top: toRem(20);
+		}
 	}
 
 	&__workbook-price {
@@ -61,6 +64,14 @@
 		span {
 			font-size: toRem(50);
 		}
+	}
+	span {
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(43);
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(24);
 	}
 }
 

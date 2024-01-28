@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 // EffectCoverflow
 /*
 Основні модулі слайдера:
@@ -34,21 +34,21 @@ function initSliders() {
 		const sl = new Swiper('.workbook-content__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
+			observeSlideChildren: true,
 			spaceBetween: 100,
 			speed: 800,
 			grabCursor: true,
-			slidesPerView: 2,
 			loop: true,
-			loopedSlides: 3,
-			/*
+			loopAdditionalSlides: 2,
+			slidesPerView: 2,
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.workbook-content__pagination',
 				clickable: true,
 			},
-			*/
+
 			// Скроллбар
 			// Кнопки "вліво/вправо"
 			navigation: {
@@ -79,14 +79,42 @@ function initSliders() {
 
 			
 			*/
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				767.98: {
+					slidesPerView: 2,
+					spaceBetween: 50,
+					// Події
+					on: {
 
+					},
+				},
 
-			// Події
-			on: {
+			},
 
+		});
+
+		// Викликаємо slideTo, якщо слайдер вже завантажений та ширина екрану більше 767.98px
+		if (window.innerWidth > 767.98 && sl.initialized) {
+			sl.slideTo(2, 0, false);
+		} else {
+			// Якщо слайдер ще не завантажено або ширина екрану менше 767.98px, чекаємо подію 'init'
+			sl.on('init', function () {
+				if (window.innerWidth > 767.98) {
+					this.slideTo(2, 0, false);
+				}
+			});
+		}
+
+		// Якщо ви хочете викликати slideTo при кожному ресайзі (при ширині більше 767.98px)
+		window.addEventListener('resize', function () {
+			if (window.innerWidth > 767.98) {
+				sl.slideTo(2, 0, false);
 			}
 		});
-		sl.slideTo(2, 0, false)
+
 	}
 
 
