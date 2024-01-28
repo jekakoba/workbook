@@ -90,7 +90,10 @@
 		}
 		// Якщо не підтримується clamp();
 		@supports not (#{$property}: $propertyValue) {
-			#{$property}: calc(#{toRem($minSize)} + #{$addSize} * (100vw - #{toRem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+			#{$property}: calc(
+				#{toRem($minSize)} + #{$addSize} * (100vw - #{toRem($widthTo)}) / #{math.div($widthFrom, 16) -
+					math.div($widthTo, 16)}
+			);
 		}
 	}
 	@if $keepSize != 1 and $keepSize != 2 {
@@ -98,4 +101,14 @@
 			#{$property}: toRem($minSize);
 		}
 	}
+}
+@function vw($value, $base: 1920) {
+	@return math.div($value, $base) * 100vw;
+}
+@function vmin($value, $base: 320) {
+	@return math.div($value, $base) * 100vmin;
+}
+
+@mixin adaptiveSize($propertyCalc, $symbolCalc, $meaningCalc) {
+	#{$propertyCalc}: calc(calc(1vw + 1vh) #{$symbolCalc} #{$meaningCalc});
 }

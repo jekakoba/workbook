@@ -1,150 +1,317 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Верстка «NEW_PROJECT_NAME»</title>
-	</head>
-	<body>
-		<div class="rootpage">
-			<h1>Верстка «NEW_PROJECT_NAME»</h1>
-			<div class="rootpage__info">
-				Опис проєкту
-			</div>
-			<h2>Готові сторінки:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html">Головна</a></li>
-			</ol>
-			<h2>Попапи:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html#"></a></li>
-			</ol>
-			<div class="rootpage__tnx">
-				<h2>Дякую за замовлення!</h2>
-				<p>Буду радий (да) гарному відгуку.</p>
-				<p>Звертайтесь ще!</p>
-			</div>
-			<div class="rootpage__contacts">
-				<h2>Мої контакти:</h2>
-				<p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-				<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-				<p>Соц. мережі: <a href="">посилання</a></p>
-			</div>
-		</div>
-	</body>
-	<style>
-		@charset "UTF-8";
-		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-		* ,*::before, *::after {
-			padding: 0px;
-			margin: 0px;
-			border: 0px;
-			box-sizing: border-box; 
-		}
-		html, body {
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			min-width: 320px;
-			width: 100%;
-			color: #fff;
-			background-color: #5e5373;
-		}
-		body {
-			font-family: Montserrat;
-			font-size: 100%;
-			line-height: 1;
-			font-size: 1rem;
-		}
-		a {
-			text-decoration: underline;
-			color: #ebe691
-		}
-		a:visited {
-			text-decoration: underline;
-			color: #aaa768;
-		}
-			a:hover {
-			text-decoration: none;
-		}
-		ul li {
-			list-style: none;
-		}
-		img {
-			vertical-align: top;
-		}
-		.wrapper {
-			width: 100%;
-			min-height: 100%;
-			overflow: hidden;
-		}
-		.rootpage{
-			padding: 30px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		@media (max-width: 767px) {
-			.rootpage{
-				padding:30px 15px;
-			}
-		}
-		h1 {
-			color: #ebe691;
-			font-size: 2.5rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-		@media (max-width: 767px) {
-			h1 {
-				font-size: 1.85rem;
-				margin: 0px 0px 1.25rem 0px;
-			}
-		}
-		h2 {
-			color: #ebe691;
-			font-size: 1.25rem;
-			margin: 0px 0px 1rem 0px;
-		}
-		@media (max-width: 767px) {
-			 h2 {
-				font-size: 1.125rem;
-				margin: 0px 0px 1rem 0px;
-			}
-		}
-		.rootpage__info{
-			line-height: 140%;
-			margin: 0px 0px 1.5rem 0px;
-		}
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Workbook"
+})
 
-		.rootpage__list{
-			margin: 0px 0px 2.25rem 1.25rem;
-		}
-		.rootpage__list li:not(:last-child){
-			margin: 0px 0px 15px 0px;
-		}
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius: 200px;
-			padding: 20px 65px;
-			line-height: 140%;
-		}
-		@media (max-width: 767px){
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius:40px;
-			padding: 20px;
-		}
-		}
-		.rootpage__contacts{
-			background: #32b5a4;
-			
-		}
-		.rootpage__contacts a{
-			color: #ebe691;
-		}
-		.rootpage__tnx{
-			background: #c22d63;
-			margin: 0px 0px 1rem 0px;
-		}
-	</style>
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="page__hero hero">
+				<div class="hero__main-container">
+					<div class="hero__header">
+						<div class="hero__top">
+							<h1 class="hero__title bg-gradient">
+								<span>Work</span>
+								<span>Book</span>
+							</h1>
+						</div>
+						<div class="hero__bottom">
+							<p class="hero__subtitle">
+								<span>the art</span>
+								<span>of posing</span>
+							</p>
+						</div>
+					</div>
+					<div class="hero__body">
+						<div class="hero__image">
+							<img src="@img/main-photo.png" alt="diana diloyan">
+						</div>
+						<div class="hero__content content-hero">
+							<h2 class="content-hero__title ">Your ultimate guide to stunning photos!</h2>
+							<div class="content-hero__languages">
+								Available in three languages
+								<span class="bg-gradient">ENG, UA, RU</span>
+							</div>
+							<a class="content-hero__button button" href="#">GET A Workbook</a>
+						</div>
+						<div class="hero__about-model model-about">
+							<p class="model-about__name">Diana Diloyan</p>
+							<ul>
+								<li>A model with a <span class="bg-gradient">10</span> years of experience</li>
+								<li>Blogger and influencer with more than <span class="bg-gradient">250K</span> audience</li>
+								<li><span class="bg-gradient">Founder</span> of a modeling school for girls</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<img class="hero__bg" src="@img/main-bg.jpg" alt="bg">
+			</section>
+			<section class="page__course course">
+				<div class="course__container">
+					<h2 class="course__title title"><span class="bg-gradient">For whom</span> is this course?</h2>
+					<ul class="course__cards">
+
+						<li class="course__card card">
+							<div class="card__wrapper">
+								<div class="card__icon">
+									<img src="@img/for-whom/heart.png" alt="hear icon">
+								</div>
+								<h3 class="card__title bg-gradient">FOR GIRLS</h3>
+								<p class="card__text text">
+									If you want to learn how to present yourself beautifully in photos and feel confident in front of the camera.
+								</p>
+							</div>
+						</li>
+						<li class="course__card card">
+							<div class="card__wrapper">
+								<div class="card__icon">
+									<img src="@img/for-whom/bloggers.png" alt="for bloggers icon">
+								</div>
+								<h3 class="card__title bg-gradient">FOR BLOGGERS</h3>
+								<p class="card__text text">
+									If you want to enhance your presentation and always look perfect in photos, know your strengths.
+								</p>
+							</div>
+						</li>
+						<li class="course__card card">
+							<div class="card__wrapper">
+								<div class="card__icon card__icon_big">
+									<img src="@img/for-whom/fashion.png" alt="fashion icon">
+								</div>
+								<h3 class="card__title bg-gradient">FOR MODELS</h3>
+								<p class="card__text text">
+									If you're a beginner or an established model and want to discover more secrets of perfect posing and interacting with the camera.
+								</p>
+							</div>
+						</li>
+						<li class="course__card card">
+							<div class="card__wrapper">
+								<div class="card__icon">
+									<img src="@img/for-whom/photography.png" alt="photography icon">
+								</div>
+								<h3 class="card__title bg-gradient">
+									FOR PHOTOGRAPHERS
+								</h3>
+								<p class="card__text text">
+									If you want always to have a cheat sheet for your clients and a posing guide at your fingertips.
+								</p>
+							</div>
+						</li>
+						<canvas class="particles particles1" data-color="#ffffff"></canvas>
+						<canvas class="particles particles2" data-color="#ffffff"></canvas>
+					</ul>
+				</div>
+			</section>
+			<section class="page__workbook workbook">
+				<div class="workbook__container">
+					<div class="workbook__wrapper">
+						<div class="workbook__body">
+							<div class="workbook__images-wrapper">
+								<h2 class="workbook__title title title_workbook"><span class="bg-gradient">Posing</span>WORKBOOK</h2>
+								<div class="workbook__images">
+									<div class="workbook__image workbook__image_left">
+										<img src="@img/workbook-posing/workbook-2.jpg" alt="workbook">
+									</div>
+									<div class="workbook__image workbook__image_center">
+										<img src="@img/workbook-posing/workbook.jpg" alt="workbook">
+									</div>
+									<div class="workbook__image workbook__image_right">
+										<img src="@img/workbook-posing/workbook-3.jpg" alt="workbook">
+									</div>
+								</div>
+							</div>
+							<div class="workbook__content">
+								<h3 class="workbook__content-title">WHAT IS THIS WORKBOOK ABOUT?</h3>
+								<p class="workbook__text text">Together, we will explore the critical aspects of posing, starting from basic principles and delving into the details that will make your shots unique. Get ready for an exciting journey
+									into
+									the world of the art of posing, where you can unleash your creativity and achieve stunning results.</p>
+								<a class="workbook__button button button_workbook-posing" href="#">GET A Workbook</a>
+							</div>
+						</div>
+						<div class="workbook__bg"></div>
+					</div>
+				</div>
+			</section>
+			<section class="page__content-workbook workbook-content">
+				<div class="workbook-content__container">
+					<h2 class="workbook-content__title title"><span class="bg-gradient">Check it out</span>WORKBOOK CONTENT</h2>
+					<div class="workbook-content__body">
+						<div class="workbook-content__slider swiper">
+							<div class="workbook-content__wrapper swiper-wrapper">
+								<div class="workbook-content__slide slide-workbook swiper-slide">
+
+									<h3 class="slide-workbook__chapter-title">Chapter 1</h3>
+									<h4 class="slide-workbook__chapter-name bg-gradient">From camera shy, to camera confident</h4>
+									<div class="slide-workbook__description text">
+										<p>
+											In the first part of the workbook, you'll learn how to identify your good side and feel at ease in front of the camera.
+										</p>
+										<p>
+											I'll share my working methods that help me prepare for a shoot. We'll review visual examples and complete practical exercises.
+										</p>
+									</div>
+								</div>
+								<div class="workbook-content__slide slide-workbook swiper-slide">
+									<h3 class="slide-workbook__chapter-title">Chapter 2</h3>
+									<h4 class="slide-workbook__chapter-name bg-gradient">PREPAring for a photoshooT</h4>
+									<div class="slide-workbook__description text">
+										<p>
+											In the book's second part, you'll learn how to prepare for a photo shoot: choosing locations, defining the style and concept of the shoot, selecting outfits, hairstyling, and makeup.
+										</p>
+										<p>
+											I'll also share what you should always bring to a photoshoot.
+										</p>
+									</div>
+								</div>
+								<div class="workbook-content__slide slide-workbook swiper-slide">
+									<h3 class="slide-workbook__chapter-title">Chapter 3</h3>
+									<h4 class="slide-workbook__chapter-name bg-gradient">The art of posing</h4>
+									<div class="slide-workbook__description text">
+										<p>
+											In the workbook's third part, you'll see possible posing mistakes and correct examples with full explanations.
+										</p>
+										<p>
+											We'll cover basic posing rules, posing while standing, sitting against a wall, on a couch, on a high stool, sitting at a table, and more.
+										</p>
+									</div>
+								</div>
+								<div class="workbook-content__slide slide-workbook swiper-slide">
+									<h3 class="slide-workbook__chapter-title">Chapter 4</h3>
+									<h4 class="slide-workbook__chapter-name bg-gradient">PRO VERSION ONLY: Building a model portfolio</h4>
+									<div class="slide-workbook__description text">
+										<p>
+											You'll discover the secrets of creating the perfect model portfolio and how to fill it correctly.
+										</p>
+										<p>
+											We'll analyze posing for model tests and snapshots with examples and practice these skills with practical assignments.
+										</p>
+									</div>
+								</div>
+								<div class="workbook-content__slide slide-workbook swiper-slide">
+									<h3 class="slide-workbook__chapter-title">Chapter 5</h3>
+									<h4 class="slide-workbook__chapter-name bg-gradient">PRO VERSION ONLY: Publishing photos in magazines</h4>
+									<div class="slide-workbook__description text">
+										<p>
+											In this workbook section, you'll learn how to get your first magazine cover and start earning from selling your photos.
+										</p>
+									</div>
+								</div>
+								<div class="workbook-content__slide slide-workbook swiper-slide">
+									<h3 class="slide-workbook__chapter-title">Chapter 6</h3>
+									<h4 class="slide-workbook__chapter-name bg-gradient">PRO VERSION ONLY: Interacting with the photographer</h4>
+									<div class="slide-workbook__description text">
+										<p>
+											You'll learn how to find a photographer for free shoots and establish proper communication.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="workbook-content__pagination">
+								<button class="swiper-button swiper-button_prev _icon-arrow-slider" aria-label="previous slide" type="button"></button>
+								<button class="swiper-button swiper-button_next _icon-arrow-slider" aria-label="next slide" type="button"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__workbook-price price-workbook">
+				<div class="price-workbook__container">
+					<h2 class="price-workbook__title title"><span class="bg-gradient">Price list</span>Workbook</h2>
+					<div class="price-workbook__items">
+						<div class="price-workbook__item item-workbook item-workbook_dark">
+
+							<h2 class="item-workbook__title title"><span class="bg-gradient">Workbook</span>"The Art of Posing"</h2>
+							<div class="item-workbook__image">
+								<img src="@img/workbook/workbook.jpg" alt="Workbook The Art of Posing">
+							</div>
+
+							<div class="item-workbook__content">
+								<h3 class="item-workbook__name">Workbook "The Art of Posing"</h3>
+								<div class="item-workbook__description text">
+									<p>After payment you will receive a Workbook in 3 languages: <span class="bg-gradient">ENG, UA, RU</span></p>
+									<p>This is <span class="bg-gradient">80 pages</span> of information with examples of over<span class="bg-gradient"> 200 different poses</span> + descriptions. </p>
+								</div>
+								<h4 class="item-workbook__title-list">You will also learn:</h4>
+								<ul>
+									<li>How to prepare for a photoshoot;</li>
+									<li>How to feel comfortable in front of the camera; </li>
+									<li>How to choose outfits, and do your makeup and hairstyle.</li>
+								</ul>
+							</div>
+							<div class="item-workbook__footer">
+								<div class="item-workbook__prices">
+									<div class="item-workbook__old-price">59.99 $</div>
+									<div class="item-workbook__price  bg-gradient">29.99 $</div>
+								</div>
+								<a href="#" class="item-workbook__button button">GET A WORKBOOK</a>
+							</div>
+						</div>
+						<div class="price-workbook__item item-workbook item-workbook_light">
+
+							<h2 class="item-workbook__title title"><span class="bg-gradient">Workbook PRO </span>"The Art of Posing"</h2>
+							<div class="item-workbook__image">
+								<img src="@img/workbook/workbook-pro.jpg" alt="Workbook PRO The Art of Posing">
+							</div>
+
+							<div class="item-workbook__content">
+								<h3 class="item-workbook__name">Workbook PRO "The Art of Posing"</h3>
+								<div class="item-workbook__description text">
+									<p>After payment you will receive a Workbook in 3 languages: <span class="bg-gradient">ENG, UA, RU</span></p>
+									<p>
+										It’s <span class="bg-gradient">100 pages</span> of info about more than <span class="bg-gradient">200 examples</span> of poses with descriptions, how to build a model portfolio, get your first magazine cover,
+										and start earning from selling your photos.</p>
+								</div>
+								<h4 class="item-workbook__title-list">ONLY IN THE PRO VERSION:</h4>
+								<ul>
+									<li>Сreating a model portfolio;</li>
+									<li>Interacting with the photographer;</li>
+									<li>Magazine publication.</li>
+								</ul>
+							</div>
+							<div class="item-workbook__footer">
+								<div class="item-workbook__prices">
+									<div class="item-workbook__old-price">79.99 $</div>
+									<div class="item-workbook__price  bg-gradient">59.99 $</div>
+								</div>
+								<a href="#" class="item-workbook__button button">GET A WORKBOOK</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="price-workbook__decor price-workbook__decor_top"></div>
+				<div class="price-workbook__decor price-workbook__decor_bottom"></div>
+				<div class="price-workbook__decor price-workbook__decor_rigth"></div>
+			</section>
+			<section class="page__faq faq">
+				<div class="faq__container">
+					<h2 class="faq__title title"><span class="bg-gradient">Questions</span>AND ANSWERS</h2>
+					<div data-spollers class="faq__spollers spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">How will I access the workbook?</summary>
+							<div class="spollers__body">
+								<p class="text">After payment, you will receive a download link for the digital version of the workbook in three languages to the email you provided during the payment process.</p>
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title">How long will I have access to the workbook?</summary>
+							<div class="spollers__body">
+								<p class="text">After purchasing the workbook, you will have lifetime access to it. <br>
+									Remember to download it so you can continue your learning and start the practical exercises.</p>
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title">Where can I reach out if I have questions before/after purchasing?</summary>
+							<div class="spollers__body">
+								<p class="text">I'm always available. You can email me at pr.dianadiloyan@gmail.com or contact me on Telegram at <a class="bg-gradient" href="https://t.me/diloyan">@diloyan</a></p>
+							</div>
+						</details>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

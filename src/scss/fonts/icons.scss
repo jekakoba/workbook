@@ -14,3 +14,12 @@
 		display: block;
 	}
 }
+
+._icon-arrow:before {
+	content: "\e900";
+	color: #fff;
+}
+._icon-arrow-slider:before {
+	content: "\e901";
+	color: #fff;
+}

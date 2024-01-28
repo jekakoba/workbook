@@ -1,1 +1,71 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.page {
+	&__hero {
+	}
+	&__course {
+		padding-top: toRem(102);
+		padding-bottom: toRem(168);
+		@media (max-width: em(1024.98)) {
+			padding-top: toRem(60);
+		}
+		@media (max-width: $mobile) {
+			padding-top: toRem(20);
+		}
+	}
+	&__workbook {
+		padding-bottom: toRem(194);
+	}
+
+	&__content-workbook {
+		padding-bottom: toRem(194);
+	}
+
+	&__workbook-price {
+		padding-bottom: toRem(186);
+	}
+	&__faq {
+		padding-bottom: toRem(167);
+	}
+}
+//==========================================//
+
+.bg-gradient {
+	background-image: $red;
+	background-position: 0 0;
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: toRem(50);
+	font-weight: 600;
+	color: $whiteColor;
+	text-transform: uppercase;
+	span {
+		transform: translateY(37%);
+		font-family: "Birthstone";
+		font-size: toRem(90);
+		font-weight: 400;
+		text-transform: none;
+	}
+	&_workbook {
+		font-size: toRem(40);
+		span {
+			font-size: toRem(50);
+		}
+	}
+}
+
+.text {
+	line-height: 1.5;
+	font-weight: 300;
+	color: $whiteColor;
+}

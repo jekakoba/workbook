@@ -9,6 +9,7 @@
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+// EffectCoverflow
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -28,19 +29,30 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.workbook-content__slider')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
+		new Swiper('.workbook-content__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			//autoHeight: true,
+			spaceBetween: 80,
+			// autoHeight: true,
 			speed: 800,
-
+			grabCursor: true,
+			centeredSlides: true,
+			slidesPerView: 2,
+			loop: true,
+			// loopedSlides: 6,
+			// effect: "coverflow",
+			// coverflowEffect: {
+			// 	rotate: 0,
+			// 	stretch: 0,
+			// 	depth: 100,
+			// 	modifier: 2,
+			// 	slideShadows: true,
+			// },
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -74,8 +86,8 @@ function initSliders() {
 
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button_prev',
+				nextEl: '.swiper-button_next',
 			},
 			/*
 			// Брейкпоінти
