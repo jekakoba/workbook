@@ -7,7 +7,7 @@
 <body>
 	<div class="wrapper">
 		<main class="page">
-			<section class="page__hero hero">
+			<section id="hero" class="page__hero hero">
 				<div class="hero__main-container">
 					<div class="hero__header">
 						<div class="hero__top">
@@ -33,7 +33,7 @@
 								Available in three languages
 								<span class="bg-gradient">ENG, UA, RU</span>
 							</div>
-							<a class="content-hero__button button" href="#">GET A Workbook</a>
+							<a class="content-hero__button button" href="#"><span>GET A Workbook</span></a>
 						</div>
 						<div class="hero__about-model model-about">
 							<p class="model-about__name">Diana Diloyan</p>
@@ -126,7 +126,7 @@
 								<p class="workbook__text text">Together, we will explore the critical aspects of posing, starting from basic principles and delving into the details that will make your shots unique. Get ready for an exciting journey
 									into
 									the world of the art of posing, where you can unleash your creativity and achieve stunning results.</p>
-								<a class="workbook__button button button_workbook-posing" href="#">GET A Workbook</a>
+								<a class="workbook__button button button_workbook-posing" href="#"><span>GET A Workbook</span></a>
 							</div>
 						</div>
 						<div class="workbook__bg"></div>
@@ -137,7 +137,7 @@
 				<div class="workbook-content__container">
 					<h2 class="workbook-content__title title"><span class="bg-gradient">Check it out</span>WORKBOOK CONTENT</h2>
 					<div class="workbook-content__body">
-						<div class="workbook-content__slider swiper">
+						<div class="workbook-content__slider swiper" data-desktop="true">
 							<div class="workbook-content__wrapper swiper-wrapper">
 
 
@@ -223,8 +223,8 @@
 							</div>
 							<div class="workbook-content__bottom">
 								<div class="workbook-content__navigation">
-									<button class="swiper-button swiper-button_prev _icon-arrow-slider" aria-label="previous slide" type="button"></button>
-									<button class="swiper-button swiper-button_next _icon-arrow-slider" aria-label="next slide" type="button"></button>
+									<button class="swiper-button swiper-button_prev _icon-arrow-slider hover-gradient" aria-label="previous slide" type="button"></button>
+									<button class="swiper-button swiper-button_next _icon-arrow-slider hover-gradient" aria-label="next slide" type="button"></button>
 								</div>
 								<div class="workbook-content__pagination"></div>
 								<div class="workbook-content__tip">
@@ -266,7 +266,7 @@
 									<div class="item-workbook__old-price">59.99 $</div>
 									<div class="item-workbook__price  bg-gradient">29.99 $</div>
 								</div>
-								<a href="#" class="item-workbook__button button">GET A WORKBOOK</a>
+								<a href="#" class="item-workbook__button button"><span>GET A WORKBOOK</span></a>
 							</div>
 						</div>
 						<div class="price-workbook__item item-workbook item-workbook_light">
@@ -296,7 +296,7 @@
 									<div class="item-workbook__old-price">79.99 $</div>
 									<div class="item-workbook__price  bg-gradient">59.99 $</div>
 								</div>
-								<a href="#" class="item-workbook__button button">GET A WORKBOOK</a>
+								<a href="#" class="item-workbook__button button"><span>GET A WORKBOOK</span></a>
 							</div>
 						</div>
 					</div>
@@ -325,15 +325,24 @@
 						<details class="spollers__item">
 							<summary class="spollers__title">Where can I reach out if I have questions before/after purchasing?</summary>
 							<div class="spollers__body">
-								<p class="text">I'm always available. You can email me at pr.dianadiloyan@gmail.com or contact me on Telegram at <a class="bg-gradient" href="https://t.me/diloyan">@diloyan</a></p>
+								<p class="text">I'm always available. You can email me at <a href="mailto:pr.dianadiloyan@gmail.com">pr.dianadiloyan@gmail.com</a> or contact me on Telegram at <a class="bg-gradient"
+										href="https://t.me/diloyan">@diloyan</a></p>
 							</div>
 						</details>
 					</div>
+
 				</div>
+				<button class="top" data-goto="#hero" type="button">
+					<svg viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 7L8 1.5L15 7" stroke="white" stroke-width="2" />
+					</svg>
+				</button>
 			</section>
+
 		</main>
 	</div>
 	@@include('html/_js.htm',{})
+
 </body>
 
 </html>

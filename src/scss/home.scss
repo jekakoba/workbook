@@ -3,17 +3,17 @@
 .hero {
 	position: relative;
 	min-height: 100vh;
-	&::before {
-		content: "";
-		position: absolute;
-		bottom: vw(10);
-		left: 0;
-		width: 100%;
-		height: vw(5);
-		background-color: #d8c3b6;
-		filter: blur(vw(15));
-		z-index: 3;
-	}
+	// &::before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	bottom: vw(10);
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: vw(5);
+	// 	background-color: #d8c3b6;
+	// 	filter: blur(vw(15));
+	// 	z-index: 3;
+	// }
 	// .hero__container
 
 	&__main-container {
@@ -263,19 +263,26 @@
 
 .course {
 	position: relative;
+	border-radius: toRem(20) toRem(20) 0 0;
 	&::before {
 		content: "";
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		left: 50%;
-		top: vw(-30);
-		background: url("@img/decor/decor-bg.svg") 0 0 / 100% auto no-repeat;
+		top: vw(-40);
+
 		transform: translateX(-50%);
 		z-index: 3;
-		display: none;
+		@media (min-width: em(1024)) {
+			background: url("@img/decor/decor-circle.svg") 0 0 / 100% auto no-repeat;
+		}
 		@media (max-width: em(1024.98)) {
+			background: url("@img/decor/decor-circle-mobile.svg") 0 0 / 100% auto no-repeat;
 			top: vmin(-15);
+		}
+		@media (max-width: $mobileSmall) {
+			top: vmin(-25);
 		}
 	}
 	// .course__container
@@ -288,23 +295,10 @@
 	// .course__title
 
 	&__title {
-		&:not(:last-child) {
-			margin-bottom: toRem(67);
-		}
-		@media (max-width: $mobile) {
-			&:not(:last-child) {
-				margin-bottom: toRem(40);
-			}
-		}
-
-		&.title {
-			span {
-				@media (max-width: $mobileSmall) {
-					font-size: toRem(43);
-				}
-			}
-			@media (max-width: $mobileSmall) {
-				font-size: toRem(24);
+		@media (max-width: $mobileSmall) {
+			transform: translateY(-30%);
+			&.title {
+				margin-bottom: toRem(15);
 			}
 		}
 	}
@@ -526,6 +520,18 @@
 //=========================Workbook============================//
 
 .workbook {
+	position: relative;
+	// @media (max-width: $mobileSmall) {
+	// 	&::before {
+	// 		content: "";
+	// 		position: absolute;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		top: 0;
+	// 		left: 0;
+	// 		background: url("@img/decor/d.svg") 0 0 / cover no-repeat;
+	// 	}
+	// }
 	// .workbook__container
 
 	&__container {
@@ -568,6 +574,9 @@
 			background: url("@img/workbook-posing/decor-2.svg") 0 0 / cover no-repeat;
 			transform: translate(-27%);
 		}
+		// @media (max-width: $tablet) {
+		// 	background: url("@img/decor/d.svg") 0 0 / cover no-repeat;
+		// }
 	}
 
 	// .workbook__body
@@ -579,9 +588,13 @@
 		column-gap: toRem(200);
 		@include adaptiveValue("column-gap", 200, 190, 0, $containerWidth, 991.98);
 		align-items: center;
+		position: relative;
+		z-index: 2;
+
 		@media (max-width: $tablet) {
 			grid-template-columns: auto;
 			row-gap: toRem(100);
+			background-color: #131313;
 		}
 	}
 
@@ -590,14 +603,14 @@
 	&__images-wrapper {
 		position: relative;
 		z-index: 2;
+		@media (max-width: $tablet) {
+			background-color: #131313;
+		}
 	}
 
 	// .workbook__title
 
 	&__title {
-		&:not(:last-child) {
-			margin-bottom: toRem(40);
-		}
 	}
 
 	// .workbook__images
@@ -660,7 +673,6 @@
 		@media (max-width: $tablet) {
 			text-align: center;
 			padding: toRem(100) toRem(20) 0 toRem(20);
-			border-radius: toRem(10);
 
 			@media (max-width: $tablet) {
 				background-color: $lightWhiteColor;
@@ -768,21 +780,8 @@
 	// .workbook-content__title
 
 	&__title {
-		&:not(:last-child) {
-			margin-bottom: toRem(84);
-		}
 		&.title {
-			color: $mainColor;
-		}
-		@media (max-width: $tablet) {
-			&:not(:last-child) {
-				margin-bottom: toRem(44);
-			}
-		}
-		@media (max-width: $mobileSmall) {
-			&:not(:last-child) {
-				margin-bottom: toRem(30);
-			}
+			color: $backgroundDark;
 		}
 	}
 
@@ -1006,21 +1005,50 @@
 	box-shadow: 0 0 toRem(30) toRem(1) rgba(0, 0, 0, 0.4);
 	color: $whiteColor;
 	border-radius: toRem(10);
-
+	background-color: $backgroundDark;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		transition: opacity 0.6s;
+		border-radius: toRem(10);
+		opacity: 0;
+		transition: opacity 0.3s;
+		background: linear-gradient(
+			90deg,
+			#ff0e10 0%,
+			#f32a2d 18.63%,
+			#fc5858 33.6%,
+			#ee3d3d 52.32%,
+			#df3032 61.96%,
+			#c21818 85.58%,
+			#bc0404 100%
+		);
+	}
+	@media (any-hover: hover) {
+		&:hover::after {
+			opacity: 1;
+		}
+	}
 	&::before {
+		position: relative;
+		z-index: 3;
 		font-size: toRem(12);
 	}
 	// .swiper-pagination_prev
 
 	&_prev {
-		background-color: $backgroundDark;
 	}
 
 	// .swiper-pagination_next
 
 	&_next {
 		transform: rotate(180deg);
-		background: $red;
+		// background: $red;
 	}
 }
 
@@ -1038,21 +1066,6 @@
 	// .price-workbook__title
 
 	&__title {
-		&:not(:last-child) {
-			margin-bottom: toRem(72);
-		}
-
-		@media (max-width: $mobileSmall) {
-			font-size: toRem(24);
-			span {
-				font-size: toRem(43);
-			}
-		}
-		@media (max-width: $mobileSmall) {
-			&:not(:last-child) {
-				margin-bottom: toRem(40);
-			}
-		}
 	}
 
 	// .price-workbook__items
@@ -1100,11 +1113,11 @@
 				transform: translateX(-30%);
 			}
 			@media (max-width: em(800.98)) {
-				width: vmin(231);
-				height: vmin(212);
-				top: vmin(-70);
-				transform: rotate(35deg);
-				left: vmin(-70);
+				width: 38.1875vmin;
+				height: 43.25vmin;
+				top: -1.875vmin;
+				transform: rotate(20deg);
+				left: -7.875vmin;
 			}
 		}
 		// .price-workbook__decor_bottom
@@ -1139,7 +1152,7 @@
 
 .item-workbook {
 	border-radius: toRem(20);
-	box-shadow: 0px 0px 12px 1px rgba(251, 251, 251, 0.3);
+	animation: puls-shadow 3s infinite ease;
 
 	display: flex;
 	flex-direction: column;
@@ -1179,6 +1192,11 @@
 		}
 		&:not(:last-child) {
 			margin-bottom: toRem(28);
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: toRem(15);
+			}
 		}
 	}
 
@@ -1383,37 +1401,26 @@
 //=========================FAQ===========================================================================
 
 .faq {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-width: 100%;
+		height: 100%;
+		background: url("@img/decor/decor-faq.svg") 0 0 / auto 100% repeat-x;
+	}
 	// .faq__container
 
 	&__container {
+		position: relative;
+		z-index: 2;
 	}
 
 	// .faq__title
 
 	&__title {
-		&:not(:last-child) {
-			margin-bottom: toRem(106);
-		}
-		@media (max-width: $mobile) {
-			&:not(:last-child) {
-				margin-bottom: toRem(60);
-			}
-		}
-		@media (max-width: $mobileSmall) {
-			&:not(:last-child) {
-				margin-bottom: toRem(35);
-			}
-		}
-		// &.title {
-		// 	span {
-		// 		@media (max-width: $mobileSmall) {
-		// 			font-size: toRem(43);
-		// 		}
-		// 	}
-		// 	@media (max-width: $mobileSmall) {
-		// 		font-size: toRem(24);
-		// 	}
-		// }
 	}
 
 	// .faq__spollers
