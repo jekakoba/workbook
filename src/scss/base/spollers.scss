@@ -79,7 +79,7 @@
 }
 // Контент спойлера
 .spollers__body {
-	padding: toRem(0) toRem(100) toRem(45) toRem(45);
+	padding: toRem(20) toRem(100) toRem(20) toRem(45);
 	background-color: #1b1b1b;
 	will-change: transform;
 	@media (max-width: em(600)) {
@@ -88,7 +88,7 @@
 	}
 	@media (max-width: $mobileSmall) {
 		font-size: toRem(12);
-		padding: 0 toRem(16) toRem(16) toRem(16);
+		padding: toRem(16);
 	}
 	p {
 		a {

@@ -154,15 +154,14 @@
 			&::before {
 				content: "";
 				position: absolute;
-				top: 0;
-				left: 50%;
-				transform: translateX(-50%);
-				// transform: translate(-50%, 2%);
+				top: toRem(50);
+				left: 55%;
+				transform: translateX(-55%);
 				background-color: rgba(0, 0, 0, 0.7);
 				-webkit-filter: blur(vw(20));
 				filter: blur(vw(20));
-				width: vw(480);
-				height: vw(220);
+				width: vw(500);
+				height: vw(240);
 				z-index: -1;
 				border-radius: 50%;
 			}
@@ -535,16 +534,18 @@
 	// .workbook__container
 
 	&__container {
+		@media (max-width: $mobileSmall) {
+			padding: 0 toRem(40);
+		}
 	}
 
 	&__wrapper {
 		position: relative;
-		border-radius: toRem(10);
 		max-width: toRem(1160);
 		margin: 0 auto;
-
 		@media (min-width: $tablet) {
 			background-color: $lightWhiteColor;
+			border-radius: toRem(10);
 		}
 		&::after {
 			content: "";
@@ -571,7 +572,7 @@
 		height: 100%;
 		width: 100%;
 		@media (min-width: $tablet) {
-			background: url("@img/workbook-posing/decor-2.svg") 0 0 / cover no-repeat;
+			background: url(../img/workbook-posing/decor-2.svg) -10% 0/ 100% auto no-repeat;
 			transform: translate(-27%);
 		}
 		// @media (max-width: $tablet) {
@@ -594,7 +595,10 @@
 		@media (max-width: $tablet) {
 			grid-template-columns: auto;
 			row-gap: toRem(100);
-			background-color: #131313;
+			// background-color: #131313;
+		}
+		@media (max-width: $mobileSmall) {
+			row-gap: 0;
 		}
 	}
 
@@ -604,7 +608,21 @@
 		position: relative;
 		z-index: 2;
 		@media (max-width: $tablet) {
-			background-color: #131313;
+		}
+		@media (max-width: $mobileSmall) {
+			background-color: $backgroundDark;
+			padding-bottom: 22%;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				padding-bottom: 23.243598%;
+				bottom: 0;
+				transform: translateY(99%);
+				left: 0;
+
+				background: url(../img/decor/wk-decor.svg) 0 0 / auto 100% no-repeat;
+			}
 		}
 	}
 
@@ -672,8 +690,8 @@
 		}
 		@media (max-width: $tablet) {
 			text-align: center;
-			padding: toRem(100) toRem(20) 0 toRem(20);
-
+			padding: toRem(50) toRem(20) 0 toRem(20);
+			border-radius: 0 0 toRem(10) toRem(10);
 			@media (max-width: $tablet) {
 				background-color: $lightWhiteColor;
 			}
@@ -686,12 +704,17 @@
 				width: 0;
 				height: 0;
 				position: absolute;
-				top: toRem(100);
+				top: toRem(50);
 				@media (max-width: $mobile) {
-					top: toRem(124);
+					top: toRem(60);
 				}
 				@media (max-width: $mobileSmall) {
-					top: toRem(120);
+					@include adaptiveValue("top", 97, 62, 0, 479.98, 320);
+				}
+				@media (max-width: $mobileSmall) {
+					border-left: toRem(8) solid transparent;
+					border-right: toRem(8) solid transparent;
+					border-bottom: toRem(23) solid $backgroundDark;
 				}
 			}
 			&::before {
@@ -699,9 +722,12 @@
 				transform: rotate(90deg);
 			}
 			&::after {
-				right: 0;
+				right: toRem(-1.5);
 				transform: rotate(-90deg);
 			}
+		}
+		@media (max-width: $mobileSmall) {
+			padding-top: 23%;
 		}
 	}
 
@@ -734,20 +760,25 @@
 		}
 		@media (max-width: $tablet) {
 			&:not(:last-child) {
-				margin-bottom: toRem(55);
+				margin-bottom: toRem(30);
 			}
 		}
 		@media (max-width: $mobileSmall) {
 			font-size: toRem(12);
-			&:not(:last-child) {
-				margin-bottom: toRem(30);
-			}
 		}
 	}
 
 	// .workbook__button
 
 	&__button {
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+		&.button {
+			@media (max-width: $mobileSmall) {
+				font-size: toRem(12);
+			}
+		}
 	}
 }
 
@@ -1153,7 +1184,6 @@
 .item-workbook {
 	border-radius: toRem(20);
 	animation: puls-shadow 3s infinite ease;
-
 	display: flex;
 	flex-direction: column;
 	padding: toRem(0) toRem(35) toRem(0) toRem(35);
@@ -1349,12 +1379,17 @@
 	// .item-workbook__button
 
 	&__button {
+		@media (min-width: $mobileSmall) {
+			max-width: 80%;
+			display: flex;
+		}
 		&.button {
+			margin: 0 auto;
 			width: 100%;
-			padding: toRem(26) toRem(68);
+			padding: toRem(20) toRem(10);
 			transform: translateY(50%);
+			font-size: toRem(16);
 			@media (max-width: $tablet) {
-				font-size: toRem(16);
 			}
 			@media (max-width: $mobileSmall) {
 				padding: toRem(18) toRem(40);
