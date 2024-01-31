@@ -1,0 +1,55 @@
+.page {
+	&__hero {
+	}
+	&__course {
+		padding-top: toRem(102);
+		padding-bottom: toRem(168);
+		@media (max-width: em(1024.98)) {
+			padding-top: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			padding-top: 0;
+			padding-bottom: toRem(100);
+		}
+		@media (max-width: $mobileSmall) {
+			padding-bottom: toRem(70);
+		}
+	}
+	&__workbook {
+		padding-bottom: toRem(194);
+		@media (max-width: $mobile) {
+			padding-bottom: toRem(100);
+		}
+		@media (max-width: $mobileSmall) {
+			padding-bottom: toRem(70);
+		}
+	}
+
+	&__content-workbook {
+		padding-bottom: toRem(38);
+		@media (max-width: $mobileSmall) {
+			padding-top: toRem(20);
+		}
+	}
+
+	&__workbook-price {
+		padding-top: toRem(30);
+		padding-bottom: toRem(186);
+		@media (max-width: $mobileSmall) {
+			padding-bottom: toRem(70);
+		}
+	}
+}
+
+//====================//
+.presets {
+	// .presets__hero
+
+	&__hero {
+	}
+
+	// .presets__faq
+
+	&__faq {
+	}
+}
