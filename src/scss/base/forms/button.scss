@@ -13,11 +13,16 @@
 	text-align: center;
 	justify-content: center;
 	align-items: center;
+	gap: toRem(10);
 	text-transform: uppercase;
 	border-radius: toRem(10);
 	color: $whiteColor;
-	// animation: puls 3s infinite linear;
-	// box-shadow: 0px 0px 80px 1px #bc0404;
+	svg {
+		position: relative;
+		z-index: 2;
+		width: toRem(34);
+		height: toRem(32);
+	}
 	&::before {
 		content: "";
 		position: absolute;

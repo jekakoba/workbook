@@ -882,20 +882,11 @@
 	}
 	&__tip {
 		display: none;
+
 		@media (max-width: $mobile) {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-		}
-		span {
-			font-size: toRem(10);
-			color: black;
-			text-transform: uppercase;
-		}
-		img {
-			width: toRem(52);
-			height: toRem(52);
-			flex: 0 0 toRem(52);
 		}
 	}
 }

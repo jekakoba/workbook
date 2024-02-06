@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 // EffectCoverflow
 /*
 Основні модулі слайдера:
@@ -27,13 +27,8 @@ import "../../scss/base/swiper.scss";
 
 // Ініціалізація слайдерів
 function initSliders() {
-	// Список слайдерів
-	// Перевіряємо, чи є слайдер на сторінці
 	if (document.querySelector('.workbook-content__slider')) { // Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
 		const sl = new Swiper('.workbook-content__slider', { // Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
 			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
@@ -55,30 +50,7 @@ function initSliders() {
 				prevEl: '.swiper-button_prev',
 				nextEl: '.swiper-button_next',
 			},
-			/*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
 
-			
-			*/
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
@@ -114,6 +86,47 @@ function initSliders() {
 				sl.slideTo(2, 0, false);
 			}
 		});
+
+	}
+	if (document.querySelector('.item-catalog__slider')) { // Вказуємо склас потрібного слайдера
+		const sl = new Swiper('.item-catalog__slider', { // Вказуємо склас потрібного слайдера
+			modules: [Navigation, Pagination, EffectFade],
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			spaceBetween: 100,
+			speed: 800,
+			grabCursor: true,
+			slidesPerView: 1,
+			effect: 'fade',
+			// pagination: {
+			// 	el: '.workbook-content__pagination',
+			// 	clickable: true,
+			// },
+
+
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.item-catalog__navigation-btn_prev',
+				nextEl: '.item-catalog__navigation-btn_next',
+			},
+			// breakpoints: {
+			// 	320: {
+			// 		slidesPerView: 1,
+			// 	},
+			// 	767.98: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 50,
+			// 		// Події
+			// 		on: {
+
+			// 		},
+			// 	},
+
+			// },
+
+		});
+
 
 	}
 

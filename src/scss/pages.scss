@@ -48,8 +48,25 @@
 	&__hero {
 	}
 
+	// .presets__catalog
+	&__catalog {
+		@include adaptiveValue("padding-bottom", 100, 30);
+		@include adaptiveValue("padding-top", 50, 15);
+	}
+
+	&__premium {
+		position: relative;
+		background-color: white;
+		@include adaptiveValue("padding-bottom", 150, 60);
+		position: relative;
+		z-index: 3;
+	}
+
 	// .presets__faq
 
 	&__faq {
+		&.faq::before {
+			display: none;
+		}
 	}
 }
