@@ -51,13 +51,22 @@
 	}
 	&:hover {
 		box-shadow:
-			0 0 0.3125rem #bc0404,
-			0 0 0.9375rem #bc0404,
-			0 0.625rem 0.625rem #bc0404,
-			0 0 5rem #bc0404;
+			0 0 0.2125rem #bc0404a3,
+			0 0 0.4375rem #bc0404ae,
+			0 0.325rem 0.325rem #bc04049c,
+			0 0 1rem #bc0404;
 		animation-play-state: paused;
 		// box-shadow: 0px 0px 80px 10px #bc0404;
 	}
+	// &:hover {
+	// 	box-shadow:
+	// 		0 0 0.3125rem #bc0404,
+	// 		0 0 0.9375rem #bc0404,
+	// 		0 0.625rem 0.625rem #bc0404,
+	// 		0 0 5rem #bc0404;
+	// 	animation-play-state: paused;
+	// 	// box-shadow: 0px 0px 80px 10px #bc0404;
+	// }
 	@media (any-hover: hover) {
 		&:hover::before {
 			opacity: 1;

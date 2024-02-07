@@ -3,13 +3,9 @@
 Документація слайдера: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-
-// Підключаємо слайдер Swiper з node_modules
-// При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
-// Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectFade } from 'swiper/modules';
-// EffectCoverflow
+import { Navigation, Pagination } from 'swiper/modules';
+
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -17,16 +13,9 @@ EffectFade, Lazy, Manipulation
 Детальніше дивись https://swiperjs.com/
 */
 
-// Стилі Swiper
-// Базові стилі
 import "../../scss/base/swiper.scss";
-// Повний набір стилів з scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
-// Повний набір стилів з node_modules
-// import 'swiper/css';
 const sliderCatalog = document.querySelector('.catalog__slider');
 let mySwiper;
-// Ініціалізація слайдерів
 function initSliders() {
 	if (document.querySelector('.workbook-content__slider')) { // Вказуємо склас потрібного слайдера
 		const sl = new Swiper('.workbook-content__slider', { // Вказуємо склас потрібного слайдера
@@ -100,6 +89,7 @@ function initSliders() {
 					slidesPerView: 2,
 					spaceBetween: 30,
 					speed: 800,
+
 					pagination: {
 						el: '.catalog__slider-pagination',
 						clickable: true,
@@ -109,11 +99,11 @@ function initSliders() {
 					breakpoints: {
 						320: {
 							slidesPerView: 1,
-							spaceBetween: 40,
+							autoHeight: true,
 						},
 						479.98: {
+							autoHeight: true,
 							slidesPerView: 1.5,
-							spaceBetween: 20,
 						},
 						767.98: {
 
@@ -130,16 +120,17 @@ function initSliders() {
 
 	if (document.querySelector('.item-catalog__slider')) { // Вказуємо склас потрібного слайдера
 		const sl = new Swiper('.item-catalog__slider', { // Вказуємо склас потрібного слайдера
-			modules: [Navigation, Pagination, EffectFade],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
 			observeSlideChildren: true,
-			spaceBetween: 100,
+			spaceBetween: 0,
 			speed: 800,
 			grabCursor: true,
 			slidesPerView: 1,
 			effect: 'fade',
 			nested: true,
+
 			// Кнопки "вліво/вправо"
 			navigation: {
 				prevEl: '.item-catalog__navigation-btn_prev',
@@ -147,6 +138,8 @@ function initSliders() {
 			},
 		});
 	}
+
+
 
 	if (sliderCatalog) {
 		if (window.innerWidth > 767.98) {
@@ -185,6 +178,8 @@ function initSlidersScroll() {
 		}
 	}
 }
+
+
 
 // window.addEventListener("load", function (e) {
 // 	// Запуск ініціалізації слайдерів

@@ -324,6 +324,8 @@
 				overflow: visible;
 			}
 		}
+		padding: toRem(10) toRem(10) toRem(22) toRem(10);
+		margin: toRem(-10);
 	}
 
 	// .catalog__title
@@ -369,7 +371,6 @@
 		@media (max-width: $mobile) {
 			gap: 0 !important;
 		}
-		padding-bottom: toRem(10);
 	}
 	&__slider-pagination {
 		@media (min-width: $mobile) {

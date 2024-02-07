@@ -176,7 +176,6 @@
 //=================Картка товару==============//
 
 .item-catalog {
-	height: 100%;
 	width: 100%;
 	list-style: none;
 	display: flex;
@@ -186,6 +185,9 @@
 	transition: transform 1.5s;
 	will-change: transform;
 	filter: drop-shadow(2.42px 4.033px 8.066px rgba(0, 0, 0, 0.25));
+	@media (min-width: $mobile) {
+		height: 100%;
+	}
 	@media (any-hover: hover) {
 		&:hover {
 			transform: translateY(-2%);
@@ -385,12 +387,14 @@
 	// .item-catalog__content
 
 	&__content {
-		display: flex;
-		flex-direction: column;
-		flex: 1 1 auto;
 		background-color: white;
 		text-align: center;
 		padding: toRem(20) toRem(30) toRem(30) toRem(30);
+		@media (min-width: $mobile) {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 auto;
+		}
 		@media (max-width: $mobile) {
 			padding: toRem(20) toRem(15) toRem(20) toRem(15);
 		}
@@ -443,7 +447,10 @@
 		justify-content: space-between;
 		align-items: center;
 		column-gap: toRem(10);
-		margin-top: auto;
+
+		@media (min-width: $mobile) {
+			margin-top: auto;
+		}
 	}
 
 	// .item-catalog__price
@@ -669,7 +676,11 @@
 		overflow: hidden;
 		width: 6.525rem !important;
 		margin: 0 auto;
-		margin-top: toRem(10);
+		margin-top: toRem(20);
+		@media (max-width: em(380)) {
+			margin-top: toRem(10);
+		}
+
 		.swiper-pagination-bullet {
 			display: inline-block;
 			width: toRem(15);
