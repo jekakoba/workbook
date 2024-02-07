@@ -24,7 +24,8 @@ import "../../scss/base/swiper.scss";
 // import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
 // import 'swiper/css';
-
+const sliderCatalog = document.querySelector('.catalog__slider');
+let mySwiper;
 // Ініціалізація слайдерів
 function initSliders() {
 	if (document.querySelector('.workbook-content__slider')) { // Вказуємо склас потрібного слайдера
@@ -88,6 +89,46 @@ function initSliders() {
 		});
 
 	}
+
+	if (sliderCatalog) {
+		if (window.innerWidth <= 767.98 && sliderCatalog.dataset.mobile == "false") {
+			if (document.querySelector('.catalog__slider')) { // Вказуємо клас потрібного слайдера
+				mySwiper = new Swiper('.catalog__slider', { // Вказуємо клас потрібного слайдера
+					modules: [Navigation, Pagination],
+					observer: true,
+					observeParents: true,
+					slidesPerView: 2,
+					spaceBetween: 30,
+					speed: 800,
+
+					pagination: {
+						el: '.catalog__slider-pagination',
+						clickable: true,
+						dynamicBullets: true,
+					},
+
+					breakpoints: {
+						320: {
+							slidesPerView: 1,
+							spaceBetween: 40,
+						},
+						479.98: {
+							slidesPerView: 1.5,
+							spaceBetween: 20,
+						},
+						767.98: {
+
+						},
+					},
+					// Події
+					on: {
+					}
+				});
+				sliderCatalog.dataset.mobile = 'true';
+			}
+		}
+	}
+
 	if (document.querySelector('.item-catalog__slider')) { // Вказуємо склас потрібного слайдера
 		const sl = new Swiper('.item-catalog__slider', { // Вказуємо склас потрібного слайдера
 			modules: [Navigation, Pagination, EffectFade],
@@ -99,6 +140,7 @@ function initSliders() {
 			grabCursor: true,
 			slidesPerView: 1,
 			effect: 'fade',
+			nested: true,
 			// pagination: {
 			// 	el: '.workbook-content__pagination',
 			// 	clickable: true,
@@ -130,6 +172,14 @@ function initSliders() {
 
 	}
 
+	if (sliderCatalog) {
+		if (window.innerWidth > 767.98) {
+			sliderCatalog.dataset.mobile = "false";
+			if (sliderCatalog.classList.contains('swiper-initialized')) {
+				mySwiper.destroy();
+			}
+		}
+	}
 
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
@@ -161,9 +211,18 @@ function initSlidersScroll() {
 	}
 }
 
-window.addEventListener("load", function (e) {
-	// Запуск ініціалізації слайдерів
+// window.addEventListener("load", function (e) {
+// 	// Запуск ініціалізації слайдерів
+// 	initSliders();
+// 	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
+// 	//initSlidersScroll();
+// });
+
+window.addEventListener('resize', () => {
 	initSliders();
-	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-	//initSlidersScroll();
+});
+window.addEventListener("load", function (e) {
+
+	initSliders();
+
 });

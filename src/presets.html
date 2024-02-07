@@ -44,172 +44,190 @@
 				</div>
 				<img class="hero-presets__bg" src="@img/presets-page/hero-block/background.png" alt="background">
 			</section>
-
 			<section class="presets__catalog catalog decor">
 				<div class="catalog__container catalog__container_wide">
 					<h2 class="catalog__title title"><span class="bg-gradient">Choose and</span>BUY PRESETS</h2>
-					<ul class="catalog__items">
-						<li class="catalog__item item-catalog">
-							<div class="item-catalog__image-wrapper">
-								<div class="item-catalog__image">
-									<img src="@img/catalog/trendy-presets/trendy-presets-wrapper.jpg" class="ibg" alt="trendy lightroom presets">
-								</div>
-								<div class="item-catalog__slider swiper">
-									<div class="item-catalog__wrapper swiper-wrapper">
-										<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
-											<img src="@img/catalog/trendy-presets/trendy-presets-wrapper.jpg" alt="trendy presets">
-											<div class="item-catalog__tip tip">
-												<span>swipe to</span>
-												<div class="tip__icon">
-													<img src="@img/decor/tip-white.svg" alt="tip swiper">
-												</div>
-												<span>see more</span>
-											</div>
-										</div>
-										<!-- <div class="item-catalog__slide-image swiper-slide">
-											<img src="@img/catalog/trendy-presets/01.jpg" alt="01">
-											<div class="item-catalog__labels">
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">before</div>
-												</div>
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">after</div>
-												</div>
-											</div>
-										</div> -->
-										<div class="item-catalog__slide-image swiper-slide">
-											<!-- <img src="@img/catalog/trendy-presets/02.jpg" alt="02"> -->
 
-											<div class="item-catalog__slide-image-inner">
-												<img class="ibg" src="@img/catalog/trendy-presets/before.jpg" alt="">
-											</div>
-											<div class="item-catalog__slide-image-inner">
-												<img class="ibg" src="@img/catalog/trendy-presets/after.jpg" alt="">
-											</div>
-
-											<div class="item-catalog__labels">
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">before</div>
-												</div>
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">after</div>
-												</div>
-											</div>
-										</div>
-										<div class="item-catalog__slide-image swiper-slide">
-
-											<div class="item-catalog__slide-image-inner">
-												<img class="ibg" src="@img/catalog/trendy-presets/before01.jpg" alt="">
-											</div>
-											<div class="item-catalog__slide-image-inner">
-												<img class="ibg" src="@img/catalog/trendy-presets/after01.jpg" alt="">
-											</div>
-
-											<div class="item-catalog__labels">
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">before</div>
-												</div>
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">after</div>
-												</div>
-											</div>
-										</div>
-										<!-- <div class="item-catalog__slide-image swiper-slide">
-											<img src="@img/catalog/trendy-presets/04.jpg" alt="04">
-											<div class="item-catalog__labels">
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">before</div>
-												</div>
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">after</div>
-												</div>
-											</div>
-										</div>
-										<div class="item-catalog__slide-image swiper-slide">
-											<img src="@img/catalog/trendy-presets/05.jpg" alt="05">
-											<div class="item-catalog__labels">
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">before</div>
-												</div>
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">after</div>
-												</div>
-											</div>
-										</div>
-										<div class="item-catalog__slide-image swiper-slide">
-											<img src="@img/catalog/trendy-presets/06.jpg" alt="06">
-											<div class="item-catalog__labels">
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">before</div>
-												</div>
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">after</div>
-												</div>
-											</div>
-										</div>
-										<div class="item-catalog__slide-image swiper-slide">
-											<img src="@img/catalog/trendy-presets/07.jpg" alt="07">
-											<div class="item-catalog__labels">
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">before</div>
-												</div>
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">after</div>
-												</div>
-											</div>
-										</div>
-										<div class="item-catalog__slide-image swiper-slide">
-											<img src="@img/catalog/trendy-presets/08.jpg" alt="08">
-											<div class="item-catalog__labels">
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">before</div>
-												</div>
-												<div class="item-catalog__label-wrapper">
-													<div class="item-catalog__label">after</div>
-												</div>
-											</div>
-										</div> -->
+					<div class="catalog__slider swiper" data-mobile="false">
+						<ul class="catalog__items swiper-wrapper">
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/trendy-presets/trendy-presets-wrapper.jpg" class="ibg" alt="trendy lightroom presets">
 									</div>
-									<div class="item-catalog__navigation">
-										<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
-										<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/trendy-presets/trendy-presets-wrapper.jpg" alt="trendy presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-before01.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-after01.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-before02.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-after02.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-before03.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-after03.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-before04.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-after04.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-before05.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-after05.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-before06.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-after06.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-before07.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-after07.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-before08.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/trendy-presets/trendy-presets-after08.jpg" alt="trendy presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
 									</div>
-								</div>
-
-							</div>
-
-							<div class="item-catalog__content">
-								<a href="#" class="item-catalog__title">
-									<h3>Trendy Lightroom Presets</h3>
-								</a>
-								<div class="item-catalog__footer">
-									<p class="item-catalog__price bg-gradient">15$</p>
-									<button class="item-catalog__add button" type="button">
-										<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<g clip-path="url(#clip0_346_1260)">
-												<path
-													d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
-													stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-											</g>
-											<defs>
-												<clipPath id="clip0_346_1260">
-													<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
-												</clipPath>
-											</defs>
-										</svg>
-										<span>Add to card</span>
-									</button>
-								</div>
-							</div>
-
-						</li>
-						<!-- <li class="catalog__item item-catalog">
-							<a href="#">
-								<div class="item-catalog__image">
-									<img src="@img/catalog/travel-presets/travel-presets-wrapper.jpg" class="ibg" alt="travel lightroom presets">
 								</div>
 								<div class="item-catalog__content">
-									<h3 class="item-catalog__title">Travel Lightroom Presets</h3>
+									<a href="#" class="item-catalog__title">
+										<h3>Trendy Lightroom Presets</h3>
+									</a>
 									<div class="item-catalog__footer">
 										<p class="item-catalog__price bg-gradient">15$</p>
 										<button class="item-catalog__add button" type="button">
@@ -229,18 +247,187 @@
 										</button>
 									</div>
 								</div>
-							</a>
-						</li>
-						<li class="catalog__item item-catalog">
-							<a href="#">
-								<div class="item-catalog__image">
-									<img src="@img/catalog/cinema-presets/cinema-presets-wrapper.jpg" class="ibg" alt="cinema lightroom presets">
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/travel-presets/travel-presets-wrapper.jpg" class="ibg" alt="travel presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/travel-presets/travel-presets-wrapper.jpg" alt="travel presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-before01.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-after01.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-before02.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-after02.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-before03.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-after03.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-before04.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-after04.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-before05.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-after05.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-before06.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-after06.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-before07.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-after07.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-before08.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/travel-presets/travel-presets-after08.jpg" alt="travel presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
 								</div>
 								<div class="item-catalog__content">
-									<h3 class="item-catalog__title">Cinema Lightroom Presets</h3>
+									<a href="#" class="item-catalog__title">
+										<h3>Travel Lightroom Presets</h3>
+									</a>
 									<div class="item-catalog__footer">
 										<p class="item-catalog__price bg-gradient">15$</p>
-
 										<button class="item-catalog__add button" type="button">
 											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_346_1260)">
@@ -258,19 +445,1991 @@
 										</button>
 									</div>
 								</div>
-							</a>
-						</li> -->
-					</ul>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/cinema-presets/cinema-presets-wrapper.jpg" class="ibg" alt="cinema presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/cinema-presets/cinema-presets-wrapper.jpg" alt="cinema presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-before01.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-after01.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-before02.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-after02.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-before03.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-after03.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-before04.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-after04.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-before05.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-after05.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-before06.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-after06.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-before07.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-after07.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-before08.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/cinema-presets/cinema-presets-after08.jpg" alt="cinema presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>Cinema Lightroom Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/night-baby-presets/night-baby-presets-wrapper.jpg" class="ibg" alt="night baby presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/cinema-presets/cinema-presets-wrapper.jpg" alt="night baby presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-before01.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-after01.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-before02.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-after02.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-before03.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-after03.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-before04.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-after04.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-before05.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-after05.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-before06.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-after06.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-before07.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-after07.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-before08.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/night-baby-presets/night-baby-presets-after08.jpg" alt="night baby presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>NIGHT BABY LIGHTROOM Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/europe-presets/europe-presets-wrapper.jpg" class="ibg" alt="europe presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/europe-presets/europe-presets-wrapper.jpg" alt="europe presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-before01.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-after01.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-before02.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-after02.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-before03.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-after03.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-before04.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-after04.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-before05.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-after05.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-before06.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-after06.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-before07.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-after07.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-before08.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/europe-presets/europe-presets-after08.jpg" alt="europe presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>Europe Lightroom Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/selfie-presets/selfie-presets-wrapper.jpg" class="ibg" alt="selfie presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/selfie-presets/selfie-presets-wrapper.jpg" alt="selfie presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-before01.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-after01.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-before02.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-after02.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-before03.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-after03.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-before04.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-after04.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-before05.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-after05.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-before06.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-after06.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-before07.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-after07.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-before08.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/selfie-presets/selfie-presets-after08.jpg" alt="selfie presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>Selfie Lightroom Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/lifestyle-presets/lifestyle-presets-wrapper.jpg" class="ibg" alt="lifestyle presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/lifestyle-presets/lifestyle-presets-wrapper.jpg" alt="lifestyle presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-before01.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-after01.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-before02.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-after02.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-before03.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-after03.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-before04.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-after04.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-before05.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-after05.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-before06.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-after06.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-before07.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-after07.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-before08.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/lifestyle-presets/lifestyle-presets-after08.jpg" alt="lifestyle presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>Lifestyle Lightroom Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/winter-presets/winter-presets-wrapper.jpg" class="ibg" alt="winter presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/winter-presets/winter-presets-wrapper.jpg" alt="winter presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-before01.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-after01.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-before02.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-after02.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-before03.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-after03.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-before03.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-after03.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-before04.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-after04.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-before05.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-after05.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-before06.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-after06.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-before07.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/winter-presets/winter-presets-after07.jpg" alt="winter presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>Winter Lightroom Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/spring-presets/spring-presets-wrapper.jpg" class="ibg" alt="spring presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/spring-presets/spring-presets-wrapper.jpg" alt="spring presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-before01.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-after01.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-before02.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-after02.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-before03.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-after03.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-before04.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-after04.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-before05.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-after05.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-before06.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-after06.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-before07.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-after07.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-before08.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/spring-presets/spring-presets-after08.jpg" alt="spring presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>Spring Lightroom Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/summer-presets/summer-presets-wrapper.jpg" class="ibg" alt="summer presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/summer-presets/summer-presets-wrapper.jpg" alt="summer presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-before01.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-after01.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-before02.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-after02.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-before03.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-after03.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-before04.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-after04.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-before05.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-after05.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-before06.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-after06.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-before07.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-after07.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-before08.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/summer-presets/summer-presets-after08.jpg" alt="summer presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>Summer Lightroom Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/autumn-presets/autumn-lightroom-presets-wrapper.jpg" class="ibg" alt="autumn presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/autumn-presets/autumn-lightroom-presets-wrapper.jpg" alt="autumn presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-before01.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-after01.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-before02.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-after02.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-before03.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-after03.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-before04.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-after04.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-before05.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-after05.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-before06.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-after06.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-before07.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-after07.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-before08.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення Після -->
+													<img data-class="ibg" src="@img/catalog/autumn-presets/autumn-lightroom-presets-after08.jpg" alt="autumn presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>Autumn Lightroom Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item swiper-slide item-catalog">
+								<div class="item-catalog__image-wrapper">
+									<!-- Фото-заглушка. При наведенні фотка зникає і з'являється слайдер внизу -->
+									<div class="item-catalog__image">
+										<img data-src="@img/catalog/blogger-presets/blogger-presets-wrapper.jpg" class="ibg" alt="blogger presets">
+									</div>
+									<!-- -------------------------------------------------------------------------------------------------------------- -->
+									<div class="item-catalog__slider swiper">
+										<div class="item-catalog__wrapper swiper-wrapper">
+											<!-- Це зображення з'являється в слайдері коли в нас пристрій з тачскріном -->
+											<div class="item-catalog__slide-image item-catalog__slide-image_first-mobile swiper-slide">
+												<img data-src="@img/catalog/autumn-presets/autumn-lightroom-presets-wrapper.jpg" alt="blogger presets">
+												<div class="item-catalog__tip tip">
+													<span>swipe to</span>
+													<div class="tip__icon">
+														<img src="@img/decor/tip-white.svg" alt="tip swiper">
+													</div>
+													<span>see more</span>
+												</div>
+											</div>
+											<!-- ----------------------------------------------------------------------------->
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-before01.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-after01.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-before02.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-after02.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-before03.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-after03.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-before04.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-after04.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-before05.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-after05.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-before06.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-after06.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-before07.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-after07.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+											<div class="item-catalog__slide-image swiper-slide">
+												<div class="item-catalog__slide-image-inner">
+													<!-- Зображення ДО -->
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-before08.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__slide-image-inner">
+													<img data-class="ibg" src="@img/catalog/blogger-presets/blogger-presets-after08.jpg" alt="blogger presets">
+												</div>
+												<div class="item-catalog__labels">
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">before</div>
+													</div>
+													<div class="item-catalog__label-wrapper">
+														<div class="item-catalog__label">after</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="item-catalog__navigation">
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_prev _icon-chevron-left bg-gradient" type="button"></button>
+											<button class="item-catalog__navigation-btn item-catalog__navigation-btn_next _icon-chevron-right bg-gradient" type="button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="item-catalog__content">
+									<a href="#" class="item-catalog__title">
+										<h3>Blogger Lightroom Presets</h3>
+									</a>
+									<div class="item-catalog__footer">
+										<p class="item-catalog__price bg-gradient">15$</p>
+										<button class="item-catalog__add button" type="button">
+											<svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_346_1260)">
+													<path
+														d="M3.40027 5.3674H16.1833C17.3411 5.3674 18.1771 6.43447 17.8595 7.50826L16.4698 12.2135C16.2555 12.936 15.5716 13.4334 14.7935 13.4334H7.09888C6.32 13.4334 5.63523 12.9352 5.42182 12.2135L3.40027 5.3674ZM3.40027 5.3674L2.80372 3.35089C2.38361 3.21086 1.45938 2.93079 1.12329 2.93079M14.1466 18.4747C14.4808 18.4747 14.8014 18.3419 15.0378 18.1056C15.2741 17.8692 15.4069 17.5487 15.4069 17.2144C15.4069 16.8801 15.2741 16.5596 15.0378 16.3232C14.8014 16.0869 14.4808 15.9541 14.1466 15.9541C13.8123 15.9541 13.4918 16.0869 13.2554 16.3232C13.019 16.5596 12.8863 16.8801 12.8863 17.2144C12.8863 17.5487 13.019 17.8692 13.2554 18.1056C13.4918 18.3419 13.8123 18.4747 14.1466 18.4747ZM7.42488 18.4747C7.75914 18.4747 8.07971 18.3419 8.31606 18.1056C8.55242 17.8692 8.6852 17.5487 8.6852 17.2144C8.6852 16.8801 8.55242 16.5596 8.31606 16.3232C8.07971 16.0869 7.75914 15.9541 7.42488 15.9541C7.09063 15.9541 6.77006 16.0869 6.5337 16.3232C6.29735 16.5596 6.16457 16.8801 6.16457 17.2144C6.16457 17.5487 6.29735 17.8692 6.5337 18.1056C6.77006 18.3419 7.09063 18.4747 7.42488 18.4747Z"
+														stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												</g>
+												<defs>
+													<clipPath id="clip0_346_1260">
+														<rect width="20.1651" height="20.1651" fill="white" transform="translate(0.283081 0.830322)" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Add to card</span>
+										</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="catalog__slider-pagination pagination"></div>
+					</div>
 				</div>
 			</section>
-
 			<section class="presets__premium premium-set decor decor_premium-set">
 				<div class="premium-set__container premium-set__container_wide">
 					<div class="premium-set__body">
 						<div class="premium-set__image">
 							<picture>
 								<source media="(min-width: 1300px)" srcset="@img/presets-page/premuim-set.png">
-								<img src="@img/presets-page/premuim-set-full.jpg" alt="premium set">
+								<img data-src="@img/presets-page/premuim-set-full.jpg" alt="premium set">
 							</picture>
 						</div>
 						<div class="premium-set__content">
@@ -304,7 +2463,6 @@
 
 				</div>
 			</section>
-
 			<section class="presets__faq faq">
 				<div class="faq__container">
 					<h2 class="faq__title title"><span class="bg-gradient">Questions</span>AND ANSWERS</h2>
@@ -372,7 +2530,6 @@
 	</div>
 	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
-
 </body>
 
 </html>
