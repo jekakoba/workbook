@@ -100,7 +100,6 @@ function initSliders() {
 					slidesPerView: 2,
 					spaceBetween: 30,
 					speed: 800,
-
 					pagination: {
 						el: '.catalog__slider-pagination',
 						clickable: true,
@@ -141,35 +140,12 @@ function initSliders() {
 			slidesPerView: 1,
 			effect: 'fade',
 			nested: true,
-			// pagination: {
-			// 	el: '.workbook-content__pagination',
-			// 	clickable: true,
-			// },
-
-
 			// Кнопки "вліво/вправо"
 			navigation: {
 				prevEl: '.item-catalog__navigation-btn_prev',
 				nextEl: '.item-catalog__navigation-btn_next',
 			},
-			// breakpoints: {
-			// 	320: {
-			// 		slidesPerView: 1,
-			// 	},
-			// 	767.98: {
-			// 		slidesPerView: 2,
-			// 		spaceBetween: 50,
-			// 		// Події
-			// 		on: {
-
-			// 		},
-			// 	},
-
-			// },
-
 		});
-
-
 	}
 
 	if (sliderCatalog) {
@@ -180,7 +156,6 @@ function initSliders() {
 			}
 		}
 	}
-
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
