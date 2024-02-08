@@ -147,3 +147,20 @@
 		display: none;
 	}
 }
+
+%image-scale {
+	overflow: hidden;
+	will-change: transform;
+
+	img {
+		will-change: transform;
+		transition: transform 1s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			img {
+				transform: scale(1.006);
+			}
+		}
+	}
+}

@@ -172,7 +172,10 @@ body {
 @import "header";
 @import "footer";
 @import "pages";
+@import "card";
+@import "double-slider";
 
 // Підключення стилів окремих сторінок
 @import "home";
 @import "presets";
+@import "product";

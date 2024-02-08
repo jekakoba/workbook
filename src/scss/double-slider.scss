@@ -1,0 +1,157 @@
+.product {
+	// .product__slider-wrapper
+}
+.product-images {
+	width: 100%;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 26, 10);
+	}
+	// .product-images__slider
+
+	&__slider {
+		min-width: 0;
+	}
+
+	// .product-images__wrapper
+
+	&__wrapper {
+		min-width: 0;
+		will-change: transform;
+	}
+
+	// .product-images__slide
+
+	&__slide {
+	}
+
+	&__labels {
+		.labels-image__text {
+			@include adaptiveValue("font-size", 30, 10);
+		}
+	}
+
+	// .product-images__slide-wrapper
+
+	&__slide-wrapper {
+		position: relative;
+		display: flex;
+	}
+
+	// .product-images__slide-image
+
+	&__slide-image {
+		width: 50%;
+		position: relative;
+		padding-bottom: 100%;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+}
+.product-preview-images {
+	position: relative;
+	// margin: 0 toRem(10);
+
+	// .product-preview-images__slider
+
+	&__slider {
+		padding: toRem(2);
+		margin: 0 22px;
+	}
+
+	// .product-preview-images__wrapper
+
+	&__wrapper {
+	}
+
+	// .product-preview-images__slide
+
+	&__slide {
+		width: toRem(114);
+		// height: toRem(114);
+		cursor: pointer;
+		&.swiper-slide-thumb-active {
+			outline: toRem(3) solid red;
+		}
+	}
+
+	// .product-preview-images__slide-wrapper
+
+	&__slide-wrapper {
+		display: flex;
+		height: 100%;
+		position: relative;
+	}
+
+	// .product-preview-images__slide-image
+
+	&__slide-image {
+		width: 50%;
+		position: relative;
+		padding-bottom: 91%;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+
+	// .product-preview-images__navigation
+
+	&__navigation {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		transform: translateY(-50%);
+		pointer-events: none;
+		align-items: center;
+		z-index: 2;
+		&::before {
+			font-size: toRem(20);
+		}
+	}
+
+	// .product-preview-images__arrow
+
+	&__arrow {
+		position: relative;
+		pointer-events: all;
+		&.swiper-button-disabled {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+		&::before {
+			transition: color 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					color: red;
+				}
+			}
+		}
+		// .product-preview-images__arrow_prev
+
+		&_prev {
+			left: -5px;
+		}
+
+		// .product-preview-images__arrow_next
+
+		&_next {
+			right: -5px;
+		}
+	}
+}

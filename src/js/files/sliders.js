@@ -4,7 +4,7 @@
 Сніппет(HTML): swiper
 */
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade, Thumbs, Controller } from 'swiper/modules';
 
 /*
 Основні модулі слайдера:
@@ -37,8 +37,8 @@ function initSliders() {
 			// Скроллбар
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.swiper-button_prev',
-				nextEl: '.swiper-button_next',
+				prevEl: '.navigation__button_prev',
+				nextEl: '.navigation__button_next',
 			},
 
 			breakpoints: {
@@ -118,6 +118,81 @@ function initSliders() {
 		}
 	}
 
+
+	//===================================================================================================//
+
+	if (document.querySelector('.product__slider-wrapper')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		let thumbsSwiper = new Swiper('.product-preview-images__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Navigation, Thumbs, Controller],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 6,
+			speed: 1000,
+			slideToClickedSlide: true,
+			spaceBetween: 8,
+			grabCursor: true,
+			// Кнопки "вліво/вправо"
+
+			navigation: {
+				prevEl: '.product-preview-images__arrow_prev',
+				nextEl: '.product-preview-images__arrow_next',
+			},
+
+
+			// Брейкпоінти
+
+			breakpoints: {
+				320: {
+					slidesPerView: 2,
+
+				},
+				479.98: {
+					slidesPerView: 4,
+
+				},
+				600.98: {
+					slidesPerView: 6,
+
+				}
+			},
+
+			// Події
+			on: {
+
+			}
+		});
+		// Створюємо слайдер
+		new Swiper('.product-images__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Navigation, Thumbs, Controller, EffectFade],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			loop: true,
+			speed: 1000,
+			grabCursor: true,
+			thumbs: {
+				swiper: thumbsSwiper
+			},
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+			// Події
+			on: {
+
+			}
+		});
+	}
+
+
+	//===================================================================================================//
+
 	if (document.querySelector('.item-catalog__slider')) { // Вказуємо склас потрібного слайдера
 		const sl = new Swiper('.item-catalog__slider', { // Вказуємо склас потрібного слайдера
 			modules: [Navigation, Pagination],
@@ -149,6 +224,59 @@ function initSliders() {
 			}
 		}
 	}
+
+	// Свайпер на сторінці з товарами
+
+	if (document.querySelector('.other-presets__slider')) { // Вказуємо склас потрібного слайдера
+		new Swiper('.other-presets__slider', { // Вказуємо склас потрібного слайдера
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			speed: 800,
+
+			pagination: {
+				el: '.workbook-content__pagination',
+				clickable: true,
+			},
+
+			// Скроллбар
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.navigation-other-preset-prev',
+				nextEl: '.navigation-other-preset-next',
+			},
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+
+				479.98: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				991.98: {
+					slidesPerView: 3,
+					spaceBetween: 40,
+				},
+				1200.98: {
+					slidesPerView: 4,
+					spaceBetween: 60,
+					// Події
+					on: {
+
+					},
+				},
+
+			},
+
+		});
+
+	}
+
+
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

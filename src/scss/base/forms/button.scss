@@ -48,6 +48,7 @@
 	span {
 		position: relative;
 		z-index: 2;
+		line-height: 1;
 	}
 	&:hover {
 		box-shadow:
@@ -99,6 +100,25 @@
 		height: 100%;
 		background-color: #fff;
 		animation: shiny-btn1 5s ease-in-out infinite;
+	}
+	&_black {
+		background: none;
+		background-color: $backgroundCards;
+
+		&::before {
+			display: none;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow:
+					0 0 0.2125rem #191919a3,
+					0 0 0.4375rem #0e0e0eae,
+					0 0.325rem 0.325rem #1a1a1a9c,
+					0 0 1rem #000000;
+			}
+		}
+		@media (max-width: em(603)) {
+		}
 	}
 }
 

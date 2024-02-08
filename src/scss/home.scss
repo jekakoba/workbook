@@ -980,47 +980,6 @@
 }
 
 .swiper-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: toRem(14) toRem(32);
-	box-shadow: 0 0 toRem(30) toRem(1) rgba(0, 0, 0, 0.4);
-	color: $whiteColor;
-	border-radius: toRem(10);
-	background-color: $backgroundDark;
-	position: relative;
-	&::after {
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		transition: opacity 0.6s;
-		border-radius: toRem(10);
-		opacity: 0;
-		transition: opacity 0.3s;
-		background: linear-gradient(
-			90deg,
-			#ff0e10 0%,
-			#f32a2d 18.63%,
-			#fc5858 33.6%,
-			#ee3d3d 52.32%,
-			#df3032 61.96%,
-			#c21818 85.58%,
-			#bc0404 100%
-		);
-	}
-	@media (any-hover: hover) {
-		&:hover::after {
-			opacity: 1;
-		}
-	}
-	&::before {
-		position: relative;
-		z-index: 3;
-		font-size: toRem(12);
-	}
 	// .swiper-pagination_prev
 
 	&_prev {
@@ -1029,7 +988,6 @@
 	// .swiper-pagination_next
 
 	&_next {
-		transform: rotate(180deg);
 		// background: $red;
 	}
 }
