@@ -127,23 +127,17 @@
 		@media (max-width: $tablet) {
 			display: flex;
 			flex-direction: column;
-			row-gap: toRem(10);
+			row-gap: toRem(30);
 		}
 		@include adaptiveValue("margin-bottom", 73, 20);
 	}
 
 	&__slider-wrapper {
-		@media (max-width: $tablet) {
-			order: 2;
-		}
 	}
 
 	// .prodcut__content
 
 	&__content {
-		@media (max-width: $tablet) {
-			order: 1;
-		}
 	}
 
 	&__presets-other {
