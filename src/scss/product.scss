@@ -108,16 +108,6 @@
 		}
 	}
 
-	&__top,
-	&__bottom {
-		.navigation__button {
-			transition: opacity 0.3s;
-			&.swiper-button-disabled {
-				opacity: 0.5;
-				pointer-events: none;
-			}
-		}
-	}
 	&__bottom {
 		@media (min-width: $mobile) {
 			display: none;
@@ -137,17 +127,11 @@
 			color: $backgroundDark;
 			font-weight: 800;
 			margin-bottom: 0;
-			@media (max-width: em(600)) {
-				font-size: toRem(40);
+			@media (max-width: $mobile) {
+				@include adaptiveValue("font-size", 50, 24);
 				span {
-					font-size: toRem(40);
+					@include adaptiveValue("font-size", 70, 43);
 				}
-			}
-			@media (max-width: $mobileSmall) {
-				font-size: toRem(43);
-			}
-			@media (max-width: $mobileSmall) {
-				font-size: toRem(24);
 			}
 		}
 	}

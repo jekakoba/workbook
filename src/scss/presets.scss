@@ -227,10 +227,10 @@
 		// .hero-presets__image_big
 
 		&_big {
-			width: vw(500);
-			height: vw(800);
+			width: vw(530);
+			height: vw(810);
 			left: 8.520833vw;
-			top: -6.47916vw;
+			top: -8.47916vw;
 			border-radius: 0;
 			z-index: 3;
 			@media (min-width: $mobile) {
@@ -318,6 +318,49 @@
 	&__container {
 	}
 
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		column-gap: toRem(10);
+		&:not(:last-child) {
+			margin-bottom: toRem(60);
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+		@media (min-width: $mobileSmall) and (max-width: $mobile) {
+			padding: toRem(20);
+			margin-left: toRem(-15);
+			margin-right: toRem(-25);
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__navigation {
+		display: none;
+		@media (max-width: $mobile) {
+			display: flex;
+			align-items: center;
+			gap: toRem(10);
+		}
+		.navigation__button {
+		}
+	}
+
 	&__slider {
 		&.swiper {
 			@media (min-width: $mobile) {
@@ -333,23 +376,18 @@
 	&__title {
 		position: relative;
 		z-index: 3;
-		&:not(:last-child) {
-			margin-bottom: toRem(70);
-		}
-		@media (max-width: em(1024)) {
-			&:not(:last-child) {
-				margin-bottom: toRem(40);
-			}
-		}
-		@media (max-width: $mobileSmall) {
-			&:not(:last-child) {
-				margin-bottom: toRem(30);
-			}
-		}
+
 		&.title {
 			align-items: start;
 			color: $backgroundDark;
 			font-weight: 800;
+			margin-bottom: 0;
+			@media (max-width: $mobile) {
+				@include adaptiveValue("font-size", 50, 24);
+				span {
+					@include adaptiveValue("font-size", 70, 43);
+				}
+			}
 		}
 	}
 
@@ -358,7 +396,6 @@
 	&__items {
 		max-width: toRem(1226);
 		margin: 0 auto;
-
 		grid-template-columns: repeat(3, 1fr) !important;
 		gap: toRem(80) toRem(38);
 		@media (min-width: $mobile) {
@@ -370,6 +407,10 @@
 		}
 		@media (max-width: $mobile) {
 			gap: 0 !important;
+		}
+		will-change: transform;
+		@media (max-width: $mobileSmall) {
+			margin-bottom: toRem(10);
 		}
 	}
 	&__slider-pagination {

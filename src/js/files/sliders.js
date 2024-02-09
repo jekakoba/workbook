@@ -90,10 +90,15 @@ function initSliders() {
 					spaceBetween: 30,
 					speed: 800,
 
-					pagination: {
-						el: '.catalog__slider-pagination',
-						clickable: true,
-						dynamicBullets: true,
+					// pagination: {
+					// 	el: '.catalog__slider-pagination',
+					// 	clickable: true,
+					// 	dynamicBullets: true,
+					// },
+
+					navigation: {
+						prevEl: '.navigation-catalog-preset-prev',
+						nextEl: '.navigation-catalog-preset-next',
 					},
 
 					breakpoints: {
@@ -176,6 +181,10 @@ function initSliders() {
 			loop: true,
 			speed: 1000,
 			grabCursor: true,
+			navigation: {
+				prevEl: '.item-catalog__navigation-btn_prev-slide-gallery',
+				nextEl: '.item-catalog__navigation-btn_next-slide-gallery',
+			},
 			thumbs: {
 				swiper: thumbsSwiper
 			},

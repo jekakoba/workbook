@@ -36,7 +36,10 @@
 		}
 	}
 
-	// .item-catalog__slide-image
+	&__slide-image {
+		position: relative;
+		padding-bottom: 100%;
+	}
 
 	// .item-catalog__image
 
@@ -58,11 +61,11 @@
 		}
 	}
 
-	&__slide-image-inner {
-		width: 50%;
-		padding-bottom: 100%;
-		position: relative;
-	}
+	// &__slide-image-inner {
+	// 	width: 50%;
+	// 	padding-bottom: 100%;
+	// 	position: relative;
+	// }
 
 	// .item-catalog__slider
 
@@ -80,6 +83,7 @@
 	// .item-catalog__wrapper
 
 	&__wrapper {
+		will-change: transform;
 	}
 
 	&__slider-pagination {
@@ -94,13 +98,22 @@
 		width: 100%;
 		height: 100%;
 		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		left: -100%;
+
 		z-index: 3;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: toRem(0);
+		opacity: 0;
+		transition: all 1s ease 2.2s;
+		.touch,
+		&._watcher-view {
+			opacity: 1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 		&.tip {
 			span {
 				color: $whiteColor;
@@ -130,10 +143,18 @@
 				left: 0;
 				background-color: rgba(0, 0, 0, 0.6);
 				z-index: 2;
+				opacity: 0;
+				transition: opacity 1s ease 2s;
 			}
 			.touch & {
 				display: block;
 				padding-bottom: 100%;
+			}
+			.touch,
+			&._watcher-view {
+				&::before {
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -156,11 +177,23 @@
 	// .item-catalog__navigation-btn
 
 	&__navigation-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 toRem(40);
 		height: toRem(40);
 		width: toRem(40);
 		pointer-events: auto;
+		border-radius: 50%;
 		&::before {
-			font-size: toRem(35);
+			color: white;
+			font-size: toRem(20);
+			transition: color 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover::before {
+				color: red;
+			}
 		}
 		&.swiper-button-disabled {
 			pointer-events: none;
@@ -169,11 +202,23 @@
 		// .item-catalog__navigation-btn_prev
 
 		&_prev {
+			position: relative;
+			left: toRem(3);
+			&::before {
+				position: relative;
+				left: toRem(-3);
+			}
 		}
 
 		// .item-catalog__navigation-btn_next
 
 		&_next {
+			position: relative;
+			right: toRem(3);
+			&::before {
+				position: relative;
+				right: toRem(-3);
+			}
 		}
 	}
 
@@ -208,7 +253,7 @@
 			}
 		}
 		h3 {
-			font-size: toRem(20);
+			font-size: toRem(18);
 			color: #121212;
 			font-weight: 600;
 			text-transform: uppercase;
