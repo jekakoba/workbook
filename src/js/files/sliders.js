@@ -83,7 +83,7 @@ function initSliders() {
 		if (window.innerWidth <= 767.98 && sliderCatalog.dataset.mobile == "false") {
 			if (document.querySelector('.catalog__slider')) { // Вказуємо клас потрібного слайдера
 				mySwiper = new Swiper('.catalog__slider', { // Вказуємо клас потрібного слайдера
-					modules: [Navigation, Pagination],
+					modules: [Navigation],
 					observer: true,
 					observeParents: true,
 					slidesPerView: 2,
