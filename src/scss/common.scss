@@ -12,6 +12,16 @@
 	text-transform: uppercase;
 }
 
+.gold-gradient {
+	background-image: $goldGradient;
+	background-position: 0 0;
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+}
+
 .title {
 	display: flex;
 	flex-direction: column;
@@ -550,6 +560,38 @@
 		.labels-image__text {
 			font-size: toRem(5);
 			padding: toRem(2) toRem(2);
+		}
+	}
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	gap: toRem(5) toRem(17);
+	flex-wrap: wrap;
+	@media (max-width: $mobileSmall) {
+		column-gap: toRem(10);
+	}
+	li {
+		list-style: none;
+		a {
+			position: relative;
+			&::before {
+				font-size: toRem(20);
+				background-image: $red;
+				background-position: 0;
+				background-size: 100%;
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: rgba(255, 255, 255, 1);
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						-webkit-text-fill-color: rgba(255, 255, 255, 0);
+					}
+				}
+			}
 		}
 	}
 }

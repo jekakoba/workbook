@@ -104,12 +104,12 @@ import './libs/parallax-mouse.js'
 
 /* Робота з полями форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
-flsForms.formFieldsInit({
-	viewPass: false,
-	autoHeight: false
-});
-*/
+
+// flsForms.formFieldsInit({
+// 	viewPass: false,
+// 	autoHeight: false
+// });
+
 /* Надсилання форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
 // flsForms.formSubmit();

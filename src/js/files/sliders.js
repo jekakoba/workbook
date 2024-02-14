@@ -210,9 +210,9 @@ function initSliders() {
 			observeSlideChildren: true,
 			spaceBetween: 0,
 			speed: 800,
-			grabCursor: true,
+			// grabCursor: true,
 			slidesPerView: 1,
-			effect: 'fade',
+			// effect: 'fade',
 			nested: true,
 
 			// Кнопки "вліво/вправо"

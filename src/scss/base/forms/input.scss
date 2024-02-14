@@ -9,14 +9,31 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
+	border-radius: toRem(10) !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: 0px toRem(20);
+	color: $whiteColor;
+	outline: none;
+	height: toRem(54);
+	background-color: transparent;
+
+	@media (max-width: $tablet) {
+		padding: 0 toRem(15);
+		font-size: toRem(14);
+	}
+	@media (max-width: $mobileSmall) {
+		height: toRem(50);
+	}
 	&._form-focus {
 	}
 	&._form-error {
+	}
+	&:focus + {
+		.form__placeholder {
+			transition: transform 0.6s ease 0s;
+			transform: translateY(-220%);
+		}
 	}
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {

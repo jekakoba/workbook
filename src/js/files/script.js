@@ -93,3 +93,31 @@ if (goTop) {
 	});
 
 }
+
+const inputs = document.querySelectorAll('.form__input');
+
+inputs.forEach(input => {
+	// Додаємо обробники подій focus, blur та input до кожного інпуту
+	input.addEventListener('focus', handleInputFocus);
+	input.addEventListener('blur', handleInputBlur);
+	input.addEventListener('input', handleInputChange);
+});
+
+function handleInputFocus() {
+	const label = this.closest('.form__label');
+	label.classList.add('_input-focus');
+}
+
+function handleInputBlur() {
+	const label = this.closest('.form__label');
+	label.classList.remove('_input-focus');
+}
+
+function handleInputChange() {
+	const label = this.closest('.form__label');
+	if (this.value.trim() !== '') {
+		label.classList.add('_input-active');
+	} else {
+		label.classList.remove('_input-active');
+	}
+}

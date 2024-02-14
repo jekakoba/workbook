@@ -143,3 +143,23 @@
 	&__presets-other {
 	}
 }
+
+//===========================//
+.main {
+	// .main__hero
+
+	&__hero {
+		margin-bottom: toRem(100);
+	}
+	&__advantages {
+		padding-bottom: toRem(300);
+	}
+	&__growt-guide {
+		padding-bottom: toRem(300);
+	}
+
+	// .main__faq
+
+	&__faq {
+	}
+}
