@@ -2,7 +2,7 @@
 .main-hero {
 	position: relative;
 	overflow: hidden;
-	@include adaptiveValue("padding-top", 100, 70, 0, $containerWidth, 767.98);
+	@include adaptiveValue("padding-top", 20, 60, 0, $containerWidth, 767.98);
 	// .main-hero__container
 
 	&__container {
@@ -22,7 +22,7 @@
 		display: grid;
 		align-self: center;
 		position: relative;
-		@include adaptiveValue("padding-bottom", 140, 30, 2, $containerWidth, 767.98);
+		@include adaptiveValue("padding-bottom", 140, 50, 2, $containerWidth, 767.98);
 		@media (max-width: $mobile) {
 			order: 2;
 			justify-items: center;

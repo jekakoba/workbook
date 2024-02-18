@@ -126,32 +126,112 @@
 	z-index: 0;
 }
 
-.splide {
-	position: relative;
-	z-index: 10;
-	transform: rotate(-4deg) translate(0, -300%);
+.marquee {
+	width: 100%;
+	padding: 20px;
+	height: 60px;
+	text-align: center;
+	overflow: hidden;
+	color: white;
+	transform: rotate(-4deg);
 	background-color: #121212;
-	// .splide__track
-	&__track {
-		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-		padding: 20px 0;
+	position: relative;
+	z-index: 97;
+	top: -218px;
+	@media (max-width: $mobile) {
+		height: 60px;
+	}
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100vw;
+		height: 11px;
+		background: url("@img/decor/square.png") 100% repeat-x;
+	}
+	&::before {
+		top: 4px;
 	}
 
-	// .splide__list
-
-	&__list {
-		display: flex;
-		gap: 13px;
-		align-items: center;
+	&::after {
+		bottom: 2.3px;
 	}
-
-	// .splide__slide
-
-	&__slide {
-		color: white;
-		font-size: toRem(25);
-		font-weight: 700;
-		text-transform: uppercase;
-		list-style: none;
+	&_top {
+		position: relative;
+		z-index: 98;
+		transform: rotate(4deg);
+		top: -263px;
+		// transform: rotate(4deg) translate(0, -446%);
+		.marquee-wrapper {
+			animation: marqueeAnimationRight 600s linear 0s infinite running;
+		}
 	}
 }
+.marquee-wrapper {
+	width: 100000px;
+	animation: marqueeAnimationLeft 600s linear 0s infinite running;
+	display: flex;
+	gap: toRem(20);
+	align-items: center;
+	@media (any-hover: hover) {
+		&:hover {
+			animation-play-state: paused;
+		}
+	}
+}
+.marquee-title {
+	display: flex;
+	align-items: center;
+	gap: toRem(20);
+}
+
+.text-stroke-black {
+	color: white;
+	font-weight: 700;
+	font-size: toRem(23);
+	@media (max-width: $mobile) {
+		font-size: toRem(16);
+	}
+}
+
+@keyframes marqueeAnimationLeft {
+	100% {
+		transform: translateX(-4600px);
+	}
+}
+@keyframes marqueeAnimationRight {
+	100% {
+		transform: translateX(4600px);
+	}
+}
+
+// .splide {
+// 	position: relative;
+// 	z-index: 10;
+// 	transform: rotate(-4deg) translate(0, -300%);
+// 	background-color: #121212;
+// 	// .splide__track
+// 	&__track {
+// 		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+// 		padding: 20px 0;
+// 	}
+
+// 	// .splide__list
+
+// 	&__list {
+// 		display: flex;
+// 		gap: 13px;
+// 		align-items: center;
+// 	}
+
+// 	// .splide__slide
+
+// 	&__slide {
+// 		color: white;
+// 		font-size: toRem(25);
+// 		font-weight: 700;
+// 		text-transform: uppercase;
+// 		list-style: none;
+// 	}
+// }
