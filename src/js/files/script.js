@@ -121,3 +121,43 @@ function handleInputChange() {
 		label.classList.remove('_input-active');
 	}
 }
+
+
+// const subMenuButton = document.querySelector('.menu__button-sub-menu')
+// const subMenuItem = document.querySelector('.menu__item_sub-menu')
+// if (subMenuButton && subMenuItem) {
+// 	subMenuButton.addEventListener("click", function (e) {
+
+// 		subMenuItem.classList.toggle('_active-sub-menu')
+
+// 	});
+// }
+
+
+
+// function linksHover() {
+// 	const links = document.querySelectorAll('[data-link-hover]');
+// 	links.forEach(link => {
+// 		// =====================================================
+// 		if (link.dataset.linkHover == 'every') {
+// 			link.classList.add('_hover-scroll-every');
+// 			spanize(link);
+// 			const width = link.clientWidth;
+// 			link.setAttribute('style', `--width-v: ${width}px`);
+// 			const linkItems = link.querySelectorAll('span')
+// 			linkItems.forEach(linkItem => {
+// 				const offsetLeft = linkItem.offsetLeft;
+// 				linkItem.setAttribute('style', `--left-v: -${offsetLeft}px`);
+// 				const linkHtml = linkItem.innerHTML;
+// 				linkItem.dataset.hoverItem = linkHtml;
+// 			})
+// 		}
+// 		// =====================================================
+// 	})
+// 	function spanize(el) {
+// 		el.innerHTML = el.innerHTML.replace(/(.)/g, '<span>$1</span>');
+// 	}
+// }
+// linksHover()
+
+

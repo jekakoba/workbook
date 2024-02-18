@@ -149,17 +149,31 @@
 	// .main__hero
 
 	&__hero {
-		margin-bottom: toRem(100);
+		@media (max-width: $mobile) {
+			margin-top: -70px;
+		}
+		margin-bottom: toRem(200);
 	}
 	&__advantages {
-		padding-bottom: toRem(300);
+		position: relative;
+		@include adaptiveValue("padding-bottom", 300, 70);
 	}
 	&__growt-guide {
-		padding-bottom: toRem(300);
+		@include adaptiveValue("padding-bottom", 300, 30);
+	}
+	&__mobile-presets {
+		position: relative;
+		@include adaptiveValue("padding-bottom", 300, 30);
+	}
+	&__about {
+		@include adaptiveValue("padding-bottom", 300, 30);
 	}
 
 	// .main__faq
 
 	&__faq {
+		&.faq {
+			@include adaptiveValue("padding-bottom", 167, 30);
+		}
 	}
 }

@@ -1,8 +1,9 @@
 .footer {
-	padding: toRem(25) 0;
+	padding: toRem(40) 0;
 	background-color: #171717;
 	@media (max-width: $mobileSmall) {
 		padding-bottom: toRem(50);
+		padding-top: toRem(30);
 	}
 	// .footer__container
 
@@ -18,8 +19,6 @@
 			grid-template-columns: auto;
 			row-gap: toRem(10);
 		}
-
-		// @include adaptiveValue("column-gap", 163, 30, 0, $containerWidth, 991.98);
 	}
 
 	// .footer__main

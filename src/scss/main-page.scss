@@ -1,7 +1,8 @@
+//=========Hero=================//
 .main-hero {
 	position: relative;
 	overflow: hidden;
-
+	@include adaptiveValue("padding-top", 100, 70, 0, $containerWidth, 767.98);
 	// .main-hero__container
 
 	&__container {
@@ -10,6 +11,9 @@
 		align-items: center;
 		position: relative;
 		z-index: 2;
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+		}
 	}
 
 	// .main-hero__content
@@ -17,8 +21,30 @@
 	&__content {
 		display: grid;
 		align-self: center;
-		// padding-bottom: toRem(30);
-		@include adaptiveValue("padding-bottom", 100, 30, 0, $containerWidth, 991.98);
+		position: relative;
+		@include adaptiveValue("padding-bottom", 140, 30, 2, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			order: 2;
+			justify-items: center;
+			align-items: center;
+			text-align: center;
+			position: relative;
+			@include adaptiveValue("top", -130, -47, 0, 767.98, 320);
+		}
+		@media (max-width: $mobile) {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 50%;
+				border-radius: toRem(330);
+				background-color: #160404;
+				filter: blur(toRem(25));
+				z-index: 1;
+			}
+		}
 	}
 
 	// .main-hero__title
@@ -27,15 +53,25 @@
 		&.title {
 			align-items: start;
 			text-align: left;
-			@include adaptiveValue("font-size", 77, 50, 0, $containerWidth, 991.98);
+			@include adaptiveValue("font-size", 77, 40, 0, $containerWidth, 767.98);
 			font-weight: 900;
 			span {
-				@include adaptiveValue("font-size", 110, 70, 0, $containerWidth, 991.98);
+				@include adaptiveValue("font-size", 110, 60, 0, $containerWidth, 767.98);
+				@media (max-width: $mobile) {
+					@include adaptiveValue("font-size", 70, 37, 0, 767.98, 320);
+				}
+			}
+			@media (max-width: $mobile) {
+				text-align: center;
+				align-items: center;
+				@include adaptiveValue("font-size", 50, 25, 0, 767.98, 320);
 			}
 		}
 		&:not(:last-child) {
-			margin-bottom: toRem(17);
+			@include adaptiveValue("margin-bottom", 17, 10);
 		}
+		position: relative;
+		z-index: 2;
 	}
 
 	// .main-hero__text
@@ -43,32 +79,425 @@
 	&__text {
 		max-width: toRem(500);
 		&:not(:last-child) {
-			margin-bottom: toRem(23);
+			@include adaptiveValue("margin-bottom", 23, 15);
 		}
+		@media (max-width: $tablet) {
+			max-width: toRem(350);
+		}
+		@media (max-width: $mobile) {
+			max-width: toRem(500);
+			@include adaptiveValue("font-size", 20, 12, 0, 767.98, 320);
+		}
+		position: relative;
+		z-index: 2;
 	}
 
 	// .main-hero__button
 
 	&__button {
 		&.button {
-			padding: toRem(25) toRem(105);
-			font-size: toRem(20);
+			padding-top: toRem(25);
+			padding-bottom: toRem(25);
+			@include adaptiveValue("padding-top", 25, 15, 0, $containerWidth, 767.98);
+			@include adaptiveValue("padding-bottom", 25, 15, 0, $containerWidth, 767.98);
+			@include adaptiveValue("padding-right", 105, 40, 0, $containerWidth, 767.98);
+			@include adaptiveValue("padding-left", 105, 40, 0, $containerWidth, 767.98);
+			@include adaptiveValue("font-size", 20, 14, 0, $containerWidth, 767.98);
+			@media (max-width: $mobile) {
+				padding: toRem(20) toRem(65);
+			}
 		}
-		justify-self: start;
+
+		@media (min-width: $mobile) {
+			justify-self: start;
+		}
+		position: relative;
+		z-index: 2;
 	}
 
 	// .main-hero__image
 
 	&__image {
-		transform: translate(-9%, 6%);
+		align-self: end;
 		img {
 			max-width: 100%;
 		}
+		@media (min-width: $mobile) {
+			transform: translate(-9%, 6%);
+		}
+		@media (max-width: $mobile) {
+			order: 1;
+		}
 	}
 }
+//===========Avantages===============//
 
-//==========================//
+.advantages-main {
+	// .advantages-main__container
 
+	&__container {
+		max-width: toRem(1300);
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		color: $whiteColor;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		gap: toRem(20);
+		@media (max-width: $tablet) {
+			gap: toRem(60);
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(30);
+		}
+	}
+
+	&__bottom {
+		@media (min-width: $tablet) {
+			display: none;
+		}
+		@media (max-width: $tablet) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	// .advantages-main__background-block
+
+	// .advantages-main__title
+
+	&__title {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("font-size", 170, 96, 0, $containerWidth, 991.98);
+		@include adaptiveValue("column-gap", 190, 270, 0, $containerWidth, 991.98);
+		color: rgba(30, 30, 30, 0.62);
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+
+	// .advantages-main__subtitle
+
+	&__subtitle {
+		display: flex;
+		font-family: "Birthstone";
+
+		@include adaptiveValue("column-gap", 400, 404, 0, $containerWidth, 991.98);
+		transform: translateY(-20px);
+
+		span {
+			text-transform: none;
+			font-size: toRem(68);
+			&:nth-child(1) {
+				position: relative;
+				left: toRem(40);
+			}
+		}
+	}
+
+	// .advantages-main__column
+
+	&__row {
+		// .advantages-main__column_left
+
+		&_top {
+			display: grid;
+			grid-template-columns: toRem(362) toRem(451);
+			@include adaptiveValue("column-gap", 470, 220, 0, $containerWidth, 991.98);
+			@media (max-width: em(1200)) {
+				grid-template-columns: toRem(362) toRem(398);
+			}
+			@media (max-width: $tablet) {
+				grid-template-columns: auto;
+			}
+			.advantages-main__item {
+				&:nth-child(1) {
+					text-align: right;
+					@media (min-width: $tablet) {
+						transform: translateX(20%);
+					}
+					@media (max-width: $tablet) {
+						flex-direction: row-reverse;
+						margin-right: auto;
+						text-align: left;
+					}
+				}
+				&:nth-child(2) {
+					@media (min-width: $tablet) {
+						flex-direction: row-reverse;
+					}
+					@media (max-width: $tablet) {
+						margin-left: auto;
+						text-align: right;
+					}
+				}
+			}
+			position: relative;
+			@media (max-width: $tablet) {
+				row-gap: toRem(22);
+				width: 100%;
+			}
+		}
+
+		// .advantages-main__column_center
+
+		&_center {
+			display: flex;
+			align-items: center;
+			@media (max-width: $tablet) {
+				position: relative;
+				transform: translateY(10%);
+			}
+		}
+
+		// .advantages-main__column_right
+
+		&_bottom {
+			display: grid;
+			column-gap: toRem(28);
+			grid-template-columns: 29.826968% 1fr 29.619641%;
+			.advantages-main__item {
+				&:nth-child(1) {
+					flex-direction: row-reverse;
+				}
+			}
+
+			.advantages-main__item {
+				&:nth-child(3) {
+					text-align: right;
+				}
+			}
+			@media (min-width: $tablet) {
+				position: relative;
+				bottom: toRem(60);
+			}
+			@media (max-width: $tablet) {
+				grid-template-columns: auto;
+				row-gap: toRem(22);
+				.advantages-main__item {
+					&:nth-child(2) {
+						margin-left: auto;
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+
+	// .advantages-main__item
+
+	&__item {
+		list-style: none;
+		display: flex;
+		gap: toRem(28);
+		@media (max-width: em(1024)) {
+			gap: toRem(15);
+		}
+		@media (max-width: $tablet) {
+			align-items: center;
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(20);
+		}
+	}
+
+	// .advantages-main__decor
+
+	&__decor {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(5);
+
+		@media (min-width: $mobileSmall) and (max-width: $tablet) {
+			transform: translateY(-95%);
+		}
+		// .advantages-main__decor_left
+
+		&_left {
+			text-align: right;
+			.advantages-main__decor-red-text {
+				transform: translate(toRem(30), toRem(-30));
+				@media (max-width: $tablet) {
+					position: relative;
+					@include adaptiveValue("top", 0, -50, 0, 991.98, 479.98);
+					@include adaptiveValue("left", 10, 60, 0, 991.98, 479.98);
+				}
+				@media (max-width: $mobileSmall) {
+					left: 0;
+				}
+			}
+			.advantages-main__decor-text {
+				position: relative;
+				left: toRem(80);
+
+				@include adaptiveValue("top", 0, -70, 0, 991.98, 479.98);
+				@include adaptiveValue("left", 185, 200, 0, 991.98, 479.98);
+				@media (max-width: $mobileSmall) {
+					left: 100px;
+				}
+			}
+		}
+
+		// .advantages-main__decor_right
+
+		&_right {
+			text-align: left;
+			.advantages-main__decor-red-text {
+				transform: translate(toRem(-25), toRem(-30));
+				position: relative;
+				z-index: 4;
+				@media (max-width: $tablet) {
+					@include adaptiveValue("top", 0, -50, 0, 991.98, 479.98);
+					@include adaptiveValue("left", 10, -70, 0, 991.98, 479.98);
+				}
+				@media (max-width: $mobileSmall) {
+					left: 0;
+				}
+			}
+			.advantages-main__decor-text {
+				position: relative;
+				left: toRem(-80);
+				@include adaptiveValue("top", 0, -70, 0, 991.98, 479.98);
+				@media (max-width: $tablet) {
+					left: -200px;
+				}
+				@media (max-width: $mobileSmall) {
+					left: -97px;
+				}
+			}
+		}
+	}
+
+	// .advantages-main__decor-text
+
+	&__decor-text {
+		color: rgba(30, 30, 30, 0.62);
+		@include adaptiveValue("font-size", 150, 100, 0, $containerWidth, 991.98);
+		font-weight: 900;
+		text-transform: uppercase;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 100, 40, 0, 991.98, 320);
+		}
+	}
+
+	// .advantages-main__decor-red-text
+
+	&__decor-red-text {
+		font-family: "Birthstone";
+		font-size: toRem(68);
+		text-transform: none;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 68, 25, 0, 991.98, 320);
+		}
+	}
+
+	// .advantages-main__image
+
+	// .advantages-main__text
+
+	&__text {
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(12);
+		}
+	}
+
+	// .advantages-main__number
+
+	&__number {
+		font-size: toRem(18);
+		font-weight: 700;
+		padding: toRem(12) toRem(15) toRem(15) toRem(10);
+		background: url("@img/main-page/icon-bg.svg") 0 0 no-repeat;
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(13);
+			padding: toRem(15) toRem(11) toRem(24) toRem(11);
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		position: relative;
+
+		@media (min-width: $tablet) {
+			bottom: toRem(30);
+		}
+	}
+
+	// .advantages-main__image
+
+	&__image {
+		position: relative;
+		z-index: 2;
+		flex: 0 0 toRem(408);
+		width: toRem(408);
+		height: toRem(336);
+		@media (min-width: $tablet) {
+			transform: translateY(-20%);
+		}
+
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 toRem(197);
+			width: toRem(197);
+			height: toRem(162);
+		}
+	}
+
+	// .advantages-main__description
+
+	&__description {
+		font-size: toRem(16);
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__prices {
+		font-family: "Birthstone";
+		line-height: 1;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+	}
+
+	// .advantages-main__old-price
+
+	&__old-price {
+		position: relative;
+		top: toRem(5);
+		text-decoration: line-through;
+		font-size: toRem(30);
+	}
+
+	// .advantages-main__price
+
+	&__price {
+		font-size: toRem(48);
+	}
+
+	// .advantages-main__button
+
+	&__button {
+		&.button {
+			padding: toRem(24) toRem(65);
+			font-size: toRem(17);
+			@media (max-width: $mobileSmall) {
+				font-size: toRem(10);
+				padding: toRem(15) toRem(43);
+			}
+		}
+	}
+}
+//===========Growt guide===============//
 .growt-guide {
 	// .growt-guide__container
 
@@ -616,336 +1045,746 @@
 		}
 	}
 }
+//=======================Mobile presets=========================//
 
-//==========================//
-
-.advantages-main {
-	// .advantages-main__container
+.mobile-presets {
+	// .mobile-presets__container
 
 	&__container {
-		max-width: toRem(1300);
-		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: 28.785714% 1fr 23.1428571429%;
+		align-items: start;
 		color: $whiteColor;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		gap: toRem(20);
-		@media (max-width: $tablet) {
-			gap: toRem(60);
-		}
-		@media (max-width: $mobileSmall) {
-			gap: toRem(30);
+		@media (max-width: em(1023.98)) {
+			grid-template-columns: auto;
+
+			justify-content: center;
+			align-items: center;
+			margin-top: toRem(-50);
 		}
 	}
 
-	&__bottom {
-		@media (min-width: $tablet) {
+	&__cards-mobile {
+		@media (min-width: em(1024)) {
 			display: none;
 		}
-		@media (max-width: $tablet) {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-	}
 
-	// .advantages-main__background-block
-
-	// .advantages-main__title
-
-	&__title {
-		display: flex;
-		align-items: center;
-		@include adaptiveValue("font-size", 170, 96, 0, $containerWidth, 991.98);
-		@include adaptiveValue("column-gap", 190, 270, 0, $containerWidth, 991.98);
-		color: rgba(30, 30, 30, 0.62);
-		font-weight: 900;
-		text-transform: uppercase;
-	}
-
-	// .advantages-main__subtitle
-
-	&__subtitle {
-		display: flex;
-		font-family: "Birthstone";
-
-		@include adaptiveValue("column-gap", 400, 404, 0, $containerWidth, 991.98);
-		transform: translateY(-20px);
-
-		span {
-			text-transform: none;
-			font-size: toRem(68);
-			&:nth-child(1) {
-				position: relative;
-				left: toRem(40);
-			}
-		}
-	}
-
-	// .advantages-main__column
-
-	&__row {
-		// .advantages-main__column_left
-
-		&_top {
+		@media (max-width: em(1023.98)) {
 			display: grid;
-			grid-template-columns: toRem(362) toRem(451);
-			@include adaptiveValue("column-gap", 470, 220, 0, $containerWidth, 991.98);
-			@media (max-width: em(1200)) {
-				grid-template-columns: toRem(362) toRem(398);
-			}
-			@media (max-width: $tablet) {
-				grid-template-columns: auto;
-			}
-			.advantages-main__item {
-				&:nth-child(1) {
-					text-align: right;
-					@media (min-width: $tablet) {
-						transform: translateX(20%);
-					}
-					@media (max-width: $tablet) {
-						flex-direction: row-reverse;
-						margin-right: auto;
-						text-align: left;
-					}
-				}
-				&:nth-child(2) {
-					@media (min-width: $tablet) {
-						flex-direction: row-reverse;
-					}
-					@media (max-width: $tablet) {
-						margin-left: auto;
-						text-align: right;
-					}
-				}
-			}
-			position: relative;
-			@media (max-width: $tablet) {
-				row-gap: toRem(22);
-				width: 100%;
-			}
-		}
-
-		// .advantages-main__column_center
-
-		&_center {
-			display: flex;
-			align-items: center;
-			@media (max-width: $tablet) {
-				position: relative;
-				transform: translateY(10%);
-			}
-		}
-
-		// .advantages-main__column_right
-
-		&_bottom {
-			display: grid;
-			column-gap: toRem(28);
-			grid-template-columns: 29.826968% 1fr 29.619641%;
-			.advantages-main__item {
-				&:nth-child(1) {
-					flex-direction: row-reverse;
-				}
-			}
-
-			.advantages-main__item {
-				&:nth-child(3) {
-					text-align: right;
-				}
-			}
-			@media (min-width: $tablet) {
-				position: relative;
-				bottom: toRem(60);
-			}
-			@media (max-width: $tablet) {
-				grid-template-columns: auto;
-				row-gap: toRem(22);
-				.advantages-main__item {
-					&:nth-child(2) {
-						margin-left: auto;
-						text-align: right;
-					}
-				}
-			}
-		}
-	}
-
-	// .advantages-main__item
-
-	&__item {
-		list-style: none;
-		display: flex;
-		gap: toRem(28);
-		@media (max-width: em(1024)) {
-			gap: toRem(15);
-		}
-		@media (max-width: $tablet) {
-			align-items: center;
-		}
-		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
 			gap: toRem(20);
-		}
-	}
-
-	// .advantages-main__decor
-
-	&__decor {
-		display: flex;
-		flex-direction: column;
-		gap: toRem(5);
-
-		@media (min-width: $mobileSmall) and (max-width: $tablet) {
-			transform: translateY(-95%);
-		}
-		// .advantages-main__decor_left
-
-		&_left {
-			text-align: right;
-			.advantages-main__decor-red-text {
-				transform: translate(toRem(30), toRem(-30));
-				@media (max-width: $tablet) {
-					position: relative;
-					@include adaptiveValue("top", 0, -50, 0, 991.98, 479.98);
-					@include adaptiveValue("left", 10, 60, 0, 991.98, 479.98);
-				}
-				@media (max-width: $mobileSmall) {
-					left: 0;
-				}
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 40, 20);
 			}
-			.advantages-main__decor-text {
-				position: relative;
-				left: toRem(80);
-
-				@include adaptiveValue("top", 0, -70, 0, 991.98, 479.98);
-				@include adaptiveValue("left", 185, 200, 0, 991.98, 479.98);
-				@media (max-width: $mobileSmall) {
-					left: 100px;
-				}
-			}
-		}
-
-		// .advantages-main__decor_right
-
-		&_right {
-			text-align: left;
-			.advantages-main__decor-red-text {
-				transform: translate(toRem(-25), toRem(-30));
-				position: relative;
-				z-index: 4;
-				@media (max-width: $tablet) {
-					@include adaptiveValue("top", 0, -50, 0, 991.98, 479.98);
-					@include adaptiveValue("left", 10, -70, 0, 991.98, 479.98);
-				}
-				@media (max-width: $mobileSmall) {
-					left: 0;
-				}
-			}
-			.advantages-main__decor-text {
-				position: relative;
-				left: toRem(-80);
-				@include adaptiveValue("top", 0, -70, 0, 991.98, 479.98);
-				@media (max-width: $tablet) {
-					left: -200px;
-				}
-				@media (max-width: $mobileSmall) {
-					left: -97px;
-				}
+			@media (max-width: $mobileSmall) {
+				gap: toRem(10);
 			}
 		}
 	}
 
-	// .advantages-main__decor-text
-
-	&__decor-text {
-		color: rgba(30, 30, 30, 0.62);
-		@include adaptiveValue("font-size", 150, 100, 0, $containerWidth, 991.98);
-		font-weight: 900;
-		text-transform: uppercase;
-		@media (max-width: $tablet) {
-			@include adaptiveValue("font-size", 100, 40, 0, 991.98, 320);
-		}
-	}
-
-	// .advantages-main__decor-red-text
-
-	&__decor-red-text {
-		font-family: "Birthstone";
-		font-size: toRem(68);
-		text-transform: none;
-		@media (max-width: $tablet) {
-			@include adaptiveValue("font-size", 68, 25, 0, 991.98, 320);
-		}
-	}
-
-	// .advantages-main__image
-
-	// .advantages-main__text
-
-	&__text {
-		@media (max-width: $mobileSmall) {
-			font-size: toRem(12);
-		}
-	}
-
-	// .advantages-main__number
-
-	&__number {
-		font-size: toRem(18);
-		font-weight: 700;
-		padding: toRem(12) toRem(15) toRem(15) toRem(10);
-		background: url("@img/main-page/icon-bg.svg") 0 0 no-repeat;
-		@media (max-width: $mobileSmall) {
-			font-size: toRem(13);
-			padding: toRem(15) toRem(11) toRem(24) toRem(11);
-		}
-	}
+	// .mobile-presets__content
 
 	&__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		// .mobile-presets__content_left
+
+		&_left {
+			.statistic-card {
+				@include adaptiveValue("top", 85, 25, 0, $containerWidth, 1023.98);
+				@include adaptiveValue("right", -51, -31, 0, $containerWidth, 1023.98);
+			}
+		}
+
+		// .mobile-presets__content_center
+
+		&_center {
+		}
+
+		// .mobile-presets__content_right
+
+		&_right {
+			.statistic-card {
+				@include adaptiveValue("min-width", 360, 248, 0, $containerWidth, 1023.98);
+				@include adaptiveValue("top", 33, 23, 0, $containerWidth, 1023.98);
+				@include adaptiveValue("right", 29, 27, 0, $containerWidth, 1023.98);
+				&:not(:last-child) {
+					@include adaptiveValue("margin-bottom", 150, 70, 0, $containerWidth, 1023.98);
+				}
+			}
+			@media (max-width: em(1023.98)) {
+				@include adaptiveValue("margin-bottom", 40, 20);
+			}
+		}
+	}
+
+	// .mobile-presets__header
+
+	&__header {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 34, 0, $containerWidth, 1023.98);
+		}
+		@media (max-width: em(1024)) {
+			display: flex;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+			flex-direction: column;
+			@include adaptiveValue("margin-bottom", 40, 20, 0, 1023.98, 320);
+		}
+	}
+
+	// .mobile-presets__title
+
+	&__title {
+		&.title {
+			margin-bottom: 0;
+			@include adaptiveValue("font-size", 40, 30, 0, $containerWidth, 1023.98);
+			align-items: flex-end;
+			font-weight: 800;
+			text-align: right;
+			@media (max-width: em(1024)) {
+				align-items: center;
+			}
+			span {
+				@include adaptiveValue("font-size", 64, 54, 0, $containerWidth, 1023.98);
+			}
+			@media (max-width: em(1023.98)) {
+				@include adaptiveValue("font-size", 50, 26, 0, 1023.98, 320);
+				span {
+					@include adaptiveValue("font-size", 90, 42, 0, 1023.98, 320);
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__description {
+		@media (min-width: em(1024)) {
+			text-align: right;
+			max-width: toRem(300);
+			margin-left: auto;
+		}
+		line-height: 1.5;
+		@include adaptiveValue("font-size", 18, 15, 0, $containerWidth, 1023.98);
+		@media (max-width: em(1023.98)) {
+			@include adaptiveValue("font-size", 20, 12, 0, 1023.98, 320);
+		}
+	}
+
+	// .mobile-presets__card-statistic
+
+	&__card-statistic {
+	}
+	&__image {
+		position: relative;
+		img {
+			max-width: 100%;
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: toRem(53);
+			height: toRem(63);
+			background: url("@img/main-page/decor-i.svg") 0 0 / contain no-repeat;
+			@media (max-width: $mobileSmall) {
+				width: toRem(33);
+				height: toRem(53);
+			}
+		}
+		&::before {
+			transform: translate(58%, 72%);
+			top: 0;
+			left: 0;
+		}
+		&::after {
+			transform: translate(-23%, -89%);
+			bottom: 0;
+			right: 0;
+		}
+		@media (max-width: em(1023.98)) {
+			@include adaptiveValue("margin-bottom", 40, 20);
+		}
+	}
+	// .mobile-presets__button
+
+	&__button {
+		align-self: center;
+		padding-left: toRem(88);
+		padding-right: toRem(88);
+		@media (min-width: em(1024)) {
+			transform: translateY(-100%);
+		}
+		&.button {
+			font-size: toRem(17);
+			@media (max-width: $mobileSmall) {
+				font-size: toRem(10);
+			}
+		}
+		@media (max-width: em(1023.98)) {
+			justify-self: center;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: toRem(15) toRem(54);
+		}
+	}
+
+	// .mobile-presets__text
+
+	&__text {
+		@include adaptiveValue("font-size", 17, 15, 0, $containerWidth, 1023.98);
+
+		@media (min-width: em(1024)) {
+			padding-left: toRem(10);
+		}
+		p {
+			line-height: 1.5;
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+		@media (max-width: em(1024.98)) {
+			text-align: center;
+			@include adaptiveValue("font-size", 20, 13, 0, 1023.98, 320);
+		}
+	}
+}
+
+.statistic-card {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: toRem(10);
+	text-align: center;
+	padding: toRem(30) toRem(10) toRem(30) toRem(10);
+	border-radius: toRem(20);
+	// border: toRem(1) solid #fff;
+	background-color: rgba(18, 18, 18, 0.89);
+	backdrop-filter: blur(toRem(1.5));
+	z-index: 2;
+	@media (min-width: em(1024)) {
+		@include adaptiveValue("min-width", 360, 280, 2, $containerWidth, 1023.98);
+	}
+	@media (max-width: em(1023.98)) {
+		border-radius: toRem(9);
+	}
+	@media (max-width: $mobile) {
+		gap: toRem(5);
+		padding: toRem(10) toRem(10) toRem(10) toRem(10);
+	}
+	// .statistic-card__value
+
+	&__value {
+		@include adaptiveValue("font-size", 60, 40, 0, $containerWidth, 1023.98);
+		font-weight: 900;
+		&::after {
+			content: "+";
+		}
+		@media (max-width: em(1023.98)) {
+			@include adaptiveValue("font-size", 60, 24, 0, 1023.98, 320);
+		}
+	}
+
+	// .statistic-card__text
+
+	&__text {
+		color: #696969;
+		font-size: toRem(16);
+		line-height: 1.3;
+		@media (min-width: em(1024)) {
+			max-width: toRem(241);
+		}
+		@media (max-width: em(1023.98)) {
+			@include adaptiveValue("font-size", 18, 7, 0, 1023.98, 320);
+		}
+	}
+}
+//==============About me============//
+.about-me {
+	position: relative;
+	// .about-me__container
+
+	&__container {
+	}
+
+	&__decor {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transform: translateY(35%);
+		pointer-events: none;
+		opacity: 0.5;
+		@media (max-width: em(1199.98)) {
+			display: none;
+		}
+	}
+
+	// .about-me__header
+
+	&__header {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		text-align: center;
-		position: relative;
-
-		@media (min-width: $tablet) {
-			bottom: toRem(30);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 0, 1, $containerWidth, 1199.98);
 		}
 	}
 
-	// .advantages-main__image
+	// .about-me__name
+
+	&__name {
+		@include adaptiveValue("font-size", 96, 60);
+		font-weight: 900;
+		text-transform: uppercase;
+		&_name {
+			transform: translateY(15%);
+		}
+		&_last-name {
+			transform: translateY(-15%);
+		}
+	}
+
+	// .about-me__professions
+
+	&__professions {
+		display: flex;
+		align-items: center;
+		font-family: "Birthstone";
+		@include adaptiveValue("font-size", 48, 26);
+		span {
+			text-transform: none;
+			display: flex;
+			align-items: center;
+			gap: toRem(10);
+			@include adaptiveValue("font-size", 48, 26);
+			@media (max-width: em(1199.98)) {
+				gap: toRem(3);
+			}
+			&:last-child {
+				&::after {
+					content: "";
+					display: inline-block;
+					width: toRem(62);
+					height: toRem(8);
+					background: url("@img/main-page/about-me/decor-professions.svg") 0 0 / contain no-repeat;
+					transform: translateY(3px);
+					@media (max-width: $mobileSmall) {
+						width: toRem(32);
+						height: toRem(8);
+					}
+				}
+				position: relative;
+				@include adaptiveValue("left", 90, 60, 0, $containerWidth, 1200);
+				@media (max-width: em(1199.98)) {
+					@include adaptiveValue("left", 25, 60, 0, 1199.98, 320);
+				}
+
+				@media (max-width: em(375)) {
+					@include adaptiveValue("left", 57, 40, 0, 375, 320);
+				}
+			}
+			&:nth-child(2) {
+				@media (max-width: em(1199.98)) {
+					opacity: 0;
+				}
+			}
+
+			&:first-child {
+				position: relative;
+				right: toRem(30);
+				@include adaptiveValue("right", 30, 10, 0, $containerWidth, 1199.98);
+				@media (max-width: em(1199.98)) {
+					@include adaptiveValue("right", 20, 20, 0, 1199.98, 320);
+				}
+				&::before {
+					content: "";
+					display: inline-block;
+					width: toRem(62);
+					height: toRem(8);
+					background: url("@img/main-page/about-me/decor-professions.svg") 0 0 / contain no-repeat;
+					transform: rotate(180deg);
+					@media (max-width: $mobileSmall) {
+						width: toRem(32);
+						height: toRem(8);
+					}
+				}
+				@media (max-width: em(375)) {
+					@include adaptiveValue("right", 20, 10, 0, 375, 320);
+				}
+			}
+		}
+	}
+
+	&__wrapp {
+		position: relative;
+	}
+
+	// .about-me__body
+
+	&__body {
+		backdrop-filter: blur(toRem(5));
+		color: $whiteColor;
+		position: relative;
+		@media (min-width: em(1200)) {
+			overflow: hidden;
+			background-color: rgba(18, 18, 18, 0.88);
+			// border: toRem(2) solid rgba(255, 255, 255, 0.51);
+			border-radius: toRem(20);
+			// border: toRem(2) solid rgba(255, 255, 255, 0.51);
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+		}
+		&::before {
+			left: 0;
+			top: 0;
+			width: 24.0714285714%;
+			height: 49.214286%;
+			background: url("@img/workbook/decor/decor-2.png") center / contain no-repeat;
+			transform: rotate(45deg) translate(-44%, -5%);
+			@media (max-width: em(1199.98)) {
+				background-size: contain;
+				width: 300px;
+				height: 300px;
+				left: -115px;
+				top: -100px;
+				transform: rotate(45deg) translate(0);
+				@include adaptiveValue("width", 300, 222, 0, 1199.98, 320);
+				@include adaptiveValue("height", 300, 165, 0, 1199.98, 320);
+			}
+		}
+		&::after {
+			right: 0;
+			top: 0;
+			width: 45.7142857143%;
+			height: 79.214286%;
+			background: url("@img/workbook/decor/decor-3.png") center / contain no-repeat;
+			transform: rotate(306deg) translate(40%, 2%);
+			@media (max-width: em(1199.98)) {
+				background-size: contain;
+				width: 348px;
+				height: 348px;
+				right: -76px;
+				top: -183px;
+				transform: rotate(304deg);
+				z-index: 1;
+				@include adaptiveValue("width", 348, 260, 0, 1199.98, 320);
+				@include adaptiveValue("height", 348, 260, 0, 1199.98, 320);
+				@include adaptiveValue("right", -76, -95, 0, 1199.98, 320);
+				@include adaptiveValue("top", -183, -125, 0, 1199.98, 320);
+			}
+		}
+		@media (max-width: em(1199.98)) {
+			.decor-border {
+				display: none;
+			}
+		}
+	}
+
+	&__mobile-content {
+		@media (min-width: em(1200)) {
+			display: none;
+		}
+		@media (max-width: em(1199.98)) {
+			display: grid;
+			@include adaptiveValue("gap", 40, 17);
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 36.428571% 1fr;
+		position: relative;
+		@media (min-width: em(1200)) {
+			padding-left: toRem(49);
+			padding-right: toRem(47);
+			padding-bottom: toRem(100);
+		}
+		@media (max-width: em(1199.98)) {
+			grid-template-columns: auto;
+			gap: toRem(120);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(100);
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(60);
+		}
+	}
+
+	// .about-me__content
+
+	&__content {
+		// .about-me__content_left
+
+		&_left {
+			align-items: flex-end;
+			@media (min-width: em(1200)) {
+				padding-right: 39px;
+			}
+			.content-about__description {
+				@media (min-width: em(1200)) {
+					text-align: right;
+				}
+			}
+
+			.content-about__label {
+				background: $red;
+			}
+			.content-about__bottom {
+				align-self: start;
+			}
+		}
+
+		// .about-me__content_right
+
+		&_right {
+			@media (min-width: em(1200)) {
+				padding-left: 30px;
+			}
+			align-items: flex-start;
+			.content-about__label {
+				background-color: white;
+				color: black;
+			}
+			.content-about__description {
+				@media (min-width: em(1200)) {
+					text-align: left;
+				}
+			}
+			.content-about__bottom {
+				align-self: flex-end;
+			}
+		}
+		@media (max-width: em(1199.98)) {
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+
+	// .about-me__center
+
+	&__center {
+		position: relative;
+		@media (max-width: em(1199.98)) {
+			// margin-top: -192px;
+			@include adaptiveValue("margin-top", -192, -150);
+		}
+	}
+
+	// .about-me__image
 
 	&__image {
-		position: relative;
-		z-index: 2;
-		flex: 0 0 toRem(408);
-		width: toRem(408);
-		height: toRem(336);
-		@media (min-width: $tablet) {
-			transform: translateY(-20%);
+		align-self: flex-end;
+		@media (min-width: em(1200)) {
+			position: absolute;
+			left: 50%;
+			// transform: translate(-53%, 34%);
+			// width: 100%;
+			// padding-bottom: 185%;
+			position: absolute;
+			left: 50%;
+			transform: translate(-55%, 34%);
+			width: 116%;
+			padding-bottom: 165%;
+			@include adaptiveValue("bottom", 83, 132, 0, $containerWidth, 1199.98);
 		}
-
-		@media (max-width: $mobileSmall) {
-			flex: 0 0 toRem(197);
-			width: toRem(197);
-			height: toRem(162);
+		@media (max-width: em(1199.98)) {
+			@include adaptiveValue("width", 293, 256, 0, 1199.98, 320);
+			@include adaptiveValue("height", 451, 320, 0, 1199.98, 320);
+		}
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			@media (max-width: em(1199.98)) {
+				object-fit: contain;
+				width: 95%;
+			}
 		}
 	}
 
-	// .advantages-main__description
+	// .about-me__instagram
+
+	&__instagram {
+	}
+}
+.content-about {
+	display: flex;
+	flex-direction: column;
+	@include adaptiveValue("gap", 27, 18);
+	// .content-about__label
+
+	&__label {
+		font-size: toRem(16);
+		text-transform: uppercase;
+		border-radius: toRem(10);
+		text-align: center;
+		padding: toRem(10) toRem(20);
+		box-shadow: 0 toRem(4) toRem(4) 0 rgba(0, 0, 0, 0.25);
+		@media (max-width: em(1199.98)) {
+			@include adaptiveValue("font-size", 20, 10);
+		}
+	}
+
+	// .content-about__description
 
 	&__description {
+		line-height: 1.2;
 		font-size: toRem(16);
-		&:not(:last-child) {
-			margin-bottom: toRem(5);
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 27, 10);
+			}
+		}
+		@media (max-width: em(1199.98)) {
+			@include adaptiveValue("font-size", 22, 12, 0, 1199.98, 320);
 		}
 	}
 
-	&__prices {
+	// .content-about__bottom
+
+	&__bottom {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		gap: toRem(10) toRem(50);
+		@media (max-width: em(1199.98)) {
+			align-self: center !important;
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(10) toRem(20);
+		}
+	}
+
+	// .content-about__statisctics
+
+	&__statisctics {
+	}
+	@media (max-width: em(1199.98)) {
+		background-color: #191818;
+		border-radius: toRem(10);
+		padding: toRem(25);
+	}
+}
+.statisctics-about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: toRem(5);
+	// .statisctics-about__value
+
+	&__value {
 		font-family: "Birthstone";
-		line-height: 1;
+		// font-size: toRem(70);
+		@include adaptiveValue("font-size", 70, 50, 0, $containerWidth, 1200);
+		text-transform: none;
+		@media (max-width: em(1199.98)) {
+			@include adaptiveValue("font-size", 90, 40, 0, 1199.98, 320);
+		}
+	}
+
+	// .statisctics-about__title
+
+	&__title {
+		text-transform: uppercase;
+		line-height: 1.2;
+		// font-size: toRem(16);
+		@include adaptiveValue("font-size", 16, 12, 0, $containerWidth, 1200);
+		@media (max-width: em(1199.98)) {
+			@include adaptiveValue("font-size", 20, 10, 0, 1199.98, 320);
+		}
+	}
+}
+.instagram {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	border-radius: toRem(30);
+	background-color: rgba(25, 25, 25, 0.53);
+	padding: toRem(15) toRem(50) toRem(23) toRem(50);
+	transform: translateY(65%);
+	@media (min-width: em(1200)) {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		backdrop-filter: blur(toRem(10));
+	}
+	@media (max-width: em(1199.98)) {
+		background-color: rgba(25, 25, 25);
+		max-width: toRem(500);
+		margin: 0 auto;
+		@include adaptiveValue("padding-right", 50, 20, 0, 1199.98, 320);
+		@include adaptiveValue("padding-left", 50, 20, 0, 1199.98, 320);
+		transform: translateY(65%);
+	}
+	@media (max-width: $mobileSmall) {
+		padding: toRem(10) 0 toRem(10) 0;
+	}
+	// .instagram__icon
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(21%, -40%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: toRem(57);
+		height: toRem(68);
+		background: url("@img/main-page/icon-bg-border.svg") center / contain no-repeat;
+		img {
+			width: toRem(30);
+			height: toRem(30);
+			position: relative;
+			bottom: 5px;
+			@media (max-width: $mobile) {
+				width: toRem(25);
+				height: toRem(25);
+			}
+			@media (max-width: $mobileSmall) {
+				width: toRem(18);
+				height: toRem(18);
+				bottom: 2px;
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(47);
+			height: toRem(48);
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(37);
+			height: toRem(40);
+		}
+	}
+
+	// .instagram__link
+
+	&__link {
+		text-align: center;
+		text-transform: none;
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}
@@ -956,31 +1795,46 @@
 		}
 	}
 
-	// .advantages-main__old-price
+	// .instagram__content
 
-	&__old-price {
-		position: relative;
-		top: toRem(5);
-		text-decoration: line-through;
-		font-size: toRem(30);
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
+		align-items: center;
+		text-align: center;
+		gap: toRem(30);
+		@media (max-width: $mobileSmall) {
+			gap: toRem(0);
+			grid-template-columns: 33% 33% 33%;
+		}
 	}
 
-	// .advantages-main__price
+	// .instagram__item
 
-	&__price {
-		font-size: toRem(48);
+	&__item {
+		display: grid;
+		gap: toRem(10);
+		@media (max-width: $mobile) {
+			gap: toRem(5);
+		}
 	}
 
-	// .advantages-main__button
+	// .instagram__value
 
-	&__button {
-		&.button {
-			padding: toRem(24) toRem(65);
-			font-size: toRem(17);
-			@media (max-width: $mobileSmall) {
-				font-size: toRem(10);
-				padding: toRem(15) toRem(43);
-			}
+	&__value {
+		font-size: toRem(25);
+		font-weight: 500;
+		@media (max-width: em(1199.98)) {
+			@include adaptiveValue("font-size", 25, 13, 0, 1199.98, 320);
+		}
+	}
+
+	// .instagram__text
+
+	&__text {
+		@media (max-width: em(1199.98)) {
+			@include adaptiveValue("font-size", 18, 11, 0, 1199.98, 320);
 		}
 	}
 }

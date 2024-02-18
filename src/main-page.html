@@ -6,8 +6,9 @@
 
 <body>
 	<div class="wrapper">
+		@@include('html/_header.htm',{})
 		<main class="main">
-			<section class="main__hero main-hero">
+			<section class="main__hero main-hero" id="main-hero">
 				<div class="main-hero__container">
 					<div class="main-hero__content">
 						<h1 class="main-hero__title title"><span class="bg-gradient">Welcome to</span>Diana Diloyan's store</h1>
@@ -20,7 +21,17 @@
 
 				</div>
 				<img class="ibg" src="@img/main-page/background.jpg" alt="background">
+
 			</section>
+			<!-- <div id="splide1" class="splide" role="group" aria-label="Splide Basic HTML Example">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">MODELING</li>
+						<li class="splide__slide">REELS</li>
+						<li class="splide__slide">PRESETS</li>
+					</ul>
+				</div>
+			</div> -->
 			<section class="main__advantages advantages-main">
 				<div class="advantages-main__container">
 					<ul class="advantages-main__row advantages-main__row_top">
@@ -66,6 +77,8 @@
 					</ul>
 					<div class="advantages-main__bottom"></div>
 				</div>
+				<canvas class="particles particles1" data-color="#ffffff"></canvas>
+				<canvas class="particles particles2" data-color="#ffffff"></canvas>
 			</section>
 			<section class="main__growt-guide growt-guide">
 				<div class="growt-guide__container">
@@ -156,25 +169,173 @@
 					</div>
 				</div>
 			</section>
+			<section class="main__mobile-presets mobile-presets">
+				<div class="mobile-presets__container">
+					<div class="mobile-presets__content mobile-presets__content_left">
+						<div class="mobile-presets__header">
+							<h2 class="mobile-presets__title title"><span class="bg-gradient">One-click</span>Mobile Presets</h2>
+							<p class="mobile-presets__description">Enhance your photos with just a <strong>single click!</strong></p>
+						</div>
+						<div class="mobile-presets__card-statistic statistic-card" data-border data-da=".mobile-presets__cards-mobile, 1023.98">
+							<span class="decor-border"></span>
+							<span class="decor-border"></span>
+							<span class="decor-border"></span>
+							<span class="decor-border"></span>
+							<div class="statistic-card__value bg-gradient">700</div>
+							<p class="statistic-card__text">downloads since the launch of the project</p>
+
+						</div>
+					</div>
+					<div class="mobile-presets__content mobile-presets__content_center">
+						<div class="mobile-presets__image">
+							<img src="@img/main-page/photos.png" alt="Diana Diloyan">
+						</div>
+						<a data-da=".mobile-presets__container, 1023.98, last" class="mobile-presets__button button" href="#"><span>Get it now</span></a>
+					</div>
+					<div class="mobile-presets__content mobile-presets__content_right">
+						<div class="mobile-presets__card-statistic statistic-card" data-border data-da=".mobile-presets__cards-mobile, 1023.98">
+							<span class="decor-border"></span>
+							<span class="decor-border"></span>
+							<span class="decor-border"></span>
+							<span class="decor-border"></span>
+							<div class="statistic-card__value bg-gradient">12</div>
+							<p class="statistic-card__text">preset packs for different photo themes and settings</p>
+						</div>
+						<div class="mobile-presets__text">
+							<p><strong>Elevate your images to stunning perfection with just a tap.</strong></p>
+							<p>Choose your favorite preset pack or grab the PREMIUM PACK, which includes all 12 available preset packs </p>
+						</div>
+					</div>
+					<div class="mobile-presets__cards-mobile">
+					</div>
+				</div>
+				<canvas class="particles particles1" data-color="#ffffff"></canvas>
+				<canvas class="particles particles2" data-color="#ffffff"></canvas>
+			</section>
+			<section class="main__about about-me">
+				<div class="about-me__container">
+					<div class="about-me__body" data-border>
+						<span class="decor-border"></span>
+						<span class="decor-border"></span>
+						<span class="decor-border"></span>
+						<span class="decor-border"></span>
+						<div class="about-me__header">
+							<h2 class="about-me__name about-me__name_name">Diana</h2>
+							<div class="about-me__professions">
+								<span class="bg-gradient">Model</span>
+								<span class="bg-gradient">& Content </span>
+								<span class="bg-gradient">creator</span>
+							</div>
+							<h2 class="about-me__name about-me__name_last-name">Diloyan</h2>
+						</div>
+						<div class="about-me__wrapper">
+							<div class="about-me__content about-me__content_left content-about" data-da=".about-me__mobile-content, 1199.98,1">
+								<div class="content-about__label">who am i ?</div>
+								<div class="content-about__description">
+									<p>Hi! My name is Diana Diloyan, and I'm delighted to welcome you to my website. Let me share a little about myself and what I do</p>
+									<p>Since 2012, I've been immersed in the world of fashion and modeling. Over these years, I've gathered a wealth of experience and paved my path in this industry. In the past year, I've actively teamed up with
+										brands
+										and appeared in fashion magazines.</p>
+								</div>
+								<div class="content-about__bottom">
+									<div class="content-about__statisctics statisctics-about">
+										<div class="statisctics-about__value bg-gradient"><span class="bg-gradient">12</span> years</div>
+										<h4 class="statisctics-about__title">of experience</h4>
+									</div>
+									<div class="content-about__statisctics statisctics-about">
+										<div class="statisctics-about__value bg-gradient"><span class="bg-gradient">500</span>+</div>
+										<h4 class="statisctics-about__title">satisfied models</h4>
+									</div>
+								</div>
+
+							</div>
+							<div class="about-me__center">
+
+								<div class="about-me__image">
+									<img src="img/main-page/about-me/diana-diloyan-1.png" alt="Diana Diloyan">
+									<!-- <picture>
+											<source srcset="img/main-page/about-me/diana-diloyan-full.png" media="(min-width: 1200px)">
+											<source srcset="img/main-page/about-me/diana-diloyan.png" media="(min-width: 1199.98px)">
+											<img src="img/main-page/about-me/diana-diloyan.png" alt="Diana Diloyan">
+										</picture> -->
+								</div>
+								<div class="about-me__instagram instagram">
+									<div class="instagram__icon">
+										<img src="@img/social-icons/instagram.svg" alt="instagram icon">
+									</div>
+									<a href="https://www.instagram.com/dianadiloyann" target="_blank" class="instagram__link bg-gradient">@dianadiloyann</a>
+									<div class="instagram__content">
+										<div class="instagram__item">
+											<div class="instagram__value">181</div>
+											<div class="instagram__text">Posts</div>
+										</div>
+										<div class="instagram__item">
+											<div class="instagram__value">450k</div>
+											<div class="instagram__text">Followers</div>
+										</div>
+										<div class="instagram__item">
+											<div class="instagram__value">449</div>
+											<div class="instagram__text">Following</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="about-me__content about-me__content_right content-about" data-da=".about-me__mobile-content, 1199.98,2">
+								<div class="content-about__label">MY experience</div>
+								<div class="content-about__description">
+									<p> In 2017, I made a significant decision — to open my modeling school in Ukraine. That's when I began teaching lessons on posing, modeling, catwalk, and etiquette for young ladies. </p>
+									<p>Today, I'm on an important mission — to create a community for women that will help them feel confident, love and accept their bodies, and unleash their feminine energy thanks to studying my products. </p>
+								</div>
+								<div class="content-about__bottom">
+									<div class="content-about__statisctics statisctics-about">
+										<div class="statisctics-about__value bg-gradient"><span class="bg-gradient">1000</span>+</div>
+										<h4 class="statisctics-about__title">photoshoots</h4>
+									</div>
+									<div class="content-about__statisctics statisctics-about">
+										<div class="statisctics-about__value bg-gradient"><span class="bg-gradient">400</span>k</div>
+										<h4 class="statisctics-about__title">FOLLOWERS</h4>
+									</div>
+								</div>
+
+							</div>
+							<div class="about-me__mobile-content">
+							</div>
+
+
+						</div>
+						<svg class="about-me__decor" width="100%" height="100%" viewBox="0 0 1398 431" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M1398 0L1339.75 26.3333C1281.5 52.6667 1165 105.333 1048.5 144.833C932 184.333 815.5 210.667 699 197.5C582.5 184.333 466 131.667 349.5 118.5C233 105.333 116.5 131.667 58.25 144.833L0 158V316H58.25C116.5 316 233 316 349.5 316C466 316 582.5 316 699 316C815.5 316 932 316 1048.5 316C1165 316 1281.5 316 1339.75 316H1398V0Z"
+								fill="#1C1C1C" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M1398 57L1339.75 83.3333C1281.5 109.667 1165 162.333 1048.5 201.833C932 241.333 815.5 267.667 699 254.5C582.5 241.333 466 188.667 349.5 175.5C233 162.333 116.5 188.667 58.25 201.833L0 215V373H58.25C116.5 373 233 373 349.5 373C466 373 582.5 373 699 373C815.5 373 932 373 1048.5 373C1165 373 1281.5 373 1339.75 373H1398V57Z"
+								fill="#161616" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M1398 115L1339.75 141.333C1281.5 167.667 1165 220.333 1048.5 259.833C932 299.333 815.5 325.667 699 312.5C582.5 299.333 466 246.667 349.5 233.5C233 220.333 116.5 246.667 58.25 259.833L0 273V431H58.25C116.5 431 233 431 349.5 431C466 431 582.5 431 699 431C815.5 431 932 431 1048.5 431C1165 431 1281.5 431 1339.75 431H1398V115Z"
+								fill="#0B0B0B" />
+						</svg>
+					</div>
+				</div>
+			</section>
 			<section class="main__faq faq">
 				<div class="faq__container">
 					<h2 class="faq__title title"><span class="bg-gradient">Questions</span>AND ANSWERS</h2>
 					<div data-spollers class="faq__spollers spollers">
-						<details class="spollers__item">
-							<summary class="spollers__title">How will I access the workbook?</summary>
+						<details class="spollers__item" data-spoller-item>
+							<summary class="spollers__title" data-spoller-title>How will I access the workbook?</summary>
 							<div class="spollers__body">
 								<p class="text">After payment, you will receive a download link for the digital version of the workbook in three languages to the email you provided during the payment process.</p>
 							</div>
 						</details>
-						<details class="spollers__item">
-							<summary class="spollers__title">How long will I have access to the workbook?</summary>
+						<details class="spollers__item" data-spoller-item>
+							<summary class="spollers__title" data-spoller-title>How long will I have access to the workbook?</summary>
 							<div class="spollers__body">
 								<p class="text">After purchasing the workbook, you will have lifetime access to it. <br>
 									Remember to download it so you can continue your learning and start the practical exercises.</p>
 							</div>
 						</details>
-						<details class="spollers__item">
-							<summary class="spollers__title">Where can I reach out if I have questions before/after purchasing?</summary>
+						<details class="spollers__item" data-spoller-item>
+							<summary class="spollers__title" data-spoller-title>Where can I reach out if I have questions before/after purchasing?</summary>
 							<div class="spollers__body">
 								<p class="text">I'm always available. You can email me at <a href="mailto:pr.dianadiloyan@gmail.com">pr.dianadiloyan@gmail.com</a> or contact me on Telegram at <a class="bg-gradient"
 										href="https://t.me/diloyan">@diloyan</a></p>
@@ -183,15 +344,16 @@
 					</div>
 
 				</div>
-				<button class="top" data-goto="#hero" type="button">
-					<svg viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M1 7L8 1.5L15 7" stroke="white" stroke-width="2" />
-					</svg>
-				</button>
+
 			</section>
 			@@include('html/_footer.htm',{})
 		</main>
 	</div>
+	<button class="top" data-goto="#main-hero" type="button">
+		<svg viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M1 7L8 1.5L15 7" stroke="white" stroke-width="2" />
+		</svg>
+	</button>
 	@@include('html/_js.htm',{})
 </body>
 

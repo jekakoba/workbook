@@ -95,9 +95,9 @@ body {
 	// background-color: #121212;
 	// Скролл заблоковано
 	.lock & {
-		// overflow: hidden;
-		// touch-action: none;
-		// overscroll-behavior: none;
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
 	}
 	// Сайт завантажений
 	.loaded & {
@@ -187,6 +187,7 @@ body {
 @import "pages";
 @import "card";
 @import "double-slider";
+@import "splide";
 
 // Підключення стилів окремих сторінок
 @import "home";
