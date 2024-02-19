@@ -105,6 +105,7 @@
 	@media (max-width: $mobileSmall) {
 		font-size: toRem(12);
 		padding: toRem(16);
+		padding-right: toRem(40);
 	}
 	p {
 		a {
@@ -113,6 +114,14 @@
 					text-decoration: underline;
 				}
 			}
+		}
+	}
+}
+
+.main__faq {
+	.spollers__body {
+		p {
+			@include adaptiveValue("max-width", 860, 250);
 		}
 	}
 }

@@ -6,7 +6,48 @@
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header data-scroll="50" data-scroll-show class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<img src="@img/main-page/logo.svg" alt="Diana Diloyan store logo">
+				</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list" data-spollers="767.98,max">
+							<li class="menu__item menu__item_sub-menu" data-spoller-item>
+								<button class="menu__button-sub-menu _icon-arrow" type="button" data-spoller-title>Products</button>
+								<div class="sub-menu-list-wrapper">
+									<ul class="sub-menu-list">
+										<li>
+											<a href="#">Workbook</a>
+										</li>
+										<li>
+											<a href="#">Instagram Growth Guide</a>
+										</li>
+										<li>
+											<a href="#">Mobile Presets</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li data-goto="#about" data-goto-header class="menu__item"><a href="#" class="menu__link">About us</a></li>
+							<li data-goto="#contacts" data-goto-header class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+							<li data-goto="#faq" data-goto-header class="menu__item"><a href="#" class="menu__link">FAQ</a></li>
+						</ul>
+					</nav>
+
+				</div>
+				<ul class="header__socials socials" data-da=".menu__list, 767.98,last">
+					<li>
+						<a class="_icon-telegram" href="#"></a>
+					</li>
+					<li>
+						<a class="_icon-instagram" href="https://www.instagram.com/dianadiloyann" target="_blank"></a>
+					</li>
+				</ul>
+				<button type="button" class="icon-menu"><span></span></button>
+			</div>
+		</header>
 		<main class="main">
 			<section class="main__hero main-hero" id="main-hero">
 				<div class="main-hero__container">
@@ -21,219 +62,30 @@
 
 				</div>
 				<img class="ibg" src="@img/main-page/background.jpg" alt="background">
+				<div class="marquee marquee_top" data-marquee data-marquee-speed='100' data-marquee-pause-mouse-enter>
+					<span>PRESETS</span>
+					<div>MODELING</div>
+					<div>REELS</div>
 
-			</section>
-			<div class="marquee">
-				<h3>
-					<div class="marquee-wrapper">
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-					</div>
-				</h3>
-			</div>
-			<div class="marquee marquee_top">
-				<h3>
-					<div class="marquee-wrapper">
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-						<div class="marquee-title">
-							<span class="text-stroke-black">PRESETS</span>
-							<span class="text-stroke-black">MODELING</span>
-							<span class="text-stroke-black">REELS</span>
-						</div>
-					</div>
-				</h3>
-			</div>
-			<!-- <div id="splide1" class="splide" role="group" aria-label="Splide Basic HTML Example">
-				<div class="splide__track">
-					<ul class="splide__list">
-						<li class="splide__slide">MODELING</li>
-						<li class="splide__slide">REELS</li>
-						<li class="splide__slide">PRESETS</li>
-					</ul>
 				</div>
-			</div> -->
+				<div class="marquee marquee_bottom" data-marquee data-marquee-speed='100' data-marquee-pause-mouse-enter data-marquee-direction='right'>
+					<span>PRESETS</span>
+					<div>MODELING</div>
+					<div>REELS</div>
+				</div>
+			</section>
 			<section class="main__advantages advantages-main">
 				<div class="advantages-main__container">
 					<ul class="advantages-main__row advantages-main__row_top">
 						<li class="advantages-main__item">
 							<p class="advantages-main__text text"><strong>Transform from being camera shy</strong> to confidently identifying your best angles</p>
-							<div class="advantages-main__number">01</div>
+							<div class="advantages-main__number">
+								<span>01</span>
+							</div>
 						</li>
 						<li class="advantages-main__item" data-da=".advantages-main__row_bottom, 991.98,1">
 							<p class=" advantages-main__text text"><strong>Navigate basic posing rules for various</strong> scenarios: standing, sitting against a wall, on a couch, on a high stool, sitting at a table, and more.</p>
-							<div class="advantages-main__number">03</div>
+							<div class="advantages-main__number"><span>03</span></div>
 						</li>
 					</ul>
 					<div class="advantages-main__row advantages-main__row_center">
@@ -252,7 +104,7 @@
 					<ul class="advantages-main__row advantages-main__row_bottom">
 						<li class="advantages-main__item" data-da=".advantages-main__row_top, 991.98,2">
 							<p class="advantages-main__text text"><strong>Learn proven methods for shoot</strong> preparation, complete with visual examples </p>
-							<div class="advantages-main__number">02</div>
+							<div class="advantages-main__number"><span>02</span></div>
 						</li>
 						<div class="advantages-main__content" data-da=".advantages-main__bottom, 991.98">
 							<p class="advantages-main__description text">Your ultimate guide to stunning photos!</p>
@@ -264,7 +116,7 @@
 						</div>
 						<li class="advantages-main__item">
 							<p class="advantages-main__text text">Explore posing ideas with <strong>examples, corrections, and detailed explanations.</strong></p>
-							<div class="advantages-main__number">04</div>
+							<div class="advantages-main__number"><span>04</span></div>
 						</li>
 					</ul>
 					<div class="advantages-main__bottom"></div>
@@ -291,7 +143,7 @@
 						</div>
 						<div class="growt-guide__column growt-guide__column_center">
 							<div class="growt-guide__image">
-								<img class="ibg" src="@img/guide/growt-guide/reels-evolution.png" alt="reels evolution">
+								<img class="ibg" src="@img/guide/growt-guide/reels-evolution-2.png" alt="reels evolution">
 							</div>
 
 						</div>
@@ -404,7 +256,7 @@
 				<canvas class="particles particles1" data-color="#ffffff"></canvas>
 				<canvas class="particles particles2" data-color="#ffffff"></canvas>
 			</section>
-			<section class="main__about about-me">
+			<section id="about" class="main__about about-me">
 				<div class="about-me__container">
 					<div class="about-me__body" data-border>
 						<span class="decor-border"></span>
@@ -444,7 +296,7 @@
 							<div class="about-me__center">
 
 								<div class="about-me__image">
-									<img src="img/main-page/about-me/diana-diloyan-1.png" alt="Diana Diloyan">
+									<img src="img/main-page/about-me/diana-diloyan.png" alt="Diana Diloyan">
 									<!-- <picture>
 											<source srcset="img/main-page/about-me/diana-diloyan-full.png" media="(min-width: 1200px)">
 											<source srcset="img/main-page/about-me/diana-diloyan.png" media="(min-width: 1199.98px)">
@@ -509,28 +361,34 @@
 					</div>
 				</div>
 			</section>
-			<section class="main__faq faq">
+			<section id="faq" class="main__faq faq">
 				<div class="faq__container">
 					<h2 class="faq__title title"><span class="bg-gradient">Questions</span>AND ANSWERS</h2>
 					<div data-spollers class="faq__spollers spollers">
 						<details class="spollers__item" data-spoller-item>
-							<summary class="spollers__title" data-spoller-title>How will I access the workbook?</summary>
+							<summary class="spollers__title" data-spoller-title>How do I get access to purchased products?</summary>
 							<div class="spollers__body">
-								<p class="text">After payment, you will receive a download link for the digital version of the workbook in three languages to the email you provided during the payment process.</p>
+								<p class="text">After the payment, you will receive an access link to the email where you can download the materials. Once you download it, it’s yours forever.</p>
 							</div>
 						</details>
 						<details class="spollers__item" data-spoller-item>
-							<summary class="spollers__title" data-spoller-title>How long will I have access to the workbook?</summary>
+							<summary class="spollers__title" data-spoller-title>Can I share the purchased products with others?</summary>
 							<div class="spollers__body">
-								<p class="text">After purchasing the workbook, you will have lifetime access to it. <br>
-									Remember to download it so you can continue your learning and start the practical exercises.</p>
+								<p class="text">The products are intended for personal use and are non-transferable.<br>
+									Engaging in the sale or sharing of them with third parties is considered illegal.</p>
 							</div>
 						</details>
 						<details class="spollers__item" data-spoller-item>
-							<summary class="spollers__title" data-spoller-title>Where can I reach out if I have questions before/after purchasing?</summary>
+							<summary class="spollers__title" data-spoller-title>In the event of dissatisfaction with the product, is it possible to initiate a refund request?</summary>
 							<div class="spollers__body">
-								<p class="text">I'm always available. You can email me at <a href="mailto:pr.dianadiloyan@gmail.com">pr.dianadiloyan@gmail.com</a> or contact me on Telegram at <a class="bg-gradient"
-										href="https://t.me/diloyan">@diloyan</a></p>
+								<p class="text">Kindly note that the acquired product is a digital asset, and its usage is considered effective post-purchase. Consequently, we uphold a stringent no-refund policy. By acquiring products, you implicitly
+									consent to this condition. Should you encounter any inquiries or challenges related to your purchase, we encourage you to reach out to us for comprehensive assistance.</p>
+							</div>
+						</details>
+						<details class="spollers__item" data-spoller-item>
+							<summary class="spollers__title" data-spoller-title>Is it possible to buy from any country?</summary>
+							<div class="spollers__body">
+								<p class="text">Affirmative, you have the flexibility to acquire our products from any country in which you currently reside.</p>
 							</div>
 						</details>
 					</div>

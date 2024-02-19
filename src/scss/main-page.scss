@@ -1,7 +1,6 @@
 //=========Hero=================//
 .main-hero {
 	position: relative;
-	overflow: hidden;
 	@include adaptiveValue("padding-top", 20, 60, 0, $containerWidth, 767.98);
 	// .main-hero__container
 
@@ -22,7 +21,7 @@
 		display: grid;
 		align-self: center;
 		position: relative;
-		@include adaptiveValue("padding-bottom", 140, 50, 2, $containerWidth, 767.98);
+		@include adaptiveValue("padding-bottom", 140, 70, 2, $containerWidth, 767.98);
 		@media (max-width: $mobile) {
 			order: 2;
 			justify-items: center;
@@ -348,8 +347,10 @@
 				transform: translate(toRem(-25), toRem(-30));
 				position: relative;
 				z-index: 4;
+				// padding-bottom: toRem(10);
+				@include adaptiveValue("padding-bottom", 10, 3, 0, 991.98, 479.98);
 				@media (max-width: $tablet) {
-					@include adaptiveValue("top", 0, -50, 0, 991.98, 479.98);
+					@include adaptiveValue("top", 10, -50, 0, 991.98, 479.98);
 					@include adaptiveValue("left", 10, -70, 0, 991.98, 479.98);
 				}
 				@media (max-width: $mobileSmall) {
@@ -359,12 +360,14 @@
 			.advantages-main__decor-text {
 				position: relative;
 				left: toRem(-80);
-				@include adaptiveValue("top", 0, -70, 0, 991.98, 479.98);
+				@include adaptiveValue("top", 0, 3, 0, $containerWidth, 991.98);
 				@media (max-width: $tablet) {
-					left: -200px;
+					@include adaptiveValue("top", 15, -65, 0, 991.98, 479.98);
+					left: toRem(-200);
 				}
 				@media (max-width: $mobileSmall) {
-					left: -97px;
+					top: toRem(-68.5);
+					left: toRem(-97);
 				}
 			}
 		}
@@ -406,13 +409,28 @@
 	// .advantages-main__number
 
 	&__number {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		font-size: toRem(18);
 		font-weight: 700;
-		padding: toRem(12) toRem(15) toRem(15) toRem(10);
-		background: url("@img/main-page/icon-bg.svg") 0 0 no-repeat;
+		width: toRem(41);
+		height: toRem(49);
+		flex: 0 0 toRem(41);
+		// padding: toRem(12) toRem(15) toRem(15) toRem(10);
+		background: url("@img/main-page/icon-bg.svg") 0 0 / contain no-repeat;
 		@media (max-width: $mobileSmall) {
+			width: toRem(31);
+			height: toRem(39);
+			flex: 0 0 toRem(31);
 			font-size: toRem(13);
-			padding: toRem(15) toRem(11) toRem(24) toRem(11);
+		}
+		span {
+			transform: translateY(-3px);
+			@media (max-width: $mobileSmall) {
+				transform: translateY(-4px);
+			}
 		}
 	}
 
@@ -869,8 +887,8 @@
 			content: "";
 			position: absolute;
 			pointer-events: none;
-			width: percent(440, 315);
-			height: percent(457, 492);
+			width: 90.68254%;
+			height: 87.886179%;
 			background: radial-gradient(
 				48.5% 50% at 48.5% 50%,
 				rgba(227, 164, 85, 0.4) 7.29%,
@@ -883,13 +901,12 @@
 				rgba(238, 188, 112, 0.4) 77.39%,
 				rgba(63, 31, 15, 0.4) 92.19%
 			);
-
-			filter: blur(toRem(100));
-			z-index: 5;
+			filter: blur(6.25rem);
+			z-index: -1;
 			border-radius: 50%;
 			top: 0;
 			left: 0;
-			transform: rotate(65deg) translate(-3%, 16%);
+			transform: rotate(65deg) translate(4%, -6%);
 		}
 		@media (max-width: em(1099.98)) {
 			position: relative;
@@ -964,6 +981,7 @@
 		@include adaptiveValue("font-size", 53, 22, 0, 1099.98, 320);
 		line-height: 1.2;
 		font-weight: 900;
+		padding: 0 toRem(5);
 		&::before {
 			content: "+";
 		}
@@ -1482,7 +1500,6 @@
 				right: -76px;
 				top: -183px;
 				transform: rotate(304deg);
-				z-index: 1;
 				@include adaptiveValue("width", 348, 260, 0, 1199.98, 320);
 				@include adaptiveValue("height", 348, 260, 0, 1199.98, 320);
 				@include adaptiveValue("right", -76, -95, 0, 1199.98, 320);
@@ -1785,6 +1802,7 @@
 	&__link {
 		text-align: center;
 		text-transform: none;
+		align-self: center;
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}
