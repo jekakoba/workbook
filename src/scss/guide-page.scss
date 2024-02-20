@@ -1,0 +1,127 @@
+.hero-guide {
+	position: relative;
+	min-height: 100vh;
+	// .hero-guide__guide-container
+
+	&__guide-container {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 52.75vw;
+		margin: 0 auto;
+		padding: vw(100) vw(15) vw(20) vw(15);
+		min-height: 100vh;
+	}
+
+	// .hero-guide__header
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// .hero-guide__top
+
+	&__top {
+	}
+
+	// .hero-guide__main-title
+
+	&__main-title {
+		display: flex;
+		align-items: center;
+		column-gap: vw(176);
+		transform: translateY(80%);
+		position: relative;
+		z-index: 2;
+		span {
+			font-family: "Birthstone";
+			font-size: vw(60);
+			letter-spacing: vw(1.2);
+			padding-bottom: toRem(7);
+		}
+	}
+
+	// .hero-guide__center
+
+	&__center,
+	&__bottom {
+		position: relative;
+	}
+
+	// .hero-guide__title
+
+	&__title {
+		font-weight: 700;
+
+		text-transform: uppercase;
+		// .hero-guide__title_center
+
+		&_center {
+			font-size: vw(250);
+			letter-spacing: vw(57.5);
+		}
+
+		// .hero-guide__title_bottom
+
+		&_bottom {
+			font-size: vw(145);
+			letter-spacing: vw(20.85);
+			opacity: 1;
+			background-image: linear-gradient(
+				136deg,
+				#e3a455 21.02%,
+				#f6dba6 36.01%,
+				#ffebc3 52.59%,
+				#f0be79 61.11%,
+				#8f653b 66.4%,
+				#673d22 69.39%,
+				#ba7f3b 76.47%,
+				#eebc70 82.14%,
+				#3f1f0f 95.05%
+			);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	// .hero-guide__title-double
+
+	&__title-double {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("@img/guide/growt-guide/decor/decor-text.jpg");
+		background-position: 100%;
+		background-repeat: repeat;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		opacity: 0.4;
+		text-transform: uppercase;
+		&_reels {
+			font-size: vw(250);
+			letter-spacing: vw(57.5);
+			font-weight: 700;
+		}
+		&_evolution {
+			font-size: vw(145);
+			letter-spacing: vw(20.85);
+			font-weight: 700;
+			opacity: 0.5;
+		}
+	}
+
+	// .hero-guide__bottom
+
+	&__bottom {
+		transform: translateY(-20%);
+	}
+}

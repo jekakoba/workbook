@@ -80,7 +80,20 @@
 		@media (max-width: $mobile) {
 			overflow: auto;
 			height: 100%;
-			padding: toRem(120) toRem(20) toRem(30) toRem(15);
+			padding: toRem(90) toRem(20) toRem(30) toRem(15);
+			position: relative;
+			._header-scroll & {
+				&::before {
+					content: "";
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					min-height: toRem(70);
+					background-color: #000000;
+					z-index: 2;
+				}
+			}
 		}
 	}
 	// .menu__list
@@ -95,6 +108,9 @@
 			flex-direction: column;
 			gap: toRem(30);
 			align-items: flex-end;
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
 		}
 	}
 	// .menu__item
@@ -220,9 +236,10 @@
 	@media (min-width: $mobile) and (max-width: em(1254)) {
 		background: rgba(89, 89, 89, 0.85);
 	}
-
-	._header-scroll & {
-		background: rgba(89, 89, 89, 0.85);
+	@media (min-width: em(1254)) {
+		._header-scroll & {
+			background: rgba(89, 89, 89, 0.85);
+		}
 	}
 
 	@media (max-width: $mobile) {

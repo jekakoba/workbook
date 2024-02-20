@@ -7,7 +7,7 @@
 	z-index: 99;
 	&._header-scroll {
 		transition: background-color 0.3s ease 0s;
-		background-color: #000000;
+		background-color: rgba(11, 11, 11, 1);
 	}
 
 	// .header__container
@@ -30,6 +30,7 @@
 		@media (max-width: $mobile) {
 			grid-template-columns: toRem(120) auto;
 			justify-items: end;
+			min-height: toRem(70);
 		}
 		._header-scroll & {
 			min-height: toRem(70);
@@ -83,8 +84,9 @@
 					}
 				}
 			}
-		}
-		@media (max-width: $mobile) {
+			@media (max-width: $mobile) {
+				justify-content: flex-end;
+			}
 		}
 	}
 }
