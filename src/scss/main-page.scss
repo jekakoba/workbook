@@ -349,7 +349,7 @@
 				position: relative;
 				z-index: 4;
 				// padding-bottom: toRem(10);
-				@include adaptiveValue("padding-bottom", 10, 3, 0, 991.98, 479.98);
+				@include adaptiveValue("padding-bottom", 10, 5, 0, 991.98, 479.98);
 				@media (max-width: $tablet) {
 					@include adaptiveValue("top", 10, -50, 0, 991.98, 479.98);
 					@include adaptiveValue("left", 10, -70, 0, 991.98, 479.98);
@@ -363,7 +363,7 @@
 				left: toRem(-80);
 				@include adaptiveValue("top", 0, 3, 0, $containerWidth, 991.98);
 				@media (max-width: $tablet) {
-					@include adaptiveValue("top", 15, -65, 0, 991.98, 479.98);
+					@include adaptiveValue("top", 15, -63, 0, 991.98, 479.98);
 					left: toRem(-200);
 				}
 				@media (max-width: $mobileSmall) {
@@ -1715,7 +1715,7 @@
 
 	&__value {
 		font-family: "Birthstone";
-		// font-size: toRem(70);
+		padding-bottom: toRem(5);
 		@include adaptiveValue("font-size", 70, 50, 0, $containerWidth, 1200);
 		text-transform: none;
 		@media (max-width: em(1199.98)) {
@@ -1804,6 +1804,7 @@
 		text-align: center;
 		text-transform: none;
 		align-self: center;
+		padding-bottom: toRem(3);
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}

@@ -173,13 +173,13 @@ function initSliders() {
 		new Swiper('.product-images__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation, Thumbs, Controller, EffectFade],
+			modules: [Navigation, Thumbs, Controller],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			loop: true,
-			speed: 1000,
+			speed: 300,
 			grabCursor: true,
 			navigation: {
 				prevEl: '.item-catalog__navigation-btn_prev-slide-gallery',
@@ -188,10 +188,10 @@ function initSliders() {
 			thumbs: {
 				swiper: thumbsSwiper
 			},
-			effect: 'fade',
-			fadeEffect: {
-				crossFade: true
-			},
+			// effect: 'fade',
+			// fadeEffect: {
+			// 	crossFade: true
+			// },
 			// Події
 			on: {
 
@@ -260,11 +260,15 @@ function initSliders() {
 				320: {
 					slidesPerView: 1,
 					spaceBetween: 20,
+					autoHeight: true,
 				},
 
 				479.98: {
 					slidesPerView: 2,
 					spaceBetween: 20,
+				},
+				767.98: {
+					autoHeight: false,
 				},
 				991.98: {
 					slidesPerView: 3,

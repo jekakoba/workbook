@@ -4,13 +4,9 @@
 	&__hero {
 	}
 	&__course {
-		padding-top: toRem(102);
 		padding-bottom: toRem(168);
-		@media (max-width: em(1024.98)) {
-			padding-top: toRem(20);
-		}
+
 		@media (max-width: $mobile) {
-			padding-top: 0;
 			padding-bottom: toRem(100);
 		}
 		@media (max-width: $mobileSmall) {
@@ -99,6 +95,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: toRem(12);
+		transition: opacity 0.3s;
 		&:not(:last-child) {
 			margin-bottom: toRem(60);
 		}
@@ -115,6 +112,11 @@
 		@media (max-width: $mobileSmall) {
 			&:not(:last-child) {
 				margin-bottom: toRem(15);
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.5;
 			}
 		}
 	}
@@ -191,5 +193,45 @@
 	// .guide__hero
 
 	&__hero {
+	}
+	&__instagram-guide {
+		@include adaptiveValue("padding-bottom", 150, 50);
+	}
+
+	&__advantages {
+		@include adaptiveValue("padding-bottom", 150, 30);
+	}
+	// .guide__content-guide
+
+	&__content-guide {
+		position: relative;
+		@include adaptiveValue("padding-bottom", 150, 30);
+	}
+	// .guide__immediately
+
+	&__immediately {
+		position: relative;
+		@include adaptiveValue("padding-bottom", 150, 50);
+	}
+	// .guide__author
+
+	&__author {
+		@include adaptiveValue("padding-bottom", 150, 30);
+	}
+	// .guide__your-instagram
+
+	&__your-instagram {
+		margin-bottom: toRem(300);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("margin-bottom", 300, 70, 0, 991, 320);
+		}
+	}
+	// .guide__faq
+
+	&__faq {
+		position: relative;
+		@media (max-width: $tablet) {
+			padding-bottom: toRem(60);
+		}
 	}
 }

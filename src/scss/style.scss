@@ -53,6 +53,19 @@ $goldGradient: linear-gradient(
 	#3f1f0f 164.06%
 );
 
+$goldGradientText: linear-gradient(
+	136deg,
+	#e3a455 21.02%,
+	#f6dba6 36.01%,
+	#ffebc3 52.59%,
+	#f0be79 61.11%,
+	#8f653b 66.4%,
+	#673d22 69.39%,
+	#ba7f3b 76.47%,
+	#eebc70 82.14%,
+	#3f1f0f 95.05%
+);
+
 // Палітра кольорів
 // @import "base/colors-palette";
 
@@ -188,6 +201,8 @@ body {
 @import "card";
 @import "double-slider";
 @import "splide";
+@import "gradients";
+@import "animation";
 
 // Підключення стилів окремих сторінок
 @import "home";

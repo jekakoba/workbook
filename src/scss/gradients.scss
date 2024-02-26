@@ -1,0 +1,76 @@
+.luminosity {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 120%;
+		height: 120%;
+		border-radius: 50%;
+		background: radial-gradient(
+			48.5% 50% at 48.5% 50%,
+			rgba(227, 164, 85, 0.4) 7.29%,
+			rgba(246, 219, 166, 0.4) 24.48%,
+			rgba(255, 235, 195, 0.4) 43.5%,
+			rgba(240, 190, 121, 0.4) 53.26%,
+			rgba(143, 101, 59, 0.4) 59.33%,
+			rgba(103, 61, 34, 0.4) 62.77%,
+			rgba(186, 127, 59, 0.4) 70.89%,
+			rgba(238, 188, 112, 0.4) 77.39%,
+			rgba(63, 31, 15, 0.4) 92.19%
+		);
+
+		filter: blur(vw(127));
+		z-index: 1;
+	}
+}
+
+.bg-gradient {
+	background-image: $red;
+	background-position: 0 0;
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.gold-gradient {
+	background-image: $goldGradient;
+	background-position: 0 0;
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	&_text {
+		background-image: $goldGradientText;
+	}
+}
+
+.background-gold {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			136deg,
+			#e3a455 21.02%,
+			#f6dba6 36.01%,
+			#ffebc3 52.59%,
+			#f0be79 61.11%,
+			#8f653b 66.4%,
+			#673d22 69.39%,
+			#ba7f3b 76.47%,
+			#eebc70 82.14%,
+			#3f1f0f 95.05%
+		);
+		border-radius: toRem(10);
+		filter: blur(toRem(2));
+		z-index: -1;
+	}
+}

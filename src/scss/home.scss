@@ -136,7 +136,7 @@
 		@media (max-width: em(1024)) {
 			position: static;
 			margin: 0 auto;
-			margin-top: -12%;
+			margin-top: -11%;
 			transform: translateX(0);
 			min-width: toRem(340);
 		}
@@ -251,29 +251,8 @@
 //===========================Course=========================================================================
 
 .course {
-	position: relative;
 	border-radius: toRem(20) toRem(20) 0 0;
-	&::before {
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 50%;
-		top: vw(-40);
 
-		transform: translateX(-50%);
-		z-index: 3;
-		@media (min-width: em(1024)) {
-			background: url("@img/decor/decor-circle.svg") 0 0 / 100% auto no-repeat;
-		}
-		@media (max-width: em(1024.98)) {
-			background: url("@img/decor/decor-circle-mobile.svg") 0 0 / 100% auto no-repeat;
-			top: vmin(-15);
-		}
-		@media (max-width: $mobileSmall) {
-			top: vmin(-25);
-		}
-	}
 	// .course__container
 
 	&__container {
@@ -284,6 +263,9 @@
 	// .course__title
 
 	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 15);
+		}
 		@media (max-width: $mobileSmall) {
 			transform: translateY(-30%);
 			&.title {
@@ -294,116 +276,12 @@
 
 	// .course__cards
 
-	&__cards {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: toRem(40);
-		@media (max-width: em(1400)) {
-			gap: toRem(20);
-		}
-		@media (max-width: em(1200.98)) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media (max-width: $mobile) {
-			grid-template-columns: auto;
-			padding: 0 toRem(55);
-			gap: toRem(35);
-		}
-		@media (max-width: $mobileSmall) {
-			padding: toRem(0) toRem(53);
-		}
-		@media (max-width: em(374)) {
-			padding: toRem(0) toRem(20);
-		}
-	}
-
 	// .course__card
 
 	&__card {
 	}
 }
 
-.card {
-	position: relative;
-	padding: toRem(1.5);
-	list-style: none;
-	overflow: hidden;
-	border-radius: toRem(8);
-
-	&::before {
-		content: "";
-		position: absolute;
-		z-index: 1;
-		top: -50%;
-		left: -50%;
-		width: 200%;
-		height: 200%;
-		background-image: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 65%);
-	}
-
-	// .card__wrapper
-
-	&__wrapper {
-		text-align: center;
-		padding: toRem(68) toRem(32) toRem(41) toRem(32);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: toRem(15);
-		background-color: $backgroundDark;
-		position: relative;
-		z-index: 5;
-		border-radius: toRem(8);
-		height: 100%;
-		@media (max-width: $mobile) {
-			padding: toRem(56) toRem(50);
-		}
-		@media (max-width: $mobileSmall) {
-			padding: toRem(36) toRem(20);
-			gap: toRem(10);
-		}
-	}
-
-	// .card__icon
-
-	&__icon {
-		flex: 0 0 toRem(97);
-		width: toRem(97);
-		height: toRem(97);
-		position: relative;
-		img {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			object-fit: contain;
-		}
-		@media (max-width: $mobileSmall) {
-			flex: 0 0 toRem(64);
-			width: toRem(63);
-			height: toRem(63);
-		}
-	}
-
-	// .card__title
-
-	&__title {
-		font-weight: 800;
-		font-size: toRem(20);
-		@media (max-width: $mobileSmall) {
-			font-size: toRem(16);
-		}
-	}
-
-	// .card__text
-
-	&__text {
-		@media (max-width: $mobileSmall) {
-			font-size: toRem(12);
-		}
-	}
-}
 .particles {
 	position: absolute;
 	top: 0;
@@ -432,42 +310,11 @@
 		clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
 	}
 
-	.card:nth-child(1)::before {
-		transform: translate(-25%, 0%);
-	}
-
-	.card:nth-child(2)::before {
-		transform: translate(-12%, -25%);
-	}
-
-	.card:nth-child(3)::before {
-		transform: translate(12%, -25%);
-	}
-
 	.card:nth-child(4) {
 		clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
 	}
 	.card:nth-child(4) .card__wrapper {
 		clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
-	}
-
-	.card:nth-child(4)::before {
-		transform: translate(25%, 0%);
-	}
-
-	.card:nth-child(1) .card__wrapper .card__icon {
-		margin-right: auto;
-	}
-	.card:nth-child(1) .card__wrapper {
-		text-align: left;
-		align-items: start;
-	}
-	.card:nth-child(4) .card__wrapper {
-		text-align: right;
-		align-items: end;
-	}
-	.card:nth-child(4) .card__wrapper .card__icon {
-		margin-left: auto;
 	}
 }
 
@@ -793,6 +640,9 @@
 		&.title {
 			color: $backgroundDark;
 		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 20);
+		}
 	}
 
 	// .workbook-content__body
@@ -1006,6 +856,9 @@
 	// .price-workbook__title
 
 	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 20);
+		}
 	}
 
 	// .price-workbook__items
@@ -1109,6 +962,7 @@
 			font-size: toRem(30);
 			span {
 				font-size: toRem(80);
+				padding: toRem(3);
 			}
 			@media (max-width: $tablet) {
 				font-size: toRem(20);

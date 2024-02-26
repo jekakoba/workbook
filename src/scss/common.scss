@@ -1,23 +1,44 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 //==========================================//
+._decor-top {
+	position: relative;
+	padding-top: toRem(0);
+	@media (max-width: em(1024.98)) {
+		padding-top: toRem(20);
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 50%;
+		top: vw(-40);
 
-.bg-gradient {
-	background-image: $red;
-	background-position: 0 0;
-	background-size: 100%;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+		transform: translateX(-50%);
+		z-index: 3;
+		@media (min-width: em(1024)) {
+			background: url("@img/decor/decor-circle.svg") 0 0 / 100% auto no-repeat;
+		}
+		@media (max-width: em(1024.98)) {
+			background: url("@img/decor/decor-circle-mobile.svg") 0 0 / 100% auto no-repeat;
+			top: vmin(-15);
+		}
+		@media (max-width: $mobileSmall) {
+			top: vmin(-25);
+		}
+	}
 }
 
-.gold-gradient {
-	background-image: $goldGradient;
-	background-position: 0 0;
-	background-size: 100%;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+.guide-instagram {
+	&._decor-top {
+		&::before {
+			content: "";
+			@media (max-width: em(1024)) {
+				display: none;
+			}
+		}
+	}
 }
 
 .title {
@@ -36,9 +57,13 @@
 		font-size: toRem(90);
 		font-weight: 400;
 		text-transform: none;
+		padding-bottom: toRem(10);
 	}
 	&_workbook {
 		font-size: toRem(40);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
 		span {
 			font-size: toRem(50);
 		}
@@ -51,33 +76,12 @@
 	@media (max-width: $mobileSmall) {
 		font-size: toRem(24);
 	}
-	&:not(:last-child) {
-		margin-bottom: toRem(70);
-	}
-
-	@media (max-width: $mobile) {
-		&:not(:last-child) {
-			margin-bottom: toRem(40);
-		}
-	}
 }
 
 .text {
 	line-height: 1.5;
 	font-weight: 300;
 	color: $whiteColor;
-}
-
-@keyframes puls-shadow {
-	0% {
-		box-shadow: 0px 0px 5px 0px rgba(251, 251, 251, 0.3);
-	}
-	50% {
-		box-shadow: 0px 0px 15px 1px rgba(251, 251, 251, 0.3);
-	}
-	100% {
-		box-shadow: 0px 0px 5px 0px rgba(251, 251, 251, 0.3);
-	}
 }
 
 .top {
@@ -126,6 +130,24 @@
 	&.back-to-top-show {
 		opacity: 1;
 		visibility: visible;
+	}
+	&_gold {
+		background: linear-gradient(
+			136deg,
+			#e3a455 21.02%,
+			#f6dba6 36.01%,
+			#ffebc3 52.59%,
+			#f0be79 61.11%,
+			#eebc70 82.14%
+		);
+		svg path {
+			stroke: black;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0px 0px 10px #f0be79;
+			}
+		}
 	}
 }
 
@@ -187,6 +209,9 @@
 	// .faq__title
 
 	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 20);
+		}
 	}
 
 	// .faq__spollers
@@ -238,62 +263,6 @@
 		}
 	}
 }
-
-// @keyframes anim-image-big {
-// 	0% {
-// 		transform: 0;
-// 	}
-// 	50% {
-// 		transform: translateY(5%);
-// 	}
-// 	100% {
-// 		transform: 0;
-// 	}
-// }
-// @keyframes anim-image-top-left {
-// 	0% {
-// 		transform: 0;
-// 	}
-// 	50% {
-// 		transform: translateY(3%);
-// 	}
-// 	100% {
-// 		transform: 0;
-// 	}
-// }
-// @keyframes anim-image-top-right {
-// 	0% {
-// 		transform: 0;
-// 	}
-// 	50% {
-// 		transform: translateY(11%);
-// 	}
-// 	100% {
-// 		transform: 0;
-// 	}
-// }
-// @keyframes anim-image-bottom-right {
-// 	0% {
-// 		transform: 0;
-// 	}
-// 	50% {
-// 		transform: translateY(12%);
-// 	}
-// 	100% {
-// 		transform: 0;
-// 	}
-// }
-// @keyframes anim-image-bottom-left {
-// 	0% {
-// 		transform: 0;
-// 	}
-// 	50% {
-// 		transform: translateY(10%);
-// 	}
-// 	100% {
-// 		transform: 0;
-// 	}
-// }
 
 .shop {
 	position: fixed;
@@ -637,38 +606,183 @@
 	}
 }
 
-@keyframes anim-border1 {
-	0% {
-		transform: translateX(-100%);
+.cards-guide {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: toRem(40);
+	@media (max-width: em(1400)) {
+		gap: toRem(20);
 	}
-	100% {
-		transform: translateX(100%);
+	@media (max-width: em(1200.98)) {
+		grid-template-columns: repeat(2, 1fr);
 	}
-}
-
-@keyframes anim-border2 {
-	0% {
-		transform: translateY(-100%);
+	@media (max-width: $mobile) {
+		grid-template-columns: auto;
+		padding: 0 toRem(55);
+		gap: toRem(35);
 	}
-	100% {
-		transform: translateY(100%);
+	@media (max-width: $mobileSmall) {
+		padding: toRem(0) toRem(53);
 	}
-}
-
-@keyframes anim-border3 {
-	0% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(-100%);
+	@media (max-width: em(374)) {
+		padding: toRem(0) toRem(20);
 	}
 }
 
-@keyframes anim-border4 {
-	0% {
-		transform: translateY(100%);
+.card {
+	position: relative;
+	padding: toRem(1.5);
+	list-style: none;
+	overflow: hidden;
+	border-radius: toRem(8);
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background-image: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 65%);
 	}
-	100% {
-		transform: translateY(-100%);
+
+	// .card__wrapper
+
+	&__wrapper {
+		text-align: center;
+		padding: toRem(68) toRem(32) toRem(41) toRem(32);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: toRem(15);
+		background-color: $backgroundDark;
+		position: relative;
+		z-index: 5;
+		border-radius: toRem(8);
+		height: 100%;
+		@media (max-width: $mobile) {
+			padding: toRem(56) toRem(50);
+		}
+		@media (max-width: $mobileSmall) {
+			padding: toRem(36) toRem(20);
+			gap: toRem(10);
+		}
+	}
+
+	// .card__icon
+
+	&__icon {
+		flex: 0 0 toRem(97);
+		width: toRem(97);
+		height: toRem(97);
+		position: relative;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: contain;
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 toRem(64);
+			width: toRem(63);
+			height: toRem(63);
+		}
+	}
+
+	// .card__title
+
+	&__title {
+		font-weight: 800;
+		font-size: toRem(20);
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(16);
+		}
+	}
+
+	// .card__text
+
+	&__text {
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(12);
+		}
+	}
+}
+@media (min-width: em(1200)) {
+	.course__cards {
+		.card:nth-child(1) .card__wrapper .card__icon {
+			margin-right: auto;
+		}
+		.card:nth-child(1) .card__wrapper {
+			text-align: left;
+			align-items: start;
+		}
+		.card:nth-child(4) .card__wrapper {
+			text-align: right;
+			align-items: end;
+		}
+		.card:nth-child(4) .card__wrapper .card__icon {
+			margin-left: auto;
+		}
+		.card:nth-child(1)::before {
+			transform: translate(-25%, 0%);
+		}
+
+		.card:nth-child(2)::before {
+			transform: translate(-12%, -25%);
+		}
+
+		.card:nth-child(3)::before {
+			transform: translate(12%, -25%);
+		}
+		.card:nth-child(4)::before {
+			transform: translate(25%, 0%);
+		}
+	}
+}
+
+.guide-instagram__cards {
+	.card {
+		position: relative;
+		border: toRem(1) solid #e3a455;
+		&::before {
+			background-image: linear-gradient(
+				167deg,
+				#e3a455 18.81%,
+				#f6dba6 48.22%,
+				#ffebc4 80.75%,
+				#f0be79 97.46%,
+				#8f653b 107.84%,
+				#673d22 113.72%,
+				#ba7f3b 127.61%,
+				#eebc70 138.74%,
+				#3f1f0f 164.06%
+			);
+		}
+	}
+
+	.card__wrapper {
+		text-align: center;
+	}
+	.card__icon {
+		flex: 0 0 toRem(148);
+		width: toRem(148);
+		height: toRem(148);
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 toRem(97);
+			width: toRem(97);
+			height: toRem(97);
+		}
+	}
+	.card__text {
+		font-size: toRem(20);
+		span {
+			font-weight: 600;
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(12);
+		}
 	}
 }
