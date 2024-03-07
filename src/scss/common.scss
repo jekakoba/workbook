@@ -1,37 +1,6 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 //==========================================//
-// ._decor-top {
-// 	position: relative;
-// 	padding-top: toRem(0);
-// 	@media (max-width: em(1024.98)) {
-// 		padding-top: toRem(20);
-// 	}
-// 	&::before,
-// 	&::after {
-// 		content: "";
-// 		position: absolute;
-// 	}
-// 	&::before {
-// 		width: 100%;
-// 		height: 100%;
-// 		left: 50%;
-// 		top: vw(-40);
-// 		z-index: 2;
-// 		transform: translateX(-50%);
-// 		z-index: 3;
-// 		@media (min-width: em(1024)) {
-// 			background: url("@img/decor/decor-circle.svg") 0 0 / 100% auto no-repeat;
-// 		}
-// 		@media (max-width: em(1024.98)) {
-// 			background: url("@img/decor/decor-circle-mobile.svg") 0 0 / 100% auto no-repeat;
-// 			top: vmin(-15);
-// 		}
-// 		@media (max-width: $mobileSmall) {
-// 			top: vmin(-25);
-// 		}
-// 	}
-// }
 
 .guide-instagram {
 	&._decor-top {
@@ -394,41 +363,6 @@
 		display: none;
 	}
 }
-// .swiper-pagination-bullets-dynamic {
-// 	.swiper-pagination-bullet {
-// 		transform: scale(0.33);
-// 		position: relative;
-// 		overflow: hidden;
-// 		font-size: 0;
-// 		display: inline-block;
-// 		transition:
-// 			600ms transform,
-// 			600ms right,
-// 			600ms left;
-// 	}
-// 	.swiper-pagination-bullet-active-prev-prev {
-// 		transform: scale(0.33);
-// 	}
-// 	.swiper-pagination-bullet-active-prev {
-// 		transform: scale(0.66);
-// 	}
-// 	.swiper-pagination-bullet-active {
-// 		transform: scale(1);
-// 	}
-// 	.swiper-pagination-bullet-active-main {
-// 		transform: scale(1);
-// 	}
-// 	.swiper-pagination-bullet-active-next {
-// 		transform: scale(0.66);
-// 	}
-// 	.swiper-pagination-bullet-active-next-next {
-// 		transform: scale(0.33);
-// 	}
-// 	// .swiper-button-disabled {
-// 	// 	opacity: 0.2;
-// 	// 	pointer-events: none;
-// 	// }
-// }
 
 .navigation {
 	// .navigation__button

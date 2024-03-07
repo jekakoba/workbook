@@ -105,6 +105,7 @@ $responsiveType: 1;
 body {
 	background-color: $backgroundDark;
 	scrollbar-gutter: stable;
+	// opacity: 0;
 	// background-color: #121212;
 	// Скролл заблоковано
 	.lock & {

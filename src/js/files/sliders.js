@@ -26,7 +26,7 @@ function initSliders() {
 			spaceBetween: 100,
 			speed: 800,
 			grabCursor: true,
-			loop: true,
+
 			loopAdditionalSlides: 2,
 			slidesPerView: 2,
 			pagination: {
@@ -43,11 +43,13 @@ function initSliders() {
 
 			breakpoints: {
 				320: {
+					spaceBetween: 50,
 					slidesPerView: 1,
 				},
 				767.98: {
 					slidesPerView: 2,
 					spaceBetween: 50,
+					loop: true,
 					// Події
 					on: {
 
