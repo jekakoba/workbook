@@ -19,6 +19,9 @@
 			grid-template-columns: auto;
 			row-gap: toRem(10);
 		}
+		@media (max-width: $mobileSmall) {
+			max-width: toRem(321);
+		}
 	}
 
 	// .footer__main
@@ -51,6 +54,16 @@
 	}
 }
 .main-footer {
+	@media (max-width: $mobile) {
+		max-width: toRem(300);
+	}
+	@media (max-width: $mobileSmall) {
+		max-width: toRem(250);
+	}
+	@media (max-width: $mobileSmall) {
+		position: relative;
+		top: toRem(15);
+	}
 	// .main-footer__title
 
 	&__title {

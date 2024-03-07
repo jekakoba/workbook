@@ -5,6 +5,65 @@
 	@media (min-width: $mobile) {
 		min-height: 100vh;
 	}
+
+	&__decors {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+	}
+
+	// .hero-presets__decor
+
+	&__decor {
+		position: absolute;
+		// .hero-presets__decor_camera-left
+
+		&_camera-left {
+			top: 0;
+			left: -3.041667vw;
+			width: 15.8854166667vw;
+			height: 14.5833333333vw;
+			background: url("@img/decor/camera-presets-left.png") 0 0 / contain no-repeat;
+			transform: rotate(12deg);
+			@media (max-width: $mobile) {
+				top: -1vmin;
+				left: -6.041667vmin;
+				width: 25.8854166667vmin;
+				height: 25.5833333333vmin;
+			}
+		}
+
+		// .hero-presets__decor_camera
+
+		&_camera-bottom {
+			bottom: -5vw;
+			left: -6.520833vw;
+			width: 26.5104166667vw;
+			height: 17.7083333333vw;
+			background: url(../img/decor/camera-presets-bottom.png) 0 0 / contain no-repeat;
+		}
+
+		// .hero-presets__decor_right
+
+		&_right {
+			top: -6.520833vw;
+			right: -9.520833vw;
+			width: vw(533);
+			height: vw(489);
+			background: url("@img/decor/camera-presets-right.png") 0 0 / contain no-repeat;
+			transform: rotate(12deg);
+			@media (max-width: $mobile) {
+				top: -5vmin;
+				right: -6.041667vmin;
+				width: 25.8854166667vmin;
+				height: 25.5833333333vmin;
+			}
+		}
+	}
+
 	// .hero-presets__container
 
 	&__main-container {
@@ -32,7 +91,7 @@
 		z-index: 2;
 		display: grid;
 		grid-template-columns: percent(600, 1520) 1fr;
-		column-gap: vw(33);
+		column-gap: vw(25);
 		@media (max-width: $mobile) {
 			align-items: center;
 			grid-template-columns: 1fr;
@@ -43,8 +102,14 @@
 	// .hero-presets__content
 
 	&__content {
+		display: flex;
+		flex-direction: column;
+
 		position: relative;
 		z-index: 2;
+		@media (min-width: $mobile) {
+			align-items: flex-start;
+		}
 		@media (max-width: $mobile) {
 			order: 2;
 			@include adaptiveValue("padding-top", 800, 200);
@@ -60,7 +125,7 @@
 			font-size: vw(43);
 			font-weight: 800;
 			span {
-				transform: translateY(25%);
+				transform: translateY(43%);
 				font-size: vw(80);
 				@media (max-width: $mobile) {
 					font-size: vmin(35);
@@ -84,14 +149,20 @@
 	// .hero-presets__description
 
 	&__description {
+		@media (min-width: $mobile) {
+			p {
+				max-width: 27.625vw;
+			}
+		}
 		&.text {
 			font-size: vw(18);
 			@media (max-width: $mobile) {
 				font-size: vmin(7);
 			}
 		}
-		span {
+		strong {
 			font-weight: 600;
+			font-size: vw(22);
 			@media (max-width: $mobile) {
 				font-size: vmin(7);
 			}
@@ -102,11 +173,11 @@
 			}
 		}
 		&:not(:last-child) {
-			margin-bottom: vw(10);
+			margin-bottom: vw(8);
 		}
-		&:not(:last-child) {
-			margin-bottom: vmin(10);
-		}
+		// &:not(:last-child) {
+		// 	margin-bottom: vmin(10);
+		// }
 	}
 
 	// .hero-presets__prices
@@ -128,7 +199,7 @@
 	&__old-price {
 		transform: translateY(20%);
 		color: white;
-		font-size: vw(40);
+		font-size: vw(50);
 		text-decoration: line-through;
 		@media (max-width: $mobile) {
 			font-size: vmin(20);
@@ -138,7 +209,7 @@
 	// .hero-presets__price
 
 	&__price {
-		font-size: vw(50);
+		font-size: vw(80);
 		@media (max-width: $mobile) {
 			font-size: vmin(30);
 		}
@@ -149,7 +220,7 @@
 	&__button {
 		&.button {
 			font-size: vw(17);
-			padding: vw(20) vw(70);
+			padding: vw(23) vw(70);
 			border-radius: vw(10);
 			@media (max-width: $mobile) {
 				font-size: vmin(13);
@@ -219,8 +290,25 @@
 				left: -8vmin;
 			}
 
+			&::before {
+				content: "";
+				position: absolute;
+				top: -2.520833vw;
+				left: 2.479167vw;
+				width: vw(74);
+				height: vw(71);
+				background: url("@img/icons/lightroom.png") 0 0 / cover no-repeat;
+				z-index: 11;
+				@media (max-width: $mobile) {
+					width: 10vmin;
+					height: 10vmin;
+					top: -6vmin;
+					left: -0.7vmin;
+				}
+			}
+
 			.touch & {
-				animation: anim-image-bottom-left 11s infinite ease-in alternate 0.5s;
+				animation: anim-image-bottom-left 11s infinite ease-in alternate;
 			}
 		}
 
@@ -230,9 +318,26 @@
 			width: vw(530);
 			height: vw(810);
 			left: 8.520833vw;
-			top: -8.47916vw;
+			top: -6.47916vw;
 			border-radius: 0;
-			z-index: 3;
+			z-index: 10;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: vw(-100);
+				width: vw(180);
+				height: vw(180);
+				background: url("@img/presets-page/hero-block/decor/decor.png") 0 0 / cover no-repeat;
+				z-index: 11;
+				transform: translateY(0%);
+				@media (max-width: $mobile) {
+					width: 20vmin;
+					height: 20vmin;
+					top: -10vmin;
+					right: -10vmin;
+				}
+			}
 			@media (min-width: $mobile) {
 				// transform: translate(-50%, -50%);
 				// left: 50%;
@@ -257,23 +362,15 @@
 			height: vw(370);
 			top: vw(-70);
 			right: 0;
-			&::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: vw(30);
-				width: vw(180);
-				height: vw(180);
-				background: url("@img/presets-page/hero-block/decor/decor.png") 0 0 / cover no-repeat;
-				z-index: 2;
-				transform: translateY(-70%);
-			}
+			z-index: 4;
+
 			@media (max-width: $mobile) {
-				width: 33.3125vmin;
-				height: 33.5625vmin;
-				top: 8.25vmin;
-				right: -4vmin;
+				width: 27.375vmin;
+				height: 33.625vmin;
+				top: 5.75vmin;
+				right: -3.875vmin;
 			}
+
 			.touch & {
 				animation: anim-image-top-right 8s infinite ease-in alternate;
 			}
@@ -283,17 +380,17 @@
 			height: vw(277);
 			right: vw(50);
 			bottom: vw(0);
+			z-index: 4;
+
 			@media (max-width: $mobile) {
-				@media (max-width: $mobile) {
-					width: 44.3125vmin;
-					height: 31.5625vmin;
-					top: 45.25vmin;
-					right: -8vmin;
-				}
+				width: 44.3125vmin;
+				height: 31.5625vmin;
+				top: 45.25vmin;
+				right: -8vmin;
 			}
 
 			.touch & {
-				animation: anim-image-bottom-right 4s infinite ease-in alternate 0.6s;
+				animation: anim-image-bottom-right 4s infinite ease-in alternate;
 			}
 		}
 	}
@@ -441,7 +538,7 @@
 		display: grid;
 		position: relative;
 		background-color: $backgroundCards;
-		border-radius: toRem(10);
+		border-radius: toRem(20);
 		@media (min-width: em(1300)) {
 			grid-template-columns: 56% 1fr;
 			&::after {
@@ -472,6 +569,7 @@
 			top: 0;
 			left: 0;
 			object-fit: cover;
+			border-radius: toRem(20) 0 0 toRem(20);
 			@media (max-width: em(1300.98)) {
 				border-radius: toRem(10) toRem(10) 0 0;
 			}
@@ -487,7 +585,7 @@
 	&__content {
 		position: relative;
 		align-self: center;
-		padding: toRem(50) toRem(0) toRem(50) toRem(20);
+		padding: toRem(50) toRem(0) toRem(50) toRem(4);
 		@include adaptiveValue("padding-right", 70, 25, 0, $containerWidth, 1300);
 		@media (max-width: em(1300)) {
 			text-align: center;

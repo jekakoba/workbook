@@ -2,6 +2,7 @@
 // Сніппет (HTML): btn
 
 .button {
+	pointer-events: all;
 	position: relative;
 	overflow: hidden;
 	display: inline-flex;
@@ -68,11 +69,9 @@
 		width: 100%;
 		padding: toRem(16.5) toRem(10);
 		font-size: toRem(14);
-		border-radius: toRem(5);
-		@media (max-width: $tablet) {
-			width: 70%;
-			margin: 0 auto;
-			transform: translateY(50%);
+		// border-radius: toRem(10);
+		@media (max-width: $mobileSmall) {
+			padding: toRem(18.5) toRem(10);
 		}
 	}
 	transition:
@@ -142,8 +141,9 @@
 		font-size: vw(23);
 		border-radius: vw(10);
 		@media (max-width: em(1024)) {
-			font-size: vmin(12);
-			padding: vmin(12) vmin(29);
+			font-size: vmin(10.5);
+			padding: vmin(15) vmin(60);
+			border-radius: vmin(3);
 		}
 	}
 }

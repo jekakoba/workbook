@@ -10,7 +10,7 @@
 			padding-bottom: toRem(100);
 		}
 		@media (max-width: $mobileSmall) {
-			padding-bottom: toRem(70);
+			padding-bottom: toRem(100);
 		}
 	}
 	&__workbook {
@@ -19,14 +19,15 @@
 			padding-bottom: toRem(100);
 		}
 		@media (max-width: $mobileSmall) {
-			padding-bottom: toRem(70);
+			padding-bottom: toRem(100);
 		}
 	}
 
 	&__content-workbook {
-		padding-bottom: toRem(38);
+		padding-bottom: toRem(35);
 		@media (max-width: $mobileSmall) {
-			padding-top: toRem(20);
+			padding-top: toRem(40);
+			padding-bottom: toRem(15);
 		}
 	}
 
@@ -34,7 +35,7 @@
 		padding-top: toRem(30);
 		padding-bottom: toRem(186);
 		@media (max-width: $mobileSmall) {
-			padding-bottom: toRem(70);
+			padding-bottom: toRem(120);
 		}
 	}
 }
@@ -162,21 +163,21 @@
 		@media (max-width: $mobile) {
 			margin-top: -60px;
 		}
-		@include adaptiveValue("margin-bottom", 200, 130);
+		@include adaptiveValue("margin-bottom", 200, 120);
 	}
 	&__advantages {
 		position: relative;
-		@include adaptiveValue("padding-bottom", 250, 70);
+		@include adaptiveValue("padding-bottom", 150, 70);
 	}
 	&__growt-guide {
-		@include adaptiveValue("padding-bottom", 250, 30);
+		@include adaptiveValue("padding-bottom", 150, 70);
 	}
 	&__mobile-presets {
 		position: relative;
-		@include adaptiveValue("padding-bottom", 250, 30);
+		@include adaptiveValue("padding-bottom", 250, 120);
 	}
 	&__about {
-		@include adaptiveValue("padding-bottom", 250, 30);
+		@include adaptiveValue("padding-bottom", 250, 10);
 	}
 
 	// .main__faq
@@ -195,7 +196,10 @@
 	&__hero {
 	}
 	&__instagram-guide {
-		@include adaptiveValue("padding-bottom", 150, 50);
+		@include adaptiveValue("padding-bottom", 150, 80);
+		@media (max-width: em(1024)) {
+			padding-top: 40px;
+		}
 	}
 
 	&__advantages {
@@ -211,7 +215,7 @@
 
 	&__immediately {
 		position: relative;
-		@include adaptiveValue("padding-bottom", 150, 50);
+		@include adaptiveValue("padding-bottom", 150, 70);
 	}
 	// .guide__author
 
@@ -222,6 +226,7 @@
 
 	&__your-instagram {
 		margin-bottom: toRem(300);
+
 		@media (max-width: $tablet) {
 			@include adaptiveValue("margin-bottom", 300, 70, 0, 991, 320);
 		}

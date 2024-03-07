@@ -259,16 +259,19 @@ function initSliders() {
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 20,
+					spaceBetween: 30,
 					autoHeight: true,
 				},
 
 				479.98: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 30,
+					autoHeight: false,
 				},
 				767.98: {
+					slidesPerView: 2,
 					autoHeight: false,
+					spaceBetween: 30,
 				},
 				991.98: {
 					slidesPerView: 3,

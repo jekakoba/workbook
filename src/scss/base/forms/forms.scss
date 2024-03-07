@@ -4,9 +4,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 0.8fr;
 	gap: toRem(30);
-	@media (max-width: $tablet) {
-		gap: toRem(15);
-	}
+
 	@media (max-width: $mobileSmall) {
 		grid-template-columns: auto;
 	}

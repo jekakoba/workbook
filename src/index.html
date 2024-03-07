@@ -25,7 +25,11 @@
 					</div>
 					<div class="hero__body">
 						<div class="hero__image">
-							<img src="@img/main-photo.png" alt="diana diloyan">
+							<picture>
+								<source srcset="@img/main-photo-2.png" media="(min-width: 1025px)">
+								<source srcset="@img/main-photo-no-shadow.png" media="(max-width: 1024px)">
+								<img src="@img/main-photo-2.png" alt="diana diloyan">
+							</picture>
 						</div>
 						<div class="hero__content content-hero">
 							<h2 class="content-hero__title ">Your ultimate guide to stunning photos!</h2>
@@ -33,7 +37,9 @@
 								Available in three languages
 								<span class="bg-gradient">ENG, UA, RU</span>
 							</div>
-							<a class="content-hero__button button" href="#"><span>GET A Workbook</span></a>
+							<div class="content-hero__button-wrapp _btn-shadow">
+								<a class="content-hero__button button" href="#"><span>GET A Workbook</span></a>
+							</div>
 						</div>
 						<div class="hero__about-model model-about">
 							<p class="model-about__name">Diana Diloyan</p>
@@ -51,7 +57,7 @@
 				<div class="course__container">
 					<h2 class="course__title title"><span class="bg-gradient">For whom</span> is this course?</h2>
 					<ul class="course__cards cards-guide">
-						<li class="cards-guide__card card">
+						<li class="cards-guide__card card card_main">
 							<div class="card__wrapper">
 								<div class="card__icon">
 									<img src="@img/for-whom/heart.png" alt="hear icon">
@@ -62,18 +68,18 @@
 								</p>
 							</div>
 						</li>
-						<li class="cards-guide__card card">
+						<li class="cards-guide__card card card_main">
 							<div class="card__wrapper">
 								<div class="card__icon">
 									<img src="@img/for-whom/bloggers.png" alt="for bloggers icon">
 								</div>
 								<h3 class="card__title bg-gradient">FOR BLOGGERS</h3>
 								<p class="card__text text">
-									If you want to enhance your presentation and always look perfect in photos, know your strengths.
+									If you want to enhance your presentation and always look perfect in photos, know you strengths.
 								</p>
 							</div>
 						</li>
-						<li class="cards-guide__card card">
+						<li class="cards-guide__card card card_main">
 							<div class="card__wrapper">
 								<div class="card__icon card__icon_big">
 									<img src="@img/for-whom/fashion.png" alt="fashion icon">
@@ -84,7 +90,7 @@
 								</p>
 							</div>
 						</li>
-						<li class="cards-guide__card card">
+						<li class="cards-guide__card card card_main">
 							<div class="card__wrapper">
 								<div class="card__icon">
 									<img src="@img/for-whom/photography.png" alt="photography icon">
@@ -97,10 +103,11 @@
 								</p>
 							</div>
 						</li>
-						<canvas class="particles particles1" data-color="#ffffff"></canvas>
-						<canvas class="particles particles2" data-color="#ffffff"></canvas>
 					</ul>
+					<canvas class="particles particles1" data-color="#ffffff"></canvas>
+					<canvas class="particles particles2" data-color="#ffffff"></canvas>
 				</div>
+				<div class="course__girls"></div>
 			</section>
 			<section class="page__workbook workbook">
 				<div class="workbook__container">
@@ -125,7 +132,9 @@
 								<p class="workbook__text text">Together, we will explore the critical aspects of posing, starting from basic principles and delving into the details that will make your shots unique. Get ready for an exciting journey
 									into
 									the world of the art of posing, where you can unleash your creativity and achieve stunning results.</p>
-								<a class="workbook__button button button_workbook-posing" href="#"><span>GET A Workbook</span></a>
+								<div class="workbook__button-wrapp _btn-shadow">
+									<a class="workbook__button button button_workbook-posing" href="#"><span>GET A Workbook</span></a>
+								</div>
 							</div>
 						</div>
 						<div class="workbook__bg"></div>
@@ -267,7 +276,9 @@
 									<div class="item-workbook__old-price">59.99 $</div>
 									<div class="item-workbook__price  bg-gradient">29.99 $</div>
 								</div>
-								<a href="#" class="item-workbook__button button"><span>GET A WORKBOOK</span></a>
+								<div class="item-workbook__button-wrapp _btn-shadow">
+									<a href="#" class="item-workbook__button button"><span>GET A WORKBOOK</span></a>
+								</div>
 							</div>
 						</div>
 						<div class="price-workbook__item item-workbook item-workbook_light">
@@ -297,7 +308,9 @@
 									<div class="item-workbook__old-price">79.99 $</div>
 									<div class="item-workbook__price  bg-gradient">59.99 $</div>
 								</div>
-								<a href="#" class="item-workbook__button button"><span>GET A WORKBOOK</span></a>
+								<div class="item-workbook__button-wrapp _btn-shadow">
+									<a href="#" class="item-workbook__button button"><span>GET A WORKBOOK</span></a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -305,6 +318,8 @@
 				<div class="price-workbook__decor price-workbook__decor_top"></div>
 				<div class="price-workbook__decor price-workbook__decor_bottom"></div>
 				<div class="price-workbook__decor price-workbook__decor_rigth"></div>
+				<canvas class="particles particles1" data-color="#ffffff"></canvas>
+				<canvas class="particles particles2" data-color="#ffffff"></canvas>
 			</section>
 			<section class="page__faq faq">
 				<div class="faq__container">
@@ -338,11 +353,12 @@
 						<path d="M1 7L8 1.5L15 7" stroke="white" stroke-width="2" />
 					</svg>
 				</button>
+				<canvas class="particles particles1" data-color="#ffffff"></canvas>
+				<canvas class="particles particles2" data-color="#ffffff"></canvas>
 			</section>
 		</main>
 	</div>
 	@@include('html/_js.htm',{})
-
 </body>
 
 </html>

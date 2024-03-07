@@ -10,43 +10,43 @@
 	}
 }
 
-@keyframes anim-border1 {
-	0% {
-		transform: translateX(-100%);
-	}
-	100% {
-		transform: translateX(100%);
-	}
-}
-
 //==========Анімація бордера=====================//
 
-@keyframes anim-border2 {
-	0% {
-		transform: translateY(-100%);
-	}
-	100% {
-		transform: translateY(100%);
-	}
-}
+// @keyframes anim-border1 {
+// 	0% {
+// 		transform: translateX(-100%);
+// 	}
+// 	100% {
+// 		transform: translateX(100%);
+// 	}
+// }
 
-@keyframes anim-border3 {
-	0% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(-100%);
-	}
-}
+// @keyframes anim-border2 {
+// 	0% {
+// 		transform: translateY(-100%);
+// 	}
+// 	100% {
+// 		transform: translateY(100%);
+// 	}
+// }
 
-@keyframes anim-border4 {
-	0% {
-		transform: translateY(100%);
-	}
-	100% {
-		transform: translateY(-100%);
-	}
-}
+// @keyframes anim-border3 {
+// 	0% {
+// 		transform: translateX(100%);
+// 	}
+// 	100% {
+// 		transform: translateX(-100%);
+// 	}
+// }
+
+// @keyframes anim-border4 {
+// 	0% {
+// 		transform: translateY(100%);
+// 	}
+// 	100% {
+// 		transform: translateY(-100%);
+// 	}
+// }
 
 @keyframes puls-icon-1 {
 	0% {
@@ -91,9 +91,15 @@
 @keyframes puls-icon-big {
 	0% {
 		transform: scale(1) rotate(31deg);
+		@media (max-width: $mobile) {
+			transform: scale(1) rotate(7deg);
+		}
 	}
 	100% {
-		transform: scale(1.4) rotate(39deg);
+		transform: scale(1) rotate(39deg);
+		@media (max-width: $mobile) {
+			transform: scale(1.1) rotate(7deg);
+		}
 	}
 }
 
@@ -106,6 +112,7 @@
 		transform: scale(1.1) rotate(65deg);
 	}
 }
+
 @keyframes puls-icon-center {
 	0% {
 		transform: scale(1) rotate(345deg);
@@ -114,6 +121,16 @@
 		transform: scale(1.15) rotate(375deg);
 	}
 }
+
+@keyframes puls-icon-center-mobile {
+	0% {
+		transform: scale(1) rotate(35deg);
+	}
+	100% {
+		transform: scale(1.3) rotate(65deg);
+	}
+}
+
 @keyframes puls-icon-bottom {
 	0% {
 		transform: scale(1) rotate(40deg);
@@ -124,21 +141,8 @@
 }
 @keyframes puls-icon-bottom-mobile {
 	0% {
-		transform: scale(1) rotate(73deg);
 	}
 	100% {
-		transform: scale(1.2) rotate(85deg);
-	}
-}
-
-//==================================================//
-
-@keyframes puls-icon-center-mobile {
-	0% {
-		transform: scale(1) rotate(19deg);
-	}
-	100% {
-		transform: scale(1.7) rotate(25deg);
 	}
 }
 
@@ -187,5 +191,47 @@
 
 	100% {
 		transform: translateY(0);
+	}
+}
+
+// Guide book //
+
+@keyframes anim-decor-giude-book-top {
+	0% {
+		transform: scale(1) translate(31%, -30%);
+	}
+
+	100% {
+		transform: scale(1.15) translate(31%, -30%);
+	}
+}
+
+@keyframes anim-decor-giude-book-left {
+	0% {
+		transform: scale(1) rotate(324deg);
+	}
+
+	100% {
+		transform: scale(1.2) rotate(324deg);
+	}
+}
+@keyframes anim-decor-guide-book-button {
+	0% {
+		transform: translate(4%, -76%) scale(1) rotate(-42deg);
+	}
+
+	100% {
+		transform: translate(4%, -76%) scale(1.2) rotate(-42deg);
+	}
+}
+
+// Тінь на головних кнопках
+
+@keyframes btn-shadow {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.07);
 	}
 }

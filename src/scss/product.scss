@@ -127,6 +127,10 @@
 			color: $backgroundDark;
 			font-weight: 800;
 			margin-bottom: 0;
+			span {
+				padding: toRem(10);
+				transform: translate(-5%, 34%);
+			}
 			@media (max-width: $mobile) {
 				@include adaptiveValue("font-size", 50, 24);
 				span {
@@ -143,15 +147,24 @@
 		align-items: center;
 		gap: toRem(10);
 		align-self: flex-end;
+		@media (min-width: $mobile) {
+			margin-right: toRem(10);
+		}
 	}
 
 	// .other-presets__slider
 
 	&__slider {
-		padding: toRem(10) toRem(10) toRem(22) toRem(10);
+		padding: toRem(14) toRem(20) toRem(22) toRem(20);
 		margin: toRem(-10);
 		@media (max-width: $mobile) {
 			padding-bottom: toRem(35);
+		}
+		@media (min-width: $mobileSmall) {
+			padding: toRem(14) toRem(10) toRem(22) toRem(10);
+		}
+		@media (max-width: $mobile) {
+			padding-bottom: toRem(40);
 		}
 	}
 
@@ -169,23 +182,35 @@
 
 	&__item {
 		&.item-catalog {
-			height: auto;
+			// height: 100%;
+			// border-radius: toRem(20);
+			@media (max-width: $mobile) {
+			}
 			@media (any-hover: hover) {
 				&:hover {
 					transform: translate(0);
 				}
 			}
 			.item-catalog__content {
-				padding: toRem(16) toRem(20) toRem(25) toRem(20);
-				@media (max-width: $mobileSmall) {
-					padding: toRem(10) toRem(15) toRem(15) toRem(15);
+				@media (min-width: $mobile) {
+					padding: toRem(16) toRem(20) toRem(25) toRem(20);
 				}
+				@media (max-width: $mobile) {
+					padding: toRem(10) toRem(15) toRem(20) toRem(15);
+					border-radius: 0 0 toRem(20) toRem(20);
+				}
+				// @media (max-width: $mobileSmall) {
+				// 	padding: toRem(10) toRem(15) toRem(15) toRem(15);
+				// }
 			}
 			.item-catalog__image-wrapper {
 				@extend %image-scale;
 			}
 			.item-catalog__title h3 {
 				font-size: toRem(16);
+				@media (max-width: $mobile) {
+					@include adaptiveValue("font-size", 18, 12, 0, 767.98, 479.78);
+				}
 				@media (max-width: $mobileSmall) {
 					font-size: toRem(14);
 				}

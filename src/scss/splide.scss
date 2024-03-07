@@ -27,14 +27,14 @@
 		transform: rotate(4deg) translateY(100%);
 		z-index: 97;
 		@media (max-width: $mobile) {
-			transform: rotate(-349deg) translateY(100%);
+			transform: rotate(-349deg) translateY(70%);
 		}
 	}
 	&_bottom {
 		transform: rotate(-4deg) translateY(116%);
 		z-index: 96;
 		@media (max-width: $mobile) {
-			transform: rotate(349deg) translateY(100%);
+			transform: rotate(349deg) translateY(70%);
 		}
 	}
 }

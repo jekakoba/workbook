@@ -98,6 +98,10 @@ body::after {
 		&.title {
 			font-weight: 800;
 			color: $backgroundCards;
+			span {
+				transform: translateY(40%);
+				padding: toRem(14);
+			}
 			&:not(:last-child) {
 				@include adaptiveValue("margin-bottom", 47, 10);
 			}
@@ -550,9 +554,7 @@ body::after {
 			font-size: toRem(18);
 			padding: toRem(15) toRem(38);
 			@media (max-width: $mobileSmall) {
-				width: 100%;
-				padding: toRem(10);
-				font-size: toRem(14);
+				font-size: toRem(16);
 			}
 		}
 	}

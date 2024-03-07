@@ -3,11 +3,11 @@
 	list-style: none;
 	display: flex;
 	flex-direction: column;
-	border-radius: toRem(10);
+	border-radius: toRem(20);
 	overflow: hidden;
 	transition: transform 1.5s;
 	will-change: transform;
-	padding: toRem(10);
+	// padding: toRem(10);
 	filter: drop-shadow(2.42px 4.033px 8.066px rgba(0, 0, 0, 0.25));
 	@media (min-width: $mobile) {
 		height: 100%;
