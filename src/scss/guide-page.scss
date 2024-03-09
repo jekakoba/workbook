@@ -249,11 +249,11 @@
 		}
 	}
 
-	&__ {
-		@media (max-width: em(1024)) {
-			order: 1;
-		}
-	}
+	// &__ {
+	// 	@media (max-width: em(1024)) {
+	// 		order: 1;
+	// 	}
+	// }
 
 	// .hero-guide__center
 
@@ -293,10 +293,10 @@
 					#989898 22.08%,
 					#908f8f -2.34%,
 					#68676a 123.58%
-				) !important;
+				);
 
-			background-clip: text;
-			-webkit-background-clip: text;
+			background-clip: text !important;
+			-webkit-background-clip: text !important;
 			-webkit-text-fill-color: transparent;
 			@media (max-width: em(1024)) {
 				font-size: vmin(68);
@@ -322,10 +322,10 @@
 					#ba7f3b 76.47%,
 					#eebc70 82.14%,
 					#3f1f0f 95.05%
-				) !important;
+				);
 
-			background-clip: text;
-			-webkit-background-clip: text;
+			background-clip: text !important;
+			-webkit-background-clip: text !important;
 			-webkit-text-fill-color: transparent;
 			@media (max-width: em(1024)) {
 				font-size: vmin(32);
