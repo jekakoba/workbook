@@ -216,7 +216,7 @@
 		font-family: "Birthstone";
 
 		@include adaptiveValue("column-gap", 400, 404, 0, $containerWidth, 991.98);
-		transform: translateY(-20px);
+		transform: translateY(toRem(-20));
 
 		span {
 			text-transform: none;
@@ -380,7 +380,7 @@
 				}
 
 				@media (max-width: $mobileSmall) {
-					left: 100px;
+					left: toRem(100);
 				}
 			}
 		}
@@ -453,7 +453,7 @@
 		}
 		&_left-top {
 			@media (max-width: $tablet) {
-				max-width: 348px;
+				max-width: toRem(348);
 			}
 			@media (max-width: $mobile) {
 				max-width: toRem(266);
@@ -461,14 +461,14 @@
 		}
 		&_bottom-left {
 			@media (max-width: $tablet) {
-				max-width: 428px;
+				max-width: toRem(428);
 				margin-right: auto;
 			}
 			@media (max-width: $mobile) {
-				max-width: 300px;
+				max-width: toRem(300);
 			}
 			@media (max-width: $mobileSmall) {
-				max-width: 270px;
+				max-width: toRem(270);
 			}
 		}
 		&_top-right {
@@ -476,16 +476,16 @@
 				max-width: toRem(298);
 			}
 			@media (max-width: $tablet) {
-				max-width: 412px;
+				max-width: toRem(412);
 				margin-left: auto;
 			}
 			@media (max-width: $mobileSmall) {
-				max-width: 266px;
+				max-width: toRem(266);
 			}
 		}
 		&_bottom-right {
 			@media (max-width: $tablet) {
-				max-width: 391px;
+				max-width: toRem(391);
 				margin-left: auto;
 			}
 			@media (max-width: $mobile) {
@@ -516,9 +516,9 @@
 			font-size: toRem(13);
 		}
 		span {
-			transform: translateY(-3px);
+			transform: translateY(toRem(-3));
 			@media (max-width: $mobileSmall) {
-				transform: translateY(-4px);
+				transform: translateY(toRem(-4));
 			}
 		}
 	}
@@ -700,8 +700,6 @@
 				@media (max-width: em(1099.98)) {
 					@include adaptiveValue("width", 107, 43, 0, 1099.98, 320);
 					@include adaptiveValue("height", 107, 43, 0, 1099.98, 320);
-					// top: 153px;
-					// left: 145px;
 
 					@include adaptiveValue("top", 153, 76, 0, 1099.98, 320);
 					@include adaptiveValue("left", 145, -6, 0, 1099.98, 320);
@@ -787,7 +785,7 @@
 			}
 			.growt-guide__title {
 				position: relative;
-				left: -28px;
+				left: -toRem(-28);
 				@media (max-width: em(1099.98)) {
 					@include adaptiveValue("left", -28, -7, 0, 1099.98, 767.98);
 				}
@@ -1051,8 +1049,8 @@
 			width: 7.5rem;
 			height: 7.5rem;
 			position: absolute;
-			top: 4px;
-			left: -60px;
+			top: toRem(4);
+			left: toRem(-60);
 			background: url("@img/guide/growt-guide/decor/3dicons.png") 0 0 / contain no-repeat;
 			z-index: 3;
 			transform: rotate(-42deg) translate(4%, -76%);
@@ -1173,7 +1171,7 @@
 			position: relative;
 			left: toRem(7);
 			@media (max-width: $mobile) {
-				top: 5px;
+				top: toRem(5);
 				&:not(:last-child) {
 					margin-bottom: 0;
 				}
@@ -1226,7 +1224,7 @@
 			}
 			@media (max-width: $mobile) {
 				position: relative;
-				top: 8px;
+				top: toRem(8);
 				.item-guide__description {
 					position: relative;
 					top: toRem(-2);
@@ -1437,8 +1435,8 @@
 		&::after {
 			content: "";
 			position: absolute;
-			width: 62px;
-			height: 73px;
+			width: toRem(62);
+			height: toRem(73);
 			background: url("@img/main-page/decor-i.svg") 0 0 / contain no-repeat;
 			@media (max-width: em(1023.98)) {
 				width: toRem(32);
@@ -1555,28 +1553,7 @@
 		top: 0;
 		left: 0;
 	}
-	// &::before {
-	// 	content: "";
-	// 	position: absolute;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	top: 0;
-	// 	left: 0;
-	// 	border-radius: 20px; /*1*/
-	// 	border: 3px solid transparent; /*2*/
-	// 	background: linear-gradient(
-	// 		111.54deg,
-	// 		#ffffff -4.25%,
-	// 		rgba(0, 0, 0, 0.690477) 34.94%,
-	// 		rgba(0, 0, 0, 0.484607) 58.88%,
-	// 		rgba(255, 255, 255, 0.89) 115.25%
-	// 	);
-	// 	-webkit-mask: /*4*/
-	// 		linear-gradient(#fff 0 0) padding-box,
-	// 		linear-gradient(#fff 0 0);
-	// 	-webkit-mask-composite: xor; /*5'*/
-	// 	mask-composite: exclude; /*5*/
-	// }
+
 	@media (min-width: em(1024)) {
 		@include adaptiveValue("min-width", 360, 280, 2, $containerWidth, 1023.98);
 	}
@@ -1658,7 +1635,7 @@
 		position: relative;
 
 		@media (min-width: em(1200)) {
-			padding: 1px;
+			padding: toRem(1);
 			border-radius: toRem(20);
 			background: linear-gradient(
 				122.08deg,
@@ -1718,7 +1695,7 @@
 					width: toRem(62);
 					height: toRem(8);
 					background: url("@img/main-page/about-me/decor-professions.svg") 0 0 / contain no-repeat;
-					transform: translateY(3px);
+					transform: translateY(toRem(3));
 					@media (max-width: $mobileSmall) {
 						width: toRem(32);
 						height: toRem(8);
@@ -1731,7 +1708,6 @@
 				}
 
 				@media (max-width: em(1199.98)) {
-					// left: 100px;
 					@include adaptiveValue("left", 40, 55, 0, 1199.98, 479);
 				}
 				@media (max-width: $mobileSmall) {
@@ -1801,10 +1777,10 @@
 			transform: rotate(45deg) translate(-44%, -5%);
 			@media (max-width: em(1199.98)) {
 				background-size: contain;
-				width: 300px;
-				height: 300px;
-				left: -115px;
-				top: -100px;
+				width: toRem(300);
+				height: toRem(300);
+				left: toRem(-115);
+				top: toRem(-100);
 				transform: rotate(45deg) translate(0);
 				@include adaptiveValue("width", 300, 222, 0, 1199.98, 320);
 				@include adaptiveValue("height", 300, 165, 0, 1199.98, 320);
@@ -1819,10 +1795,10 @@
 			transform: rotate(306deg) translate(40%, 2%);
 			@media (max-width: em(1199.98)) {
 				background-size: contain;
-				width: 348px;
-				height: 348px;
-				right: -76px;
-				top: -183px;
+				width: toRem(348);
+				height: toRem(348);
+				right: toRem(-76);
+				top: toRem(-183);
 				transform: rotate(304deg);
 				@include adaptiveValue("width", 348, 260, 0, 1199.98, 320);
 				@include adaptiveValue("height", 348, 260, 0, 1199.98, 320);
@@ -1876,7 +1852,7 @@
 		&_left {
 			align-items: flex-end;
 			@media (min-width: em(1200)) {
-				padding-right: 39px;
+				padding-right: toRem(39);
 			}
 			.content-about__description {
 				@media (min-width: em(1200)) {
@@ -1924,7 +1900,6 @@
 	&__center {
 		position: relative;
 		@media (max-width: em(1199.98)) {
-			// margin-top: -192px;
 			@include adaptiveValue("margin-top", -192, -130, 0, 1199.98, 479.98);
 		}
 		@media (max-width: $mobileSmall) {
@@ -2008,10 +1983,10 @@
 				p {
 					margin: 0 auto;
 					&:nth-child(1) {
-						max-width: 326px;
+						max-width: toRem(326);
 					}
 					&:nth-child(2) {
-						max-width: 316px;
+						max-width: toRem(316);
 					}
 				}
 			}
@@ -2020,10 +1995,10 @@
 				p {
 					margin: 0 auto;
 					&:nth-child(1) {
-						max-width: 303px;
+						max-width: toRem(303);
 					}
 					&:nth-child(2) {
-						max-width: 304px;
+						max-width: toRem(304);
 					}
 				}
 			}

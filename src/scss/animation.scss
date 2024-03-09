@@ -1,12 +1,12 @@
 @keyframes puls-shadow {
 	0% {
-		box-shadow: 0px 0px 5px 0px rgba(251, 251, 251, 0.3);
+		box-shadow: 0 0 toRem(5) 0 rgba(251, 251, 251, 0.3);
 	}
 	50% {
-		box-shadow: 0px 0px 15px 1px rgba(251, 251, 251, 0.3);
+		box-shadow: 0 0 toRem(15) toRem(1) rgba(251, 251, 251, 0.3);
 	}
 	100% {
-		box-shadow: 0px 0px 5px 0px rgba(251, 251, 251, 0.3);
+		box-shadow: 0 0 toRem(5) 0 rgba(251, 251, 251, 0.3);
 	}
 }
 

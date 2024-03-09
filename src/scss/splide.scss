@@ -12,16 +12,16 @@
 		position: absolute;
 		left: 0;
 		width: 100vw;
-		height: 11px;
+		height: toRem(11);
 		background: url("@img/decor/square.png") 100% repeat-x;
 		@media (max-width: $mobile) {
 		}
 	}
 	&::before {
-		top: 4px;
+		top: toRem(4);
 	}
 	&::after {
-		bottom: 2.3px;
+		bottom: toRem(2.3);
 	}
 	&_top {
 		transform: rotate(4deg) translateY(100%);

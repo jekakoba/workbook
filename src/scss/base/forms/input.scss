@@ -12,7 +12,7 @@ textarea {
 	border-radius: toRem(10) !important;
 	width: 100%;
 	display: block;
-	padding: 0px toRem(20);
+	padding: 0 toRem(20);
 	color: $whiteColor;
 	outline: none;
 	height: toRem(54);
@@ -47,5 +47,4 @@ textarea {
 
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
 }

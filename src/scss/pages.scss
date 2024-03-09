@@ -161,7 +161,7 @@
 	&__hero {
 		position: relative;
 		@media (max-width: $mobile) {
-			margin-top: -60px;
+			margin-top: -toRem(-60);
 		}
 		@include adaptiveValue("margin-bottom", 200, 120);
 	}
@@ -198,7 +198,7 @@
 	&__instagram-guide {
 		@include adaptiveValue("padding-bottom", 150, 80);
 		@media (max-width: em(1024)) {
-			padding-top: 40px;
+			padding-top: toRem(40);
 		}
 	}
 

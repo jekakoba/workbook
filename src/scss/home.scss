@@ -282,10 +282,10 @@
 			position: absolute;
 		}
 		&::before {
-			left: -100px;
+			left: toRem(-100);
 			top: 45%;
-			width: 283px;
-			height: 757px;
+			width: toRem(283);
+			height: toRem(457);
 			background: url("@img/icons/girl-decor-left.png") 0 0 / contain no-repeat;
 			@media (max-width: em(1200)) {
 				top: 5%;
@@ -294,26 +294,26 @@
 				top: 48%;
 			}
 			@media (max-width: $mobileSmall) {
-				left: -53px;
+				left: toRem(-53);
 				top: 60%;
-				width: 130px;
-				height: 403px;
+				width: toRem(130);
+				height: toRem(403)
 			}
 		}
 		&::after {
-			right: -100px;
+			right:  toRem(-100);
 			top: 2%;
-			width: 240px;
-			height: 885px;
+			width: toRem(240);
+			height: toRem(885);
 			background: url("@img/icons/girl-decor-right.png") 0 0 / contain no-repeat;
 			@media (max-width: $mobile) {
 				top: 15%;
 			}
 			@media (max-width: $mobileSmall) {
-				right: -46px;
+				right:  toRem(-46);
 				top: 21%;
-				width: 126px;
-				height: 885px;
+				width: toRem(126);
+				height: toRem(885);
 			}
 		}
 	}
@@ -321,9 +321,9 @@
 	&__wrapper {
 		position: relative;
 		background-color: #0e0e0e;
-		border-radius: 40px 40px 0 0;
+		border-radius: toRem(40) toRem(40) 0 0;
 		@media (max-width: em(1024)) {
-			border-radius: 20px 20px 0 0;
+			border-radius: toRem(20) toRem(20) 0 0;
 		}
 		&::before {
 			content: "";
@@ -331,13 +331,13 @@
 			width: 100%;
 			height: 50%;
 			left: 0;
-			top: 0px;
+			top: 0;
 			z-index: -1;
-			box-shadow: 0 0 50px 0 #d8c3b6;
-			border-radius: 40px 40px 0 0;
+			box-shadow: 0 0 toRem(50) 0 #d8c3b6;
+			border-radius: toRem(40) toRem(40) 0 0;
 			@media (max-width: em(1024)) {
-				border-radius: 20px 20px 0 0;
-				box-shadow: 0 0 30px 0 #d8c3b6;
+				border-radius: toRem(20) toRem(20) 0 0;
+				box-shadow: 0 0 toRem(30) 0 #d8c3b6;
 			}
 		}
 		@media (min-width: em(1024)) {
@@ -352,21 +352,21 @@
 			transform: translate(-55%, -18%);
 			background: url("@img/decor-circle-main.png") center / contain no-repeat;
 			@media (max-width: em(1024)) {
-				top: -45px;
+				top: toRem(-45);
 				left: 50%;
 				width: 50%;
 				height: 15%;
 				transform: translate(-50%, -18%);
 			}
 			@media (max-width: $mobile) {
-				top: -53px;
+				top: toRem(-53);
 				left: 50%;
 				width: 55%;
 				height: 10%;
 				transform: translate(-50%, -18%);
 			}
 			@media (max-width: $mobileSmall) {
-				top: -43px;
+				top: toRem(-43);
 			}
 		}
 	}
@@ -379,7 +379,7 @@
 		padding-top: toRem(50);
 		@media (max-width: em(1024)) {
 			padding-top: 0;
-			margin-top: -100px;
+			margin-top: toRem(-100);
 		}
 		@media (max-width: $mobileSmall) {
 			padding-top: toRem(15);
@@ -624,8 +624,8 @@
 
 		&_left {
 			padding-bottom: percent(237, 180);
-			top: 37px;
-			right: -53px;
+			top: toRem(37);
+			right:  toRem(-53);
 			transform: rotate(-15deg);
 		}
 		&_center {
@@ -638,8 +638,8 @@
 
 			transform: rotate(9.53deg);
 			position: relative;
-			top: 12px;
-			right: 46px;
+			top:toRem(12);
+			right: toRem(46);
 		}
 	}
 
@@ -732,7 +732,6 @@
 			@include adaptiveValue("font-size", 16, 11);
 		}
 		@media (max-width: $mobileSmall) {
-			// max-width: 250px;
 			@include adaptiveValue("max-width", 250, 240, 0, 479.98, 375);
 			margin: 0 auto;
 		}
@@ -883,7 +882,7 @@
 .slide-workbook {
 	position: relative;
 	border-radius: toRem(50);
-	box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 toRem(50) toRem(1) rgba(0, 0, 0, 0.3);
 	transition: transform 0.3s;
 	will-change: filter;
 	@media (max-width: $mobile) {
@@ -1206,7 +1205,7 @@
 		}
 		@media (max-width: $mobileSmall) {
 			margin: 0 auto;
-			max-width: 253px;
+			max-width: toRem(253);
 		}
 	}
 

@@ -148,7 +148,7 @@
 			transform: translateX(toRem(20));
 			opacity: 0;
 			will-change: filter;
-			filter: blur(10px);
+			filter: blur(toRem(10));
 			$base-delay: 0.2s;
 			$properties:
 				transform 0.2s,
@@ -171,7 +171,8 @@
 			$base-delay: 0.1s;
 			$properties:
 				transform 0.5s,
-				opacity 0.7s filter 1s;
+				opacity 0.7s,
+				filter 1s;
 			@for $i from 1 through 4 {
 				&:nth-child(#{$i}) {
 					transition: $properties;
