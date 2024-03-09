@@ -91,15 +91,19 @@
 @keyframes puls-icon-big {
 	0% {
 		transform: scale(1) rotate(31deg);
-		@media (max-width: $mobile) {
-			transform: scale(1) rotate(7deg);
-		}
 	}
 	100% {
 		transform: scale(1) rotate(39deg);
-		@media (max-width: $mobile) {
-			transform: scale(1.1) rotate(7deg);
-		}
+	}
+}
+
+@keyframes puls-icon-big-moblie {
+	0% {
+		transform: scale(1) rotate(7deg);
+	}
+
+	100% {
+		transform: scale(1.1) rotate(10deg);
 	}
 }
 
@@ -137,12 +141,6 @@
 	}
 	100% {
 		transform: scale(1.18) rotate(80deg);
-	}
-}
-@keyframes puls-icon-bottom-mobile {
-	0% {
-	}
-	100% {
 	}
 }
 
