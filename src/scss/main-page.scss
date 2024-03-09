@@ -785,7 +785,7 @@
 			}
 			.growt-guide__title {
 				position: relative;
-				left: -toRem(-28);
+				left: toRem(-28);
 				@media (max-width: em(1099.98)) {
 					@include adaptiveValue("left", -28, -7, 0, 1099.98, 767.98);
 				}

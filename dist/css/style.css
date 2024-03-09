@@ -4973,7 +4973,7 @@ body::after {
 
 .growt-guide__column_right .growt-guide__title {
   position: relative;
-  left: -toRem(-28);
+  left: -1.75rem;
 }
 
 .growt-guide__column_right .growt-guide__text {
