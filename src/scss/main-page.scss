@@ -164,6 +164,11 @@
 //===========Avantages===============//
 
 .advantages-main {
+	&__wrapper {
+		@media (max-width: $tablet) {
+			@include adaptiveValue("margin-bottom", 120, 80);
+		}
+	}
 	// .advantages-main__container
 
 	&__container {

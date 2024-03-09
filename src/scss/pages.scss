@@ -161,7 +161,7 @@
 	&__hero {
 		position: relative;
 		@media (max-width: $mobile) {
-			margin-top: -toRem(-60);
+			margin-top: toRem(-60);
 		}
 		@include adaptiveValue("margin-bottom", 200, 120);
 	}

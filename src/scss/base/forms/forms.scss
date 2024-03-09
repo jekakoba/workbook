@@ -83,7 +83,7 @@
 		cursor: pointer;
 		&.button {
 			font-size: toRem(15);
-			padding: toRem(19.5) toRem(39);
+			padding: toRem(19.5) toRem(36);
 			@media (max-width: $mobileSmall) {
 				font-size: toRem(13);
 			}
