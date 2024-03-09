@@ -539,7 +539,7 @@
 		position: relative;
 		background-color: $backgroundCards;
 		border-radius: toRem(20);
-		@media (min-width: em(1300)) {
+		@media (min-width: em(1301)) {
 			grid-template-columns: 56% 1fr;
 			&::after {
 				content: "";
@@ -570,11 +570,11 @@
 			left: 0;
 			object-fit: cover;
 			border-radius: toRem(20) 0 0 toRem(20);
-			@media (max-width: em(1300.98)) {
+			@media (max-width: em(1300)) {
 				border-radius: toRem(10) toRem(10) 0 0;
 			}
 		}
-		@media (max-width: em(1300.98)) {
+		@media (max-width: em(1300)) {
 			border-radius: toRem(10) toRem(10) 0 0;
 			padding-bottom: 47%;
 		}
@@ -590,6 +590,7 @@
 		@media (max-width: em(1300)) {
 			text-align: center;
 			padding-bottom: 0;
+			padding-left: toRem(25);
 			@include adaptiveValue("padding-top", 50, 25);
 		}
 		&::before,
@@ -597,7 +598,7 @@
 			content: "";
 			position: absolute;
 		}
-		@media (max-width: em(1300.98)) {
+		@media (max-width: em(1300)) {
 			&::before,
 			&::after {
 				@include adaptiveValue("top", 60, 35);
@@ -640,7 +641,7 @@
 		font-weight: 700;
 		line-height: 1.3;
 		text-transform: uppercase;
-		@media (max-width: em(1300.98)) {
+		@media (max-width: em(1300)) {
 			text-align: center;
 			@include adaptiveValue("font-size", 44, 25, 0);
 		}
@@ -678,7 +679,7 @@
 		justify-content: space-between;
 		align-items: center;
 		column-gap: toRem(15);
-		@media (max-width: em(1300.98)) {
+		@media (max-width: em(1300)) {
 			flex-direction: column;
 		}
 	}
@@ -696,7 +697,7 @@
 		color: #8e8e8e;
 		font-size: toRem(30);
 		text-decoration: line-through;
-		@media (max-width: em(1300.98)) {
+		@media (max-width: em(1300)) {
 			@include adaptiveValue("font-size", 60, 30);
 		}
 	}
@@ -706,7 +707,7 @@
 	&__price {
 		font-size: toRem(40);
 		font-weight: 500;
-		@media (max-width: em(1300.98)) {
+		@media (max-width: em(1300)) {
 			@include adaptiveValue("font-size", 80, 40);
 		}
 	}
@@ -725,10 +726,10 @@
 				}
 			}
 		}
-		@media (max-width: em(1300.98)) {
+		@media (max-width: em(1300)) {
 			transform: translateY(50%);
 		}
-		@media (max-width: em(1300.98)) {
+		@media (max-width: em(1300)) {
 			width: 70%;
 		}
 		@media (max-width: $mobileSmall) {
