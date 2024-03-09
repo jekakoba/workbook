@@ -26,25 +26,24 @@ function initSliders() {
 			spaceBetween: 100,
 			speed: 800,
 			grabCursor: true,
-
 			loopAdditionalSlides: 2,
 			slidesPerView: 2,
+
 			pagination: {
 				el: '.workbook-content__pagination',
 				clickable: true,
 			},
-
-			// Скроллбар
-			// Кнопки "вліво/вправо"
 			navigation: {
 				prevEl: '.navigation__button_prev',
 				nextEl: '.navigation__button_next',
 			},
-
+			// Скроллбар
+			// Кнопки "вліво/вправо"
 			breakpoints: {
 				320: {
 					spaceBetween: 50,
 					slidesPerView: 1,
+
 				},
 				767.98: {
 					slidesPerView: 2,
@@ -327,18 +326,19 @@ function initSlidersScroll() {
 
 
 
-// window.addEventListener("load", function (e) {
-// 	// Запуск ініціалізації слайдерів
+window.addEventListener("load", function (e) {
+	// Запуск ініціалізації слайдерів
+	initSliders();
+	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
+	//initSlidersScroll();
+});
+
+// window.addEventListener('resize', () => {
 // 	initSliders();
-// 	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-// 	//initSlidersScroll();
+// });
+// window.addEventListener("load", function (e) {
+
+// 	initSliders();
+
 // });
 
-window.addEventListener('resize', () => {
-	initSliders();
-});
-window.addEventListener("load", function (e) {
-
-	initSliders();
-
-});

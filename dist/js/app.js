@@ -4507,9 +4507,6 @@
             }
         });
     }
-    window.addEventListener("resize", (() => {
-        initSliders();
-    }));
     window.addEventListener("load", (function(e) {
         initSliders();
     }));
