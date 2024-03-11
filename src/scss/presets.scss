@@ -125,7 +125,7 @@
 			font-size: vw(43);
 			font-weight: 800;
 			span {
-				transform: translateY(43%);
+				transform: translateY(40%);
 				font-size: vw(80);
 				@media (max-width: $mobile) {
 					font-size: vmin(35);
@@ -324,17 +324,17 @@
 			&::before {
 				content: "";
 				position: absolute;
-				top: 0;
-				right: vw(-100);
-				width: vw(180);
-				height: vw(180);
+				top: -3vw;
+				right: vw(-120);
+				width: vw(210);
+				height: vw(210);
 				background: url("@img/presets-page/hero-block/decor/decor.png") 0 0 / cover no-repeat;
 				z-index: 11;
 				transform: translateY(0%);
 				@media (max-width: $mobile) {
 					width: 20vmin;
 					height: 20vmin;
-					top: -10vmin;
+					top: -5vmin;
 					right: -10vmin;
 				}
 			}
@@ -409,7 +409,8 @@
 
 //=====================//
 .catalog {
-	background-color: white;
+	&__wrapper {
+	}
 	// .catalog__container
 
 	&__container {
@@ -480,6 +481,7 @@
 			font-weight: 800;
 			margin-bottom: 0;
 			span {
+				transform: translate(-3%, 36%);
 				padding: toRem(10);
 			}
 
@@ -495,8 +497,6 @@
 	// .catalog__items
 
 	&__items {
-		max-width: toRem(1226);
-		margin: 0 auto;
 		grid-template-columns: repeat(3, 1fr) !important;
 		gap: toRem(80) toRem(38);
 		@media (min-width: $mobile) {
@@ -527,6 +527,21 @@
 }
 
 .premium-set {
+	&__wrapp {
+		&.decor-main-circle {
+			background-color: white;
+			&::before {
+				display: none;
+			}
+			&::after {
+				background: url("@img/decor-circle-main-white.png") center / contain no-repeat;
+				transform: translate(-55%, -50.2%) rotate(180deg);
+				@media (max-width: $mobile) {
+					transform: translate(-50%, -50.2%);
+				}
+			}
+		}
+	}
 	// .premium-set__container
 
 	&__container {

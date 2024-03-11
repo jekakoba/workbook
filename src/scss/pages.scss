@@ -47,10 +47,27 @@
 	&__hero {
 	}
 
+	&__wrapp {
+		&.decor-main-circle {
+			background-color: white;
+			border-radius: toRem(40);
+			&::before {
+				display: none;
+			}
+			&::after {
+				background: url("@img/decor-circle-main-white.png") center / contain no-repeat;
+				transform: translate(-50%, -50.2%);
+				border-radius: toRem(40);
+				@media (max-width: $mobile) {
+				}
+			}
+		}
+	}
+
 	// .presets__catalog
 	&__catalog {
 		@include adaptiveValue("padding-bottom", 100, 30);
-		@include adaptiveValue("padding-top", 50, 15);
+		// @include adaptiveValue("padding-top", 50, 15);
 	}
 
 	&__premium {

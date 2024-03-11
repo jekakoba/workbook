@@ -1,0 +1,54 @@
+[data-ba] {
+  position: relative;
+}
+
+[data-ba-before] img,
+[data-ba-after] img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+[data-ba-before] img {
+  width: 100%;
+}
+
+[data-ba-after] {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+[data-ba-after] img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+[data-ba-arrow] {
+  cursor: -webkit-grab;
+  cursor: grab;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: toRem(4);
+  z-index: 2;
+  background-color: #ddd;
+}
+[data-ba-arrow]::before, [data-ba-arrow]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: toRem(32);
+  height: toRem(32);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url("@img/icons/ellipse-before-after.svg") 0 0 no-repeat;
+}

@@ -360,6 +360,7 @@
 			justify-items: center;
 			margin-top: vmin(-45);
 			row-gap: vmin(20);
+			margin-bottom: vmin(15);
 		}
 	}
 
@@ -471,8 +472,13 @@
 	&__info {
 		position: relative;
 		z-index: 5;
+
 		@media (max-width: em(1024)) {
 			order: 3;
+		}
+
+		@media (min-width: em(1024)) {
+			left: vw(-18);
 		}
 	}
 
@@ -485,6 +491,8 @@
 	}
 
 	&__button-wrapp {
+		@media (min-width: em(1024)) {
+		}
 		@media (max-width: em(1024)) {
 		}
 	}
@@ -611,11 +619,11 @@
 			&::after {
 				content: "";
 				position: absolute;
-				top: -3%;
+				top: 0;
 				left: 50%;
 				width: 20%;
 				height: 10%;
-				transform: translate(-55%, -18%);
+				transform: translate(-55%, -52%);
 				background: url("@img/decor-circle-main.png") center / contain no-repeat;
 			}
 		}

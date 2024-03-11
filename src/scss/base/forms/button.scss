@@ -66,12 +66,15 @@
 	}
 
 	&_workbook-posing {
-		width: 100%;
-		padding: toRem(16.5) toRem(10);
-		font-size: toRem(14);
-		// border-radius: toRem(10);
+		@media (min-width: $tablet) {
+			padding: toRem(20);
+		}
+		@media (min-width: $tablet) {
+			width: 95%;
+			font-size: toRem(14);
+		}
 		@media (max-width: $mobileSmall) {
-			padding: toRem(18.5) toRem(10);
+			padding: toRem(23.5) toRem(10);
 		}
 	}
 	transition:
