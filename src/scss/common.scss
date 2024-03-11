@@ -840,6 +840,14 @@
 	opacity: 0.2;
 }
 
+.your-instagram {
+	.particles {
+		@media (max-width: $mobileSmall) {
+			height: 70vh;
+		}
+	}
+}
+
 ._btn-shadow {
 	position: relative;
 	pointer-events: none;

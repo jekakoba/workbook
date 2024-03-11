@@ -12,6 +12,8 @@
 // Спойлер
 .spollers__item {
 	overflow: hidden;
+	position: relative;
+	z-index: 10;
 	border-radius: toRem(20);
 }
 // Заголовок спойлера

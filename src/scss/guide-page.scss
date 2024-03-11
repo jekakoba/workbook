@@ -601,10 +601,10 @@
 	// .guide-instagram__container
 
 	&__wrapper {
-		@media (min-width: em(1200)) {
+		@media (min-width: em(1024)) {
 			position: relative;
 			background-color: #0e0e0e;
-			border-radius: 40px 40px 0 0;
+			border-radius: toRem(40) toRem(40) 0 0;
 			&::before {
 				content: "";
 				position: absolute;
@@ -613,18 +613,21 @@
 				left: 0;
 				top: 0px;
 				z-index: -1;
-				box-shadow: 0 0 50px 0 #d8c3b6;
-				border-radius: 40px 40px 0 0;
+				box-shadow: 0 0 toRem(50) 0 #d8c3b6;
+				border-radius: toRem(40) toRem(40) 0 0;
 			}
 			&::after {
 				content: "";
 				position: absolute;
 				top: 0;
 				left: 50%;
-				width: 20%;
-				height: 10%;
-				transform: translate(-55%, -52%);
+				width: 25%;
+				height: 12%;
+				transform: translate(-55%, -52.8%);
 				background: url("@img/decor-circle-main.png") center / contain no-repeat;
+				@media (max-width: em(1024)) {
+					transform: translate(-55%, -51.8%);
+				}
 			}
 		}
 	}
@@ -647,16 +650,18 @@
 		}
 		&.title {
 			font-weight: 800;
+			font-size: toRem(40);
 			span {
-				transform: translateY(30%);
+				font-size: toRem(57);
+				transform: translateY(35%);
 				@media (max-width: $mobileSmall) {
 					transform: translateY(40%);
 				}
 			}
 			@media (max-width: $mobile) {
-				@include adaptiveValue("font-size", 32, 26, 0, 767.98, 375);
+				@include adaptiveValue("font-size", 32, 26, 0, 767.98, 479);
 				span {
-					@include adaptiveValue("font-size", 44, 36, 0, 767.98, 375);
+					@include adaptiveValue("font-size", 44, 36, 0, 767.98, 479);
 				}
 			}
 		}
@@ -863,6 +868,7 @@
 
 	&__button {
 		&.button {
+			padding: toRem(35) toRem(57);
 			&_gold {
 				color: $backgroundCards;
 			}
@@ -1074,8 +1080,13 @@
 //============Immediately========//
 
 .immediately {
-	position: relative;
-	z-index: 10;
+	// position: relative;
+	// z-index: 10;
+
+	&__wrapp {
+		position: relative;
+		z-index: 10;
+	}
 	// .immediately__container
 
 	&__container {
