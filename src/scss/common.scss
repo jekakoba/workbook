@@ -171,6 +171,30 @@
 		height: 100%;
 		background: url("@img/decor/decor-faq.svg") 0 0 / auto 100% repeat-x;
 	}
+
+	&__wrapp {
+		&.decor-main-circle {
+			&::before {
+				display: none;
+			}
+			&::after {
+				background: url("@img/decor-circle-main-white.png") center / contain no-repeat;
+				transform: translate(-50%, -170.2%) rotate(180deg);
+				@media (max-width: em(1024)) {
+					width: 20%;
+					transform: translate(-50%, -132.2%) rotate(180deg);
+				}
+				@media (max-width: $mobile) {
+					width: 50%;
+					transform: translate(-50%, -169.2%) rotate(180deg);
+				}
+				@media (max-width: $mobileSmall) {
+					transform: translate(-50%, -113.2%) rotate(180deg);
+				}
+			}
+		}
+	}
+
 	// .faq__container
 
 	&__container {
