@@ -44,7 +44,7 @@
 		align-items: center;
 		@media (min-width: em(1024.98)) {
 			position: relative;
-			top: vw(-76);
+			// top: vw(-76);
 			&:not(:last-child) {
 				margin-bottom: vw(80);
 			}
@@ -132,15 +132,16 @@
 
 	&__image {
 		position: absolute;
-		@include adaptiveSize("width", "*", 27);
+
 		bottom: vw(-30);
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translateX(-51%);
 		object-fit: cover;
 		img {
 			width: 100%;
 		}
 		@media (min-width: em(1024)) {
+			@include adaptiveSize("width", "*", 25.4);
 			// transform: translateX(0);
 		}
 		@media (max-width: em(1024)) {
@@ -160,6 +161,9 @@
 				object-fit: cover;
 			}
 		}
+		@media (max-height: em(885)) {
+			// @include adaptiveSize("width", "*", 22.4);
+		}
 	}
 
 	// .hero__about-model
@@ -176,7 +180,7 @@
 	align-items: flex-start;
 	@media (min-width: em(1024)) {
 		left: vw(30);
-		top: vw(-60);
+		// top: vw(-60);
 	}
 	@media (max-width: em(1024)) {
 		display: flex;
@@ -241,7 +245,7 @@
 
 	@media (min-width: em(1024)) {
 		left: vw(25);
-		top: vw(-68);
+		// top: vw(-68);
 	}
 	// .model-about__name
 

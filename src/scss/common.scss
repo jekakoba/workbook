@@ -840,6 +840,12 @@
 	opacity: 0.2;
 }
 
+.advantages-guide {
+	.particles {
+		// height: 200vh;
+	}
+}
+
 .your-instagram {
 	.particles {
 		@media (max-width: $mobileSmall) {

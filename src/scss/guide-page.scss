@@ -412,8 +412,6 @@
 		@include adaptiveSize("width", "*", 22);
 		bottom: vw(-145);
 		left: 26.7vw;
-
-		// left: 46.5%;
 		z-index: 3;
 		@media (min-width: em(1024.98)) {
 			transform: translateX(-50%);
@@ -729,7 +727,7 @@
 
 	&__icon-wrapper {
 		display: flex;
-		align-items: flex-end;
+		// align-items: flex-end;
 		justify-content: center;
 		width: toRem(150);
 		height: toRem(81);
@@ -769,7 +767,7 @@
 			flex: 0 0 toRem(150);
 			width: toRem(150);
 			height: toRem(103);
-			// top: 15px;
+			top: 12px;
 			img {
 			}
 			@media (max-width: em(499.98)) {
@@ -796,7 +794,7 @@
 		text-transform: uppercase;
 		@include adaptiveValue("font-size", 20, 16, 0, $containerWidth, 767.98);
 		&:not(:last-child) {
-			margin-bottom: toRem(6);
+			margin-bottom: toRem(8);
 		}
 	}
 

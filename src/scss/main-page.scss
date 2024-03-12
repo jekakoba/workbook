@@ -406,7 +406,7 @@
 				}
 				@media (max-width: $mobileSmall) {
 					@include adaptiveValue("top", -62, -62, 0, 479.98, 375);
-					@include adaptiveValue("left", -20, -20, 0, 479.98, 375);
+					@include adaptiveValue("left", -20, -19, 0, 479.98, 375);
 				}
 			}
 			.advantages-main__decor-text {
