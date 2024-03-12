@@ -966,6 +966,7 @@
 
 	&__guide-list {
 		row-gap: toRem(20);
+		list-style: none;
 		@include adaptiveValue("column-gap", 60, 20, 0, $containerWidth, 1099.98);
 		@media (min-width: em(1100)) {
 			margin-top: auto;

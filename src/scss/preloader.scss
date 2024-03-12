@@ -19,8 +19,8 @@
 
 /* Блок з елементами */
 .fls-preloader__body {
-	padding: 0.93rem;
-	max-width: 31.25rem;
+	// padding: 0.93rem;
+	@include adaptiveSize("width", "*", 18);
 	display: flex;
 	flex-direction: column;
 	color: white;
@@ -37,9 +37,10 @@
 
 .fls-preloader__image {
 	margin-bottom: toRem(30);
+
 	img {
 		animation: pulse 3s linear 0s infinite forwards;
-		@include adaptiveSize("width", "*", 25.4);
+		@include adaptiveSize("width", "*", 18);
 	}
 }
 
