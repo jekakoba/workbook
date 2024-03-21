@@ -42,8 +42,8 @@
 		}
 		@media (max-width: $mobile) {
 			text-align: center;
-			grid-template-columns: 1fr;
-			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: 1fr !important;
+			grid-template-rows: repeat(2, 1fr) !important;
 			height: 100vh;
 			gap: vmin(20);
 		}
