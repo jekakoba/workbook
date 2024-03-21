@@ -4,8 +4,9 @@
 "title":"Workbook"
 })
 
-<body>
+<body class="page-template-guide-index">
 	<div class="wrapper">
+		@@include('html/_header.htm',{})
 		<main class="page">
 			<section id="hero" class="page__hero hero">
 				<div class="hero__main-container">
@@ -329,7 +330,7 @@
 				<canvas class="particles particles1" data-color="#ffffff"></canvas>
 				<canvas class="particles particles2" data-color="#ffffff"></canvas>
 			</section>
-			<section class="page__faq faq">
+			<section id="faq" class="page__faq faq">
 				<div class="faq__container">
 					<h2 class="faq__title title"><span class="bg-gradient">Questions</span>AND ANSWERS</h2>
 					<div data-spollers class="faq__spollers spollers">
@@ -365,6 +366,7 @@
 				<canvas class="particles particles2" data-color="#ffffff"></canvas>
 			</section>
 		</main>
+		@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_preloader.htm',{})
 	@@include('html/_js.htm',{})

@@ -88,7 +88,7 @@
 			width: 20%;
 			bottom: 0;
 			left: 50%;
-			transform: translate(-50%, 51%) rotate(180deg);
+			transform: translate(-50%, 50%) rotate(180deg);
 			background: url("@img/decor-circle-main-white.png") center / contain no-repeat;
 			@media (max-width: em(1300)) {
 				height: 9%;
@@ -117,15 +117,12 @@
 
 //=============Product page===========//
 .product {
-	padding-top: toRem(60);
+	padding-top: toRem(100);
 	background-color: $whiteColor;
 	@include adaptiveValue("padding-bottom", 166, 20);
 	@media (max-width: $tablet) {
-		padding-top: toRem(30);
 	}
-	@media (max-width: $mobileSmall) {
-		padding-top: toRem(15);
-	}
+
 	// .prodcut__container
 
 	&__container {
@@ -143,7 +140,7 @@
 		gap: toRem(12);
 		transition: opacity 0.3s;
 		&:not(:last-child) {
-			margin-bottom: toRem(60);
+			margin-bottom: toRem(40);
 		}
 		font-size: toRem(17);
 		svg {

@@ -4,9 +4,10 @@
 "title":"Guide"
 })
 
-<body>
+<body class="page-template-guide-page">
 
 	<div class="wrapper">
+		@@include('html/_header-gold.htm',{})
 		<main id="guide-hero" class="guide">
 			<section class="guide__hero hero-guide">
 				<div class="hero-guide__wrapper">
@@ -421,7 +422,7 @@
 				<canvas class="particles particles1" data-color="#ffffff"></canvas>
 				<canvas class="particles particles2" data-color="#ffffff"></canvas>
 			</section>
-			<section class="guide__faq faq-guide">
+			<sectio id="faq" class="guide__faq faq-guide">
 				<div class="faq-guide__container">
 					<h2 class="faq-guide__title title"><span class="gold-gradient gold-gradient_text">Answers to</span>Frequently Asked Questions</h2>
 					<div class="faq-guide__content">
@@ -492,14 +493,16 @@
 				<div class="faq-guide__decor"></div>
 				<canvas class="particles particles1" data-color="#ffffff"></canvas>
 				<canvas class="particles particles2" data-color="#ffffff"></canvas>
-			</section>
+			</sectio>
 		</main>
+		@@include('html/_footer-gold.htm',{})
 	</div>
 	<button class="top top_gold" data-goto="#guide-hero" type="button">
 		<svg viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M1 7L8 1.5L15 7" stroke="white" stroke-width="2" />
 		</svg>
 	</button>
+
 	@@include('html/_preloader.htm',{})
 	@@include('html/_js.htm',{})
 </body>

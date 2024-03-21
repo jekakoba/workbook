@@ -273,7 +273,7 @@
 	border-radius: 50%;
 	background-color: white;
 	filter: drop-shadow(toRem(4) toRem(4) toRem(10) rgba(0, 0, 0, 0.25));
-	z-index: 99;
+	z-index: 98;
 	transition: opacity 0.3s;
 	svg {
 		width: toRem(50);
@@ -520,6 +520,12 @@
 			&:hover {
 				&::before {
 					-webkit-text-fill-color: rgba(255, 255, 255, 0);
+				}
+			}
+			.header_gold &,
+			.footer_gold & {
+				&::before {
+					background-image: $goldGradient;
 				}
 			}
 		}
@@ -974,3 +980,20 @@
 		}
 	}
 }
+
+// .logo-gold,
+// .logo-main {
+// 	max-width: 100%;
+// }
+
+// .logo-gold {
+// 	display: none;
+// 	.page-template-guide-page & {
+// 		display: block;
+// 	}
+// }
+// .logo-main {
+// 	.page-template-guide-page & {
+// 		display: none;
+// 	}
+// }

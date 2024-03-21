@@ -9,14 +9,14 @@
 		background-color: rgba(7, 7, 7, 0.85);
 		z-index: -1;
 		pointer-events: none;
-		&::before {
-			content: "";
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			min-height: toRem(120);
-		}
+		// &::before {
+		// 	content: "";
+		// 	position: fixed;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	min-height: toRem(120);
+		// }
 
 		transition: opacity 0.3s 0.3s;
 		pointer-events: none;
@@ -66,6 +66,28 @@
 		@media (max-width: $mobile) {
 			font-size: toRem(20);
 		}
+		.header_gold & {
+			@media (any-hover: hover) {
+				&:hover {
+					color: white;
+					background-image: $goldGradientText;
+					background-position: 0 0;
+					background-size: 100%;
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+				&:hover::before {
+					color: white;
+					background-image: $goldGradientText;
+					background-position: 0 0;
+					background-size: 100%;
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+		}
 	}
 
 	// .menu__sub-menu
@@ -83,19 +105,37 @@
 		@media (max-width: $mobile) {
 			overflow: auto;
 			height: 100%;
-			padding: toRem(120) toRem(20) toRem(30) toRem(15);
+			padding: toRem(90) toRem(20) toRem(30) toRem(15);
 			position: relative;
 			._header-scroll & {
-				&::before {
-					content: "";
-					position: fixed;
-					top: 0;
-					left: 0;
-					width: 100%;
-					min-height: toRem(70);
-					background-color: #000000;
-					z-index: 2;
-				}
+				// &::before {
+				// 	content: "";
+				// 	position: fixed;
+				// 	top: 0;
+				// 	left: 0;
+				// 	width: 100%;
+				// 	min-height: toRem(70);
+				// 	background-color: #000000;
+				// 	z-index: 2;
+				// }
+			}
+		}
+		// .wrapper_presets &,
+		// .wrapper_product &,
+		// .wrapper_main & {
+		// 	@media (max-width: $mobile) {
+		// 		padding-top: toRem(90);
+		// 	}
+		// }
+		.wrapper_workbook & {
+			@media (max-width: em(1024)) {
+				padding-top: toRem(90);
+			}
+		}
+
+		@media (max-width: $mobile) {
+			.header_gold & {
+				padding-top: toRem(90);
 			}
 		}
 	}
@@ -199,6 +239,17 @@
 		@media (max-width: $mobile) {
 			font-size: toRem(20);
 		}
+		.header_gold & {
+			&:hover {
+				color: white;
+				background-image: $goldGradientText;
+				background-position: 0 0;
+				background-size: 100%;
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
 	}
 }
 
@@ -226,7 +277,8 @@
 		flex-direction: column;
 		text-align: right;
 		border-radius: toRem(5);
-		background: rgba(89, 89, 89, 0.46);
+		// background: rgba(89, 89, 89, 0.46);
+		background: rgba(89, 89, 89, 0.85);
 		min-width: 176px;
 		padding: toRem(20) toRem(15) toRem(10) toRem(15);
 		row-gap: 0.9375rem;
@@ -243,11 +295,11 @@
 	@media (min-width: $mobile) and (max-width: em(1254)) {
 		background: rgba(89, 89, 89, 0.85);
 	}
-	@media (min-width: em(1254)) {
-		._header-scroll & {
-			background: rgba(89, 89, 89, 0.85);
-		}
-	}
+	// @media (min-width: em(1254)) {
+	// 	._header-scroll & {
+	// 		background: rgba(89, 89, 89, 0.85);
+	// 	}
+	// }
 
 	@media (max-width: $mobile) {
 		margin-top: toRem(10);
@@ -269,6 +321,17 @@
 				color: #959595;
 				font-size: toRem(14);
 			}
+			.header_gold & {
+				&:hover {
+					color: white;
+					background-image: $goldGradientText;
+					background-position: 0 0;
+					background-size: 100%;
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
 		}
 		@media (min-width: $mobile) {
 			position: relative;
@@ -289,6 +352,10 @@
 				margin-bottom: toRem(13);
 			}
 		}
+	}
+
+	.wrapper_product & {
+		background: rgba(89, 89, 89, 0.96);
 	}
 }
 

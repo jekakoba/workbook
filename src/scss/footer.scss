@@ -1,4 +1,6 @@
 .footer {
+	position: relative;
+	z-index: 90;
 	padding: toRem(40) 0;
 	background-color: #171717;
 	@media (max-width: $mobileSmall) {
@@ -80,6 +82,15 @@
 				font-size: toRem(40);
 				@media (max-width: $mobileSmall) {
 					font-size: toRem(32);
+				}
+				.footer_gold & {
+					background-position: 0 0;
+					background-size: 100%;
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+
+					background-image: $goldGradientText;
 				}
 			}
 			@media (max-width: $mobileSmall) {

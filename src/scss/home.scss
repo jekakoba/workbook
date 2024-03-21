@@ -501,7 +501,7 @@
 
 .workbook {
 	position: relative;
-	z-index: 100;
+	z-index: 97;
 	// .workbook__container
 
 	&__container {
@@ -602,7 +602,7 @@
 				padding-bottom: 23.243598%;
 				bottom: toRem(4);
 				transform: translateY(99%);
-				left: toRem(-1);
+				left: toRem(-1.5);
 				right: toRem(-1);
 
 				background: url(../img/decor/wk-decor.svg) 0 0 / auto 104% no-repeat;

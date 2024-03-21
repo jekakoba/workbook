@@ -5,6 +5,9 @@
 	@media (min-width: $mobile) {
 		min-height: 100vh;
 	}
+	@media (max-width: $mobile) {
+		padding-top: vmin(30);
+	}
 
 	&__decors {
 		position: absolute;
@@ -20,7 +23,6 @@
 	&__decor {
 		position: absolute;
 		// .hero-presets__decor_camera-left
-
 		&_camera-left {
 			top: 0;
 			left: -3.041667vw;
@@ -29,10 +31,11 @@
 			background: url("@img/decor/camera-presets-left.png") 0 0 / contain no-repeat;
 			transform: rotate(12deg);
 			@media (max-width: $mobile) {
-				top: -1vmin;
-				left: -6.041667vmin;
-				width: 25.8854166667vmin;
-				height: 25.5833333333vmin;
+				display: none;
+				// top: -1vmin;
+				// left: -6.041667vmin;
+				// width: 25.8854166667vmin;
+				// height: 25.5833333333vmin;
 			}
 		}
 
@@ -56,10 +59,11 @@
 			background: url("@img/decor/camera-presets-right.png") 0 0 / contain no-repeat;
 			transform: rotate(12deg);
 			@media (max-width: $mobile) {
-				top: -5vmin;
-				right: -6.041667vmin;
-				width: 25.8854166667vmin;
-				height: 25.5833333333vmin;
+				display: none;
+				// top: -5vmin;
+				// right: -6.041667vmin;
+				// width: 25.8854166667vmin;
+				// height: 25.5833333333vmin;
 			}
 		}
 	}
@@ -112,7 +116,7 @@
 		}
 		@media (max-width: $mobile) {
 			order: 2;
-			@include adaptiveValue("padding-top", 800, 200);
+			@include adaptiveValue("padding-top", 800, 180);
 		}
 	}
 
@@ -315,19 +319,26 @@
 		// .hero-presets__image_big
 
 		&_big {
-			width: vw(530);
-			height: vw(810);
-			left: 8.520833vw;
-			top: -6.47916vw;
+			// width: vw(530);
+			// height: vw(810);
+			// left: 8.520833vw;
+			// top: -6.47916vw;
+			width: vw(400);
+			height: vw(650);
+			left: 11.520833vw;
+
+			top: -2.47916vw;
 			border-radius: 0;
 			z-index: 10;
 			&::before {
 				content: "";
 				position: absolute;
 				top: -3vw;
-				right: vw(-120);
-				width: vw(210);
-				height: vw(210);
+				right: vw(-80);
+				// width: vw(210);
+				width: vw(160);
+				height: vw(160);
+				// height: vw(210);
 				background: url("@img/presets-page/hero-block/decor/decor.png") 0 0 / cover no-repeat;
 				z-index: 11;
 				transform: translateY(0%);
@@ -358,10 +369,14 @@
 		// .hero-presets__image_top-right
 
 		&_top-right {
-			width: vw(310);
-			height: vw(370);
-			top: vw(-70);
-			right: 0;
+			// width: vw(310);
+			// height: vw(370);
+			width: vw(260);
+			height: vw(390);
+			// top: vw(-70);
+			top: vw(-5);
+			// right: 0;
+			right: vw(60);
 			z-index: 4;
 
 			@media (max-width: $mobile) {
