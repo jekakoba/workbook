@@ -1,0 +1,150 @@
+.error-page {
+	height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+	}
+	&::after {
+		right: 0;
+		width: vw(622);
+		height: vw(571);
+		background: url("@img/workbook/decor/decor-3.png") 0 0 / contain no-repeat;
+		transform: rotate(-53deg) translate(43%, 7%);
+	}
+	&::before {
+		left: 0;
+		width: vw(622);
+		height: vw(571);
+		background: url("@img/workbook/decor/decor-1.png") 0 0 / contain no-repeat;
+		transform: rotate(18deg) translate(-25%, -8%);
+	}
+	// .error-page__main
+
+	&__main {
+		display: grid;
+		grid-template-columns: 1fr 0.7fr;
+		height: 100%;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: start;
+		align-items: center;
+		// padding-left: 150px;
+		padding-left: vw(150);
+		align-self: center;
+	}
+
+	// .error-page__label
+
+	&__label {
+		&.bg-gradient {
+			// font-size: toRem(45);
+			font-size: vw(45);
+			padding-bottom: vw(20);
+			// padding-bottom: toRem(5);
+		}
+	}
+
+	// .error-page__logo
+
+	&__logo {
+		width: vw(800);
+		// width: toRem(777);
+		// height: 300px;
+		// width: vw(777);
+		// height: 17.041667vw;
+		position: relative;
+
+		img {
+			max-width: 100%;
+		}
+		&:not(:last-child) {
+			margin-bottom: vw(40);
+		}
+	}
+
+	// .error-page__button
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// gap: toRem(63);
+		gap: vw(50);
+		width: 100%;
+	}
+
+	// .error-page__button-wrap
+
+	&__button-wrap {
+		flex: 0 0 35%;
+	}
+
+	&__link-wrapp {
+		position: relative;
+		border-radius: vw(5);
+		overflow: hidden;
+		flex: 0 0 35%;
+		@media (any-hover: hover) {
+			&:hover {
+				.error-page__link {
+					&::before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		svg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+
+	// .error-page__link
+
+	&__link {
+		&.button {
+			width: 100%;
+			font-size: vw(20);
+			font-size: vw(20);
+			// padding: vw(35) vw(120);
+			padding: vw(30) vw(10);
+			border-radius: vw(5);
+		}
+	}
+
+	// .error-page__image
+
+	&__image {
+		align-self: flex-end;
+		justify-self: end;
+		position: relative;
+		right: vw(-10);
+		// right: vw(-490);
+		// width: vw(599);
+		// height: vw(777);
+		// bottom: vw(-100);
+		// position: absolute;
+		// right: 0;
+		// bottom: vw(425);
+		// height: 40vh;
+		// width: 40vw;
+
+		img {
+			text-align: right;
+			max-width: 100%;
+		}
+	}
+}

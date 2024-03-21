@@ -395,17 +395,17 @@
 		&_right {
 			text-align: left;
 			.advantages-main__decor-red-text {
-				transform: translate(toRem(-25), toRem(-30));
+				transform: translate(toRem(-25), toRem(-20));
 				position: relative;
 				z-index: 4;
 				// padding-bottom: toRem(10);
 				@include adaptiveValue("padding-bottom", 10, 5, 0, 991.98, 479.98);
 				@media (max-width: $tablet) {
-					@include adaptiveValue("top", 0, -55, 0, 991.98, 479.98);
+					@include adaptiveValue("top", 0, -65, 0, 991.98, 479.98);
 					@include adaptiveValue("left", -70, -90, 0, 991.98, 479.98);
 				}
 				@media (max-width: $mobileSmall) {
-					@include adaptiveValue("top", -62, -62, 0, 479.98, 375);
+					@include adaptiveValue("top", -74, -64, 0, 479.98, 375);
 					@include adaptiveValue("left", -20, -19, 0, 479.98, 375);
 				}
 			}

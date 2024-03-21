@@ -18,6 +18,13 @@
 	text-transform: uppercase;
 	border-radius: toRem(10);
 	color: $whiteColor;
+
+	&_gradient-border {
+		background: transparent;
+		position: relative;
+		border-radius: vw(5);
+	}
+
 	svg {
 		position: relative;
 		z-index: 2;
