@@ -49,7 +49,6 @@
 		"gulp-prettier": "latest",
 		"gulp-rename": "latest",
 		"gulp-svg-sprite": "latest",
-		"gulp-ttf2woff": "latest",
 		"gulp-ttf2woff2": "latest",
 		"gulp-util": "latest",
 		"gulp-version-number": "latest",
@@ -84,7 +83,6 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
-		"@splidejs/splide": "^4.1.4",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
 		"react": "^18.2.0",

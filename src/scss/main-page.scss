@@ -45,9 +45,14 @@
 
 			span {
 				@include adaptiveValue("font-size", 110, 60, 0, $containerWidth, 767.98);
-				transform: translateY(44%);
+				// transform: translateY(44%);
+				transform: translate(-5%, 42%);
+				padding: toRem(18);
 				@media (max-width: $mobile) {
 					@include adaptiveValue("font-size", 70, 37, 0, 767.98, 320);
+				}
+				@media (max-width: $mobileSmall) {
+					transform: translate(-1%, 42%);
 				}
 			}
 			@media (max-width: $mobile) {
@@ -1581,16 +1586,16 @@
 					}
 				}
 				position: relative;
-				left: toRem(66);
+				left: toRem(63);
 				@media (max-width: em(1430)) {
-					@include adaptiveValue("left", 66, 52, 0, 1430, 1200);
+					@include adaptiveValue("left", 63, 52, 0, 1430, 1200);
 				}
 
 				@media (max-width: em(1199.98)) {
-					@include adaptiveValue("left", 43, 50, 0, 1199.98, 479);
+					@include adaptiveValue("left", 39, 42, 0, 1199.98, 479);
 				}
 				@media (max-width: $mobileSmall) {
-					@include adaptiveValue("left", 46, 49, 0, 479, 375);
+					@include adaptiveValue("left", 40, 49, 0, 479, 375);
 				}
 				@media (max-width: em(374)) {
 					left: toRem(46);
@@ -1602,10 +1607,11 @@
 
 			&:first-child {
 				position: relative;
+				padding-right: 10px;
 				// right: toRem(30);
-				@include adaptiveValue("right", 23, 10, 0, $containerWidth, 1199.98);
+				@include adaptiveValue("right", 15, 10, 0, $containerWidth, 1199.98);
 				@media (max-width: em(1199.98)) {
-					@include adaptiveValue("right", 24, 17, 0, 1199.98, 480);
+					@include adaptiveValue("right", 20, 10, 0, 1199.98, 480);
 				}
 				&::before {
 					content: "";
@@ -1620,7 +1626,7 @@
 					}
 				}
 				@media (max-width: em(375)) {
-					@include adaptiveValue("right", 20, 10, 0, 375, 320);
+					right: toRem(10);
 				}
 			}
 		}

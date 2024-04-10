@@ -21,11 +21,12 @@ export const css = () => {
 				app.isBuild,
 				autoprefixer({
 					grid: false,
-					overrideBrowserslist: ["last 3 versions"],
+					overrideBrowserslist: ["last 1 versions"],
 					cascade: true
 				})
 			)
 		)
+		/*
 		.pipe(
 			app.plugins.if(
 				app.isWebP,
@@ -40,11 +41,31 @@ export const css = () => {
 				)
 			)
 		)
+		*/
+		.pipe(
+			app.plugins.if(
+				app.isBuild,
+				cleanCss({
+					format: 'beautify',
+					level: {
+						1: {
+							tidySelectors: false
+						}
+					}
+				})
+			)
+		)
 		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
-				cleanCss()
+				cleanCss({
+					level: {
+						1: {
+							tidySelectors: false
+						}
+					}
+				})
 			)
 		)
 		.pipe(app.plugins.rename({ suffix: ".min" }))

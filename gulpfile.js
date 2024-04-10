@@ -3,7 +3,7 @@ import gulp from "gulp";
 // Імпорт загальних плагінів
 import { plugins } from "./config/gulp-plugins.js";
 // Імпорт шляхів
-import { path } from "./config/gulp-settings.js";
+import { pathtofiles } from "./config/gulp-settings.js";
 
 // Передаємо значення у глобальну змінну
 global.app = {
@@ -13,7 +13,7 @@ global.app = {
 	isImgOpt: !process.argv.includes('--noimgopt'),
 	isFontsReW: process.argv.includes('--rewrite'),
 	gulp: gulp,
-	path: path,
+	path: pathtofiles,
 	plugins: plugins
 }
 
@@ -23,34 +23,33 @@ import { html } from "./config/gulp-tasks/html.js";
 import { css } from "./config/gulp-tasks/css.js";
 import { js } from "./config/gulp-tasks/js.js";
 import { jsDev } from "./config/gulp-tasks/js-dev.js";
-import { images } from "./config/gulp-tasks/images.js";
+import { WebP, imagesOptimize, copySvg } from "./config/gulp-tasks/images.js";
 import { ftp } from "./config/gulp-tasks/ftp.js";
 import { zip } from "./config/gulp-tasks/zip.js";
 import { sprite } from "./config/gulp-tasks/sprite.js";
 import { gitignore } from "./config/gulp-tasks/gitignore.js";
-import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
+import { otfToTtf, ttfToWoff2, woff2Copy, fontsStyle } from "./config/gulp-tasks/fonts.js";
 
 // Послідовна обробка шрифтів
-const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
-// Основні завдання виконуватимемо паралельно після обробки шрифтів
-const devTasks = gulp.parallel(fonts, gitignore);
-// Основні завдання виконуватимемо паралельно після обробки шрифтів
-const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images, gitignore));
+const fonts = gulp.series(reset, otfToTtf, ttfToWoff2, woff2Copy, fontsStyle);
+// Порядок виконання завдань для режиму розробник
+const devTasks = gulp.series(fonts, gitignore);
+// Порядок виконання завдань для режиму продакшн
+const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, gulp.parallel(WebP, copySvg), gitignore));
 
 // Експорт завдань
 export { html }
 export { css }
 export { js }
 export { jsDev }
-export { images }
 export { fonts }
 export { sprite }
 export { ftp }
 export { zip }
 
 // Побудова сценаріїв виконання завдань
-const development = gulp.series(devTasks);
-const build = gulp.series(buildTasks);
+const development = devTasks;
+const build = buildTasks;
 const deployFTP = gulp.series(buildTasks, ftp);
 const deployZIP = gulp.series(buildTasks, zip);
 

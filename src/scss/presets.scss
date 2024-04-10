@@ -496,8 +496,11 @@
 			font-weight: 800;
 			margin-bottom: 0;
 			span {
-				transform: translate(-3%, 36%);
-				padding: toRem(10);
+				transform: translate(-5%, 38%);
+				padding: toRem(18);
+				@media (max-width: $mobile) {
+					transform: translate(-8%, 44%);
+				}
 			}
 
 			@media (max-width: $mobile) {
