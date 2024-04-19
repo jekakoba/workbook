@@ -1,19 +1,28 @@
 .footer {
 	position: relative;
 	z-index: 90;
-	padding: toRem(40) 0;
+	padding: toRem(40) 0 0 0;
 	background-color: #171717;
 	@media (max-width: $mobileSmall) {
-		padding-bottom: toRem(50);
+		padding-bottom: toRem(0);
 		padding-top: toRem(30);
 	}
 	// .footer__container
 
 	&__container {
+		@media (max-width: $mobileSmall) {
+			max-width: toRem(321);
+		}
+	}
+
+	&__top {
 		display: grid;
 		grid-template-columns: percent(322, 1400) 1fr;
 		column-gap: toRem(20);
 		align-items: center;
+		@include adaptiveValue("padding-bottom", 50, 20);
+		border-bottom: toRem(1) solid rgba(255, 255, 255, 0.33);
+
 		@media (max-width: em(1300)) {
 			grid-template-columns: 34% 1fr;
 		}
@@ -21,8 +30,34 @@
 			grid-template-columns: auto;
 			row-gap: toRem(10);
 		}
+	}
+	&__bottom {
+		padding: toRem(30) 0;
+
+		nav {
+			ul {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				row-gap: toRem(5);
+				@include adaptiveValue("column-gap", 209, 30, 0, $containerWidth, 991.98);
+				flex-wrap: wrap;
+				li {
+					list-style: none;
+					a {
+						font-size: toRem(17.5);
+						line-height: 1.4;
+						transition: color 0.3s;
+						color: white;
+						&:hover {
+							color: #bc0404;
+						}
+					}
+				}
+			}
+		}
 		@media (max-width: $mobileSmall) {
-			max-width: toRem(321);
+			padding: toRem(20) 0 toRem(50) 0;
 		}
 	}
 

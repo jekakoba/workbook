@@ -39,6 +39,16 @@ $red: linear-gradient(
 	#d01d1e 85.58%,
 	#bc0404 100%
 );
+$red-hover: linear-gradient(
+	90deg,
+	#e83737 0%,
+	#fd4042 18.63%,
+	#fc5858 33.6%,
+	#f54e4f 52.32%,
+	#df3032 100%,
+	#d01d1e 85.58%,
+	#bc0404 100%
+);
 
 $goldGradient: linear-gradient(
 	167deg,
@@ -214,3 +224,4 @@ body {
 @import "main-page";
 @import "guide-page";
 @import "404";
+@import "document";

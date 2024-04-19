@@ -1,0 +1,40 @@
+.document-page {
+	background-color: white;
+}
+
+.document {
+	padding-top: toRem(100);
+	padding-bottom: toRem(30);
+
+	// .document__container
+
+	&__container {
+	}
+
+	// .document__title
+
+	&__title {
+		color: #000;
+		@include adaptiveValue("font-size", 40, 30);
+		font-weight: 400;
+		line-height: 1.24;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 15, 5);
+		}
+	}
+
+	// .document__text
+
+	&__text {
+		line-height: 1.7;
+		@include adaptiveValue("font-size", 18, 14);
+		p {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+				@media (max-width: $mobileSmall) {
+					margin-bottom: toRem(5);
+				}
+			}
+		}
+	}
+}

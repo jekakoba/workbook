@@ -137,13 +137,16 @@
 
 @keyframes top-arrow {
 	0% {
-		bottom: toRem(0);
+		// bottom: toRem(0);
+		transform: translateY(0);
 	}
 	50% {
-		bottom: toRem(10);
+		transform: translateY(toRem(-10));
+		// bottom: toRem(10);
 	}
 	100% {
-		bottom: toRem(0);
+		transform: translateY(0);
+		// bottom: toRem(0);
 	}
 }
 
@@ -526,6 +529,19 @@
 			.footer_gold & {
 				&::before {
 					background-image: $goldGradient;
+				}
+			}
+		}
+		.header_document & {
+			a {
+				&::before {
+					background-image: $red;
+					-webkit-text-fill-color: rgba(255, 255, 255, 0);
+				}
+				&:hover {
+					&::before {
+						background-image: $red-hover;
+					}
 				}
 			}
 		}
