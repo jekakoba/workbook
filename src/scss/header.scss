@@ -161,4 +161,14 @@
 			}
 		}
 	}
+	@media (max-width: $mobile) {
+		.menu__body {
+			padding-top: toRem(120);
+		}
+		&._header-scroll {
+			.menu__body {
+				padding-top: toRem(90);
+			}
+		}
+	}
 }

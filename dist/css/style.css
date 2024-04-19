@@ -10086,6 +10086,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .header_document .header__logo .logo-scroll {
     display: block
   }
+  .header .menu__body {
+    padding-top: 7.5rem
+  }
+  .header._header-scroll .menu__body {
+    padding-top: 5.625rem
+  }
   .footer__top {
     grid-template-columns: auto;
     row-gap: .625rem
