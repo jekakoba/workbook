@@ -89,6 +89,27 @@
 			justify-content: center;
 		}
 	}
+	&_gold {
+		.footer__bottom {
+			nav {
+				ul {
+					li {
+						a {
+							&:hover {
+								color: white;
+								background-image: $goldGradientText;
+								background-position: 0 0;
+								background-size: 100%;
+								background-clip: text;
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 .main-footer {
 	@media (max-width: $mobile) {
