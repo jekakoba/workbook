@@ -11077,6 +11077,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .your-instagram .particles {
     height: 70vh
   }
+  #about {
+    scroll-margin-top: 6.25rem
+  }
   .footer {
     padding-bottom: 0;
     padding-top: 1.875rem
