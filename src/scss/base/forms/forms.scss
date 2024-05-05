@@ -2,18 +2,15 @@
 // Сніппет (HTML):
 .form {
 	display: grid;
-	grid-template-columns: 1fr 1fr 0.8fr;
-	gap: toRem(30);
-
+	gap: toRem(20);
 	@media (max-width: $mobileSmall) {
-		grid-template-columns: auto;
+		gap: toRem(15);
 	}
 	&__label {
 		border-radius: toRem(10);
 		position: relative;
 		border: toRem(1) solid rgba(80, 80, 80, 0.3);
 		display: flex;
-		height: toRem(54);
 		transition: border 0.3s ease 0s;
 		i {
 			display: flex;
@@ -32,7 +29,7 @@
 		&._input-focus {
 			transition: border 0.3s ease 0s;
 			border: toRem(1) solid #df3032;
-			.footer_gold & {
+			.page-template-guide-page & {
 				border: toRem(1) solid #f0be79;
 			}
 		}
@@ -41,14 +38,44 @@
 				&::before {
 					transition: color 0.6s;
 					color: #df3032;
-					.footer_gold & {
+					.page-template-guide-page & {
 						color: #f0be79;
 					}
+				}
+			}
+			svg path {
+				stroke: #df3032;
+			}
+			.page-template-guide-page & {
+				svg path {
+					stroke: #f0be79;
 				}
 			}
 		}
 		@media (max-width: em(1300)) {
 		}
+		&_message {
+			align-items: start;
+			.form__placeholder {
+				top: 0;
+				transform: translateY(100%);
+			}
+			svg {
+				transition: stroke 0.3s ease 0s;
+				margin-left: 20px;
+				width: toRem(30);
+				height: toRem(30);
+				transform: translateY(30%);
+			}
+			svg path {
+				stroke: #686868;
+			}
+		}
+	}
+
+	&__input-wrapper {
+		width: 100%;
+		height: 100%;
 	}
 	&__input {
 	}
@@ -66,17 +93,19 @@
 		font-size: toRem(16);
 		z-index: 2;
 		transform: translateY(-50%);
-		background-color: #171717;
-
+		background-color: #eee;
 		._input-active & {
 			transform: translateY(-220%);
+			&_message {
+				transform: translateY(-60%);
+			}
 		}
 		._input-focus & {
 			transition:
 				transform 0.6s,
 				color 0.6s;
 			color: #df3032;
-			.footer_gold & {
+			.page-template-guide-page & {
 				color: #f0be79;
 			}
 		}
@@ -88,23 +117,15 @@
 	// .form__submit
 
 	&__submit {
+		&.button {
+			padding: toRem(20) toRem(10);
+			font-size: toRem(18);
+			@media (max-width: $mobileSmall) {
+				font-size: toRem(14);
+			}
+		}
 	}
 	&__submit {
-		cursor: pointer;
-		&.button {
-			font-size: toRem(15);
-			padding: toRem(19.5) toRem(36);
-			.footer_gold & {
-				color: rgb(19, 19, 19);
-			}
-			@media (max-width: $mobileSmall) {
-				font-size: toRem(13);
-			}
-		}
-
-		@media (min-width: $mobileSmall) and (max-width: em(1300)) {
-			grid-column: span 2;
-		}
 	}
 	&__error {
 	}

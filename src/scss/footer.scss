@@ -5,30 +5,50 @@
 	background-color: #171717;
 	@media (max-width: $mobileSmall) {
 		padding-bottom: toRem(0);
-		padding-top: toRem(30);
+		padding-top: toRem(15);
 	}
 	// .footer__container
 
 	&__container {
-		@media (max-width: $mobileSmall) {
-			max-width: toRem(321);
+	}
+
+	&__submit {
+		cursor: pointer;
+		&.button {
+			font-size: toRem(15);
+			padding: toRem(19.5) toRem(36);
+			.footer_gold & {
+				color: rgb(19, 19, 19);
+			}
+			@media (max-width: $mobileSmall) {
+				font-size: toRem(13);
+				padding: toRem(19.5) toRem(10);
+			}
+		}
+		@media (min-width: $mobileSmall) and (max-width: $mobile) {
+			max-width: toRem(400);
+			margin: 0 auto;
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
 		}
 	}
 
 	&__top {
 		display: grid;
-		grid-template-columns: percent(322, 1400) 1fr;
-		column-gap: toRem(20);
+		justify-content: space-between;
+		gap: toRem(10) toRem(20);
 		align-items: center;
 		@include adaptiveValue("padding-bottom", 50, 20);
 		border-bottom: toRem(1) solid rgba(255, 255, 255, 0.33);
-
-		@media (max-width: em(1300)) {
-			grid-template-columns: 34% 1fr;
+		@media (min-width: $mobile) {
+			grid-template-columns: auto toRem(300);
+			row-gap: toRem(20);
 		}
 		@media (max-width: $mobile) {
-			grid-template-columns: auto;
-			row-gap: toRem(10);
+			grid-template-columns: 1fr;
 		}
 	}
 	&__bottom {
@@ -113,7 +133,7 @@
 }
 .main-footer {
 	@media (max-width: $mobile) {
-		max-width: toRem(300);
+		// max-width: toRem(300);
 	}
 	@media (max-width: $mobileSmall) {
 		max-width: toRem(250);
@@ -132,12 +152,16 @@
 			justify-content: start;
 			font-weight: 900;
 			text-align: left;
-			margin-bottom: 0;
 			span {
 				transform: translate(-3%, -37%);
 				font-size: toRem(40);
+				@media (max-width: $mobile) {
+					transform: translate(-3%, 0);
+					margin-top: toRem(-20);
+				}
 				@media (max-width: $mobileSmall) {
 					font-size: toRem(32);
+					margin-top: toRem(-15);
 				}
 				.footer_gold & {
 					background-position: 0 0;
@@ -152,6 +176,9 @@
 			@media (max-width: $mobileSmall) {
 				font-size: toRem(16);
 			}
+		}
+		@media (max-width: $mobileSmall) {
+			margin-bottom: toRem(20);
 		}
 	}
 
